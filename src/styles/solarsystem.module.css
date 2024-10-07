@@ -1,0 +1,131 @@
+.solar_system {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    --orbit-size: 4px;
+    --sun-diameter: 139px;
+    --revolution-scale: 960ms;
+    z-index: -2;
+}
+
+.sunlight {
+    position: absolute;
+    inset: -1240px; /* Same as jupiter's orbit radius */
+    border-radius: 100%;
+    background: rgba(255, 213, 46, 0.1);
+    filter: blur(512px);
+}
+
+.sun {
+    position: absolute;
+    background-color: white;
+    height: var(--sun-diameter);
+    width: var(--sun-diameter);
+    border-radius: 100%;
+}
+
+.sun::before {
+    content: "";
+    position: absolute;
+    background-color: white;
+    inset: 0;
+    filter: blur(64px);
+}
+
+.planet_wrapper {
+    position: absolute;
+    height: calc(var(--orbit-radius) * 2);
+    width: calc(var(--orbit-radius) * 2);
+    transform: rotate(var(--initial-angle));
+}
+
+.orbit::before {
+    content: "";
+    position: absolute;
+    inset: calc(0px - var(--orbit-size));
+    padding: var(--orbit-size);
+    background: linear-gradient(to right, white, var(--background) 10%);
+    border-radius: 100%;
+    mask: linear-gradient(to right, white, var(--background) 10%) content-box,
+        linear-gradient(to right, white, var(--background) 10%);
+    mask-composite: exclude;
+}
+
+.orbit {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+}
+
+.planet {
+    position: absolute;
+    top: calc(var(--orbit-radius) - var(--diameter) / 2);
+    left: calc(0px - var(--diameter) / 2);
+    height: var(--diameter);
+    width: var(--diameter);
+    background: var(--color);
+    border-radius: 100%;
+}
+
+
+.mercury {
+    --orbit-radius: 221px;
+    --diameter: 24px;
+    --color: #acacac;
+    --revolution-days: 87.97;
+    --initial-angle: 25deg;
+}
+
+.venus {
+    --orbit-radius: 432px;
+    --diameter: 40px;
+    --color: linear-gradient(234deg, #f60 -63.19%, #c0f 228.91%);
+    --revolution-days: 224.7;
+    --initial-angle: -22deg;
+}
+
+.earth {
+    --orbit-radius: 740px;
+    --diameter: 48px;
+    --color: linear-gradient(134deg, #00ee5f -36.84%, #0009e9 150.26%);
+    --revolution-days: 365.26;
+    --initial-angle: 13deg;
+}
+
+.mars {
+    --orbit-radius: 980px;
+    --diameter: 32px;
+    --color: linear-gradient(
+        120deg,
+        #d11 -110.91%,
+        #ffe064 191.15%,
+        rgba(221, 17, 17, 0) 191.18%
+    );
+    --revolution-days: 686.68;
+    --initial-angle: -60deg;
+}
+
+.jupiter {
+    --orbit-radius: 1240px;
+    --diameter: 72px;
+    --color: linear-gradient(134deg, #583131 -36.84%, #cf3c3c 150.26%);
+    --revolution-days: 4331.98;
+    --initial-angle: -4deg;
+}
+
+@keyframes revolution {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+@media not (prefers-reduced-motion) {
+    .planet_wrapper {
+        animation: revolution
+            calc(var(--revolution-scale) * var(--revolution-days)) linear
+            infinite;
+    }
+}

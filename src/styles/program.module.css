@@ -1,0 +1,94 @@
+.program_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: var(--background);
+    border-radius: 16px;
+    box-shadow: 0px 12px 24px 0px rgba(255, 255, 255, 0.08);
+}
+
+.image_wrapper {
+    position: relative;
+}
+
+.image {
+    border-radius: 8px;
+    width: 100%;
+}
+
+.time_remaining {
+    position: absolute;
+    bottom: 2px;
+    font-weight: 700;
+    border: 4px solid var(--background);
+    font-size: 0.75rem;
+    right: 5%;
+    padding: 2px 8px;
+    border-radius: 8px 8px 0px 0px;
+    background: #00800d;
+}
+
+.red{
+    background-color: red;
+}
+
+.title {
+    text-align: center;
+    font-variant: small-caps;
+}
+
+.flex_wrapper {
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.info_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.info {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 16px;
+}
+
+.info {
+    opacity: 0.7;
+}
+
+.register_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+    line-height: normal;
+    font-variant: small-caps;
+    border-radius: 32px;
+    padding: 8px 24px;
+    border: 2px solid var(--gradient-start);
+}
+
+.register_button:disabled{
+    border-color: grey;
+    cursor: not-allowed;
+}
+
+.register_arrow {
+    display: flex;
+    align-items: center;
+    visibility: collapse;
+    scale: 0;
+    transition: scale 200ms ease-in-out, margin 200ms ease-in-out;
+}
+
+.register_button:not(:disabled):hover > .register_arrow {
+    margin-left: 4px;
+    visibility: visible;
+    scale: 1;
+}

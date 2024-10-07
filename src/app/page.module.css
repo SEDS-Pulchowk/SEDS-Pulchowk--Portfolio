@@ -1,0 +1,183 @@
+.solar_system_wrapper {
+    position: absolute;
+    top: 40vh;
+    left: 100%;
+    scale: 0.5;
+    z-index: -1;
+}
+
+.section {
+    margin-left: 64px;
+    margin-bottom: 128px;
+}
+
+.programs_section {
+    margin-right: 64px;
+}
+
+.main_section {
+    max-width: 60vw;
+    height: 100vh;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main_header {
+    font-size: 4rem;
+    text-transform: capitalize;
+    line-height: 128%;
+    font-weight: 700;
+}
+
+.main_text {
+    margin-top: 8px;
+    margin-bottom: 32px;
+}
+
+.main_text {
+    color: var(--text-light);
+}
+
+.join_us_button {
+    padding: 8px 16px;
+    border: 2px solid var(--gradient-start);
+    font-variant: small-caps;
+    font-weight: 700;
+    border-radius: 32px;
+    max-width: fit-content;
+}
+
+.about_header {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 64px;
+}
+
+.about_content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 32px;
+}
+
+.about_image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 32px 0px 0px 32px;
+}
+
+.programs_section_inner {
+    position: relative;
+}
+
+.programs_section_background {
+    position: absolute;
+    background: linear-gradient(
+        185deg,
+        rgba(133, 0, 255, 0.12) -17.15%,
+        rgba(0, 71, 255, 0.12) 145.22%
+    );
+    z-index: -1;
+    border-radius: 500%;
+    inset: 30% -15%;
+    filter: blur(256px);
+}
+
+.programs_header {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.program_buttons_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 64px;
+}
+
+.program_button {
+    display: flex;
+    gap: 8px;
+    padding: 8px 24px;
+    border: 2px solid white;
+    border-radius: 32px;
+    font-weight: 700;
+    opacity: 0.56;
+}
+
+.active {
+    border-color: var(--gradient-start);
+    opacity: 1;
+}
+
+.program_items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-content: space-around;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+@media  (max-width: 1024px) {
+    .solar_system_wrapper {
+        scale: 0.4;
+    }
+
+    .main_header {
+        font-size: 3rem;
+    }
+
+    .about_header,
+    .programs_header {
+        font-size: 2rem;
+    }
+
+    .program_items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media  (max-width: 728px) {
+    .solar_system_wrapper {
+        scale: 0.3;
+    }
+
+    .section {
+        margin-left: 32px;
+        margin-bottom: 64px;
+    }
+
+    .programs_section,
+    .about_section {
+        margin-right: 32px;
+    }
+
+    .main_header {
+        font-size: 2.5rem;
+    }
+
+    .about_content {
+        grid-template-columns: 1fr;
+    }
+
+    .about_header,
+    .programs_header {
+        margin-bottom: 32px;
+    }
+
+    .about_image {
+        border-radius: 8px;
+    }
+
+    .program_items {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media  (max-width: 620px) {
+    .solar_system_wrapper {
+        scale: 0.2;
+    }
+}
