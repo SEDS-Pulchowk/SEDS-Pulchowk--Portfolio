@@ -1,3 +1,5 @@
+"use clint";
+
 import styles from "./page.module.css";
 import MemberCard from "@/components/MemberCard";
 import executives from "./executives";
