@@ -4,7 +4,7 @@ import { useState } from "react";
 import styles from "./page.module.css";
 
 export default function joinSeds() {
-  const [selected, set_selected] = useState<"general" | "executive">("executive");
+  const [selected, set_selected] = useState<"general" | "executive">("general");
 
   return (
     <div className={styles.join_seds}>
