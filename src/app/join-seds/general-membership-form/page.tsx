@@ -310,7 +310,7 @@ export default function GeneralForm() {
   return (
     <div className={`container ${styles.join_seds}`}>
       <section className={styles.application_form}>
-        <JoinSeds />
+        <JoinSeds membershipType="general"/>
         <div data-bs-theme="dark" className={styles.form_outline}>
           <div>
             <p>
