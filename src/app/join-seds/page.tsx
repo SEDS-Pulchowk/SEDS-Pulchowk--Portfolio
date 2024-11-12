@@ -5,7 +5,7 @@ import styles from "./page.module.css";
 import Link from "next/link";
 
 interface JoinSedsProps {
-  membershipType: "general" | "executive";
+  membershipType?: "general" | "executive";
 }
 
 export default function JoinSeds({membershipType = "general"}: JoinSedsProps) {
