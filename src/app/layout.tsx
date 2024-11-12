@@ -5,26 +5,32 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BootstrapClient from "@/components/BootstrapClient";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
 
 const inter = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "SEDS-Pulchowk",
+  title: "SEDS-Pulchowk",
 };
 
 export default function RootLayout({
-    children,
+  children,
 }: {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }) {
-    return (
-        <html lang="en">
-            <body className={inter.className}>
-                <Navbar />
-                {children}
-                <Footer />
-                <BootstrapClient />
-            </body>
-        </html>
-    );
+  return (
+    <html lang="en">
+      <head>
+        <link rel="icon" href="/logo.svg" sizes="any" />
+      </head>
+      <body className={inter.className}>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
+      <BootstrapClient />
+    </html>
+  );
 }

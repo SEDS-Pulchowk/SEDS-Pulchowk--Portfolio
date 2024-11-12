@@ -24,8 +24,8 @@
 
 .navbar {
   display: flex;
-  gap: 16px;
-  padding: 20px 32px;
+  gap: 10px;
+  padding: 20px 16px;
   justify-content: space-between;
   align-items: center;
   background-color: var(--background);
@@ -38,6 +38,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  width: fit-content;
 }
 
 .logo_text {
@@ -49,6 +50,7 @@
 
 .logo_image {
     height: 40px;
+    width: auto;
 }
 
 .navbar_large {
@@ -57,9 +59,9 @@
   list-style-type: none;
   text-decoration: none;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 52px;
+  gap: 4vw;
   font-size: 1rem;
 }
 
@@ -125,6 +127,8 @@
 
 .hamburger_btn {
   display: none;
+  margin-right: 4vw;
+  margin-top: 6px;
 }
 
 .sidenav_wrapper {
@@ -186,7 +190,7 @@
   }
 
   .navbar_large {
-    gap: 24px;
+    gap: 3vw;
   }
 }
 
@@ -201,8 +205,8 @@
 
   .hamburger_btn {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
   }
 
 }

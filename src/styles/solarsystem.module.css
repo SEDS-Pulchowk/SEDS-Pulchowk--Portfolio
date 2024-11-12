@@ -130,12 +130,24 @@
     }
 } */
 
+.solar_system_wrapper {
+  position: absolute;
+  top: 100px;
+  right: -33vw;
+  height: 100vh;
+  width: 100vw;
+  scale: 1;
+  z-index: -1;
+  margin: 0;
+  padding: 0;
+}
+
 .solar_syst {
   display: flex;
   background: radial-gradient(
     circle,
     rgba(48, 48, 48, 0.4) 0%,
-    rgba(1, 1, 1, 0) 70%
+    rgba(1, 1, 1, 0) 55%
   );
   width: 100%;
   height: 100%;
@@ -244,7 +256,7 @@
   width: 9px;
   margin-top: -6px;
   margin-left: -6px;
-  background: radial-gradient(circle at 40% 70%, #0a8f44, #11abe9 30%, #000080 90%);
+  background: radial-gradient(circle at 40% 70%, #0a8f44, #11abe9 50%, #000080 90%);
 }
 
 .moon {
@@ -261,7 +273,7 @@
   width: 4px;
   margin-top: -2px;
   margin-left: -2px;
-  background: gray;
+  background: rgb(222, 218, 218);
 }
 
 .mars {

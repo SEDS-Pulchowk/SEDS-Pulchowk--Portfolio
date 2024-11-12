@@ -5,6 +5,8 @@ import styles from "./page.module.css";
 import Program from "@/components/Program";
 import who_we_are from "public/images/who_we_are.jpg";
 import SolarSystem from "@/components/SolarSystem";
+import TailStar from "@/components/TailStar";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Home() {
@@ -13,10 +15,8 @@ export default function Home() {
   return (
     <>
       <div className={styles.hero_banner}>
-        <div className={styles.solar_system_wrapper}>
           <SolarSystem />
-        </div>
-
+          <TailStar />
         <section className={styles.section}>
           <div className={styles.main_text_wrapper}>
             <h1 className={styles.main_header}>
@@ -30,7 +30,8 @@ export default function Home() {
               Lorem ipsum is the industrial language too be used
             </p>
           </div>
-          <button className={styles.join_us_button}>Join Us</button>
+          <Link href="/join-seds">
+          <button className={styles.join_us_button}>Join Us</button></Link>
         </section>
       </div>
 

@@ -1,0 +1,45 @@
+/* Container for the stars */
+.star-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow:  0 0 10px 2px rgba(255, 255, 255, 0.8), 0 0 10px 2px rgba(255, 255, 255, 0.4);
+  opacity: 0.8;
+  animation: fly 3s linear forwards;
+}
+
+/* Tail effect */
+.star::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5)); 
+    border-radius: 2px;
+    top: 2px;
+    left: -57.5px; 
+    transform-origin: right center;
+    transform: rotate(var(--rotation));
+    opacity: 0.8;
+  }
+
+  @keyframes fly {
+    0% {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(var(--fly-x), var(--fly-y));
+      opacity: 0;
+    }
+  }
+  

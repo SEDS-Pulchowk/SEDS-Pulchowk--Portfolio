@@ -27,7 +27,7 @@ import styles from "@/styles/solarsystem.module.css";
 
 export default function SolarSystem() {
   return (
-    <>
+    <div className={styles.solar_system_wrapper}>
       <div className={styles.solar_syst}>
         <div className={styles.sun}></div>
         <div className={styles.mercury}></div>
@@ -41,6 +41,6 @@ export default function SolarSystem() {
         <div className={styles.uranus}></div>
         <div className={styles.neptune}></div>
       </div>
-    </>
+    </ div>
   );
 }
