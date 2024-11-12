@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ArrowUpRight, Clock, LocationPin } from "./icons";
 import styles from "@/styles/program.module.css";
 import humanize from "humanize-duration";
+import Image from "next/image";
 
 export default function Program({
     title,
@@ -23,7 +24,8 @@ export default function Program({
     return (
         <div className={styles.program_wrapper}>
             <div className={styles.image_wrapper}>
-                <img alt={title} src={image} className={styles.image} />
+                <Image alt={title} src={image} className={styles.image} height={300}
+                width={300}/>
                 <div
                     className={`${styles.time_remaining} ${
                         Date.now() > end.getTime() ? styles.red : ""

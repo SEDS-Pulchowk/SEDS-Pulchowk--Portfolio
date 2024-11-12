@@ -1,14 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import styles from "./page.module.css";
+import styles from "./joinseds.module.css";
 import Link from "next/link";
 
 interface JoinSedsProps {
   membershipType?: "general" | "executive";
 }
 
-export default function JoinSeds({membershipType = "general"}: JoinSedsProps) {
+export function JoinSeds({ membershipType = "general" }: JoinSedsProps) {
   const [selected, set_selected] = useState(membershipType);
 
   return (

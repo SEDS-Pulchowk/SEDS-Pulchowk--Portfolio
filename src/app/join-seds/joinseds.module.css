@@ -68,13 +68,6 @@
   min-width: 450px !important;
 }
 
-.form_section img {
-  width: 20%;
-  height: auto;
-  max-width: 500px;
-  min-width: 350px;
-}
-
 .select_dropdown{
     width: 50%;
     min-width: 200px;

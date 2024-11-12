@@ -1,8 +1,9 @@
 "use client";
 
 import { ChangeEvent, useState } from "react";
-import styles from "../page.module.css";
-import JoinSeds from "../page";
+import Image from "next/image";
+import styles from "../joinseds.module.css";
+import { JoinSeds } from "../joinseds";
 
 export default function GeneralForm() {
   const [membershipForm, create_membershipForm] = useState(
@@ -266,11 +267,13 @@ export default function GeneralForm() {
             style={{ display: "flex", flexDirection: "column" }}
           >
             <label htmlFor="esewa-payment">
-              Scan to pay your membership fee:{" "}
+              Scan to pay your membership fee:
             </label>
-            <img
+            <Image
               src="/Media/Payment/e-sewa-QR.png"
               alt="Esewa: 9817899305 Siddhant Yadav"
+              width={300}
+              height={380}
             />
           </div>
           <div className={`mb-3 ${styles.form_section}`}>
@@ -310,7 +313,7 @@ export default function GeneralForm() {
   return (
     <div className={`container ${styles.join_seds}`}>
       <section className={styles.application_form}>
-        <JoinSeds membershipType="general"/>
+        <JoinSeds membershipType="general" />
         <div data-bs-theme="dark" className={styles.form_outline}>
           <div>
             <p>

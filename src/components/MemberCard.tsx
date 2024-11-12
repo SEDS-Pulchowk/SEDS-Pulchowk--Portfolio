@@ -2,6 +2,7 @@ import { Member, SocialIcon } from "@/types";
 import { Facebook, Instagram, LinkedIn } from "./icons";
 import styles from "@/styles/membercard.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function MemberCard({
     name,
@@ -13,10 +14,12 @@ export default function MemberCard({
 }: Member) {
     return (
         <div className={styles.member_wrapper}>
-            <img
+            <Image
                 alt={name}
-                src={image || "images/person.png"}
+                src={image || "/images/person.png"}
                 className={styles.member_image}
+                height={150}
+                width={150}
             />
             <div className={styles.details_wrapper}>
                 <div className={styles.member_details}>

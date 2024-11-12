@@ -1,14 +1,14 @@
 "use client";
 
 import { ChangeEvent, useState } from "react";
-import styles from "../page.module.css";
-import JoinSeds from "../page";
+import styles from "../joinseds.module.css";
+import { JoinSeds } from "../joinseds";
 
 export default function ExecutiveForm() {
   return (
     <div className={`container ${styles.join_seds}`}>
       <section className={styles.application_form}>
-        <JoinSeds membershipType="executive"/>
+        <JoinSeds membershipType="executive" />
         <div data-bs-theme="dark" className={styles.form_outline}>
           <div
             style={{
