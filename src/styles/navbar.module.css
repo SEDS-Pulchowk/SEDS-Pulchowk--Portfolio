@@ -98,7 +98,7 @@
   font-weight: 700;
   font-variant: small-caps;
   /* TODO: gradient doesn't work with border-radius */
-  border: 2px solid var(--gradient-start);
+  border: 2px outset var(--gradient-start);
   border-radius: 32px;
   display: flex;
   align-items: center;
@@ -125,10 +125,15 @@
   scale: 1;
 }
 
-.hamburger_btn {
+.hamburger {
   display: none;
   margin-right: 4vw;
-  margin-top: 6px;
+  margin-top: 8px;
+  align-items: center;
+}
+
+.hamburger_btn {
+  height: 1.8rem;
 }
 
 .sidenav_wrapper {
@@ -203,7 +208,7 @@
     display: none;
   }
 
-  .hamburger_btn {
+  .hamburger {
     display: flex;
     /* align-items: center;
     justify-content: center; */
@@ -218,5 +223,14 @@
 
   .sidenav_wrapper_shown .sidenav {
     width: 100%;
+  }
+
+  .logo_text {
+    font-size: 1.25rem;
+  }
+
+  .hamburger_btn {
+    height: 1.5rem;
+    margin-top: 2px;
   }
 }
