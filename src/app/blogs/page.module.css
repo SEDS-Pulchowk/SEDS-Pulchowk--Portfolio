@@ -1,15 +1,21 @@
+.blogs_container {
+  margin: 120px auto 10px auto;
+  width: 80vw;
+  text-align: center;
+  align-items: center;
+}
+
 .container {
-  margin: 120px 128px;
-  display: flex;
+  display: inline-block;
   justify-content: space-evenly;
   align-items: center;
   width: 80vw;
   gap: 20px;
-  /* background-color: red; */
 } 
 
 .container > *{
     display: inline-block;
+    margin: 10px;
 }
 
 @media (max-width: 1280px) {

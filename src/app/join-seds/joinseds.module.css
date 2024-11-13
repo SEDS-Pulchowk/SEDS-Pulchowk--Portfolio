@@ -65,12 +65,13 @@
 }
 
 .form_section_text_area {
-  min-width: 450px !important;
+  min-width: 350px !important;
+  width: 100%;
 }
 
 .select_dropdown{
     width: 50%;
-    min-width: 200px;
+    min-width: 150px;
 }
 
 .submit_button {
@@ -85,7 +86,9 @@
 }
 
 .submit_button:hover {
-  background: var(--gradient-start);
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 

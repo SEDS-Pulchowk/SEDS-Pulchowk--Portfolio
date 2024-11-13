@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Star, Hamburger } from "./icons";
+import { Star } from "./icons";
 import styles from "@/styles/navbar.module.css";
 import logo from "public/logo.svg";
 import Link from "next/link";
@@ -30,7 +30,7 @@ export default function Navbar() {
             <NavbarItems />
           </ul>
           {/* <button
-            className={styles.hamburger_btn}
+            className={styles.hamburger}
             onClick={() => setSideNavShown(true)}
           >
             <Hamburger />
@@ -109,7 +109,7 @@ function HamburgerButton() {
   return (
     <div
       data-bs-theme="dark"
-      className={`dropdown ${styles.hamburger_btn}`}
+      className={`dropdown ${styles.hamburger}`}
       style={{ position: "absolute", top: "15px", right: "40px" }}
     >
       <button
@@ -120,7 +120,7 @@ function HamburgerButton() {
         aria-haspopup="true"
         aria-expanded="false"
       >
-        <FontAwesomeIcon icon={faBars} size="2x"/>
+        <FontAwesomeIcon className={styles.hamburger_btn} icon={faBars} size="2x"/>
       </button>
       <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <Link href="/#Programs" className="dropdown-item">
@@ -128,7 +128,7 @@ function HamburgerButton() {
           <span>&nbsp;  Programs</span>
         </Link>
         <Link href="/#Projects" className="dropdown-item">
-        <FontAwesomeIcon icon={faInfoCircle} />
+          <FontAwesomeIcon icon={faListCheck} />
           <span>&nbsp; Projects</span>
         </Link>
         <Link href="/blogs" className="dropdown-item">
@@ -136,7 +136,7 @@ function HamburgerButton() {
           <span>&nbsp; Blogs</span>
         </Link>
         <Link href="/about" className="dropdown-item">
-          <FontAwesomeIcon icon={faListCheck} />
+        <FontAwesomeIcon icon={faInfoCircle} />
           <span>&nbsp; About Us</span>
         </Link>
         <Link href="/join-seds" className="dropdown-item">

@@ -28,9 +28,9 @@ let executives: Member[][] = [
             ],
         },
         {
-            name: "Aarya Risal",
-            position: "Secretary",
-            level: "Bachelor in Aerospace Engineering",
+            name: "Prajjwal Pandey",
+            position: "Research Coordinator",
+            level: "Bachelor in Computer Engineering",
             college: "Pulchowk Campus",
             links: [
                 { icon: "facebook", url: "https://facebook.com/" },
@@ -41,8 +41,31 @@ let executives: Member[][] = [
     ],
     [
         {
+            name: "Roshan Giri",
+            position: "Secretary",
+            level: "Bachelor in Aerospace Engineering",
+            college: "Pulchowk Campus",
+            image: "/images/roshan_giri.png",
+            links: [
+                { icon: "facebook", url: "https://facebook.com/" },
+                { icon: "instagram", url: "https://instagram.com" },
+                { icon: "linkedin", url: "https://linkedin.com" },
+            ],
+        },
+        {
+            name: "Mansi Thapa",
+            position: "Vice Secretary",
+            level: "Bachelor in Aerospace Engineering",
+            college: "Pulchowk Campus",
+            links: [
+                { icon: "facebook", url: "https://facebook.com/" },
+                { icon: "instagram", url: "https://instagram.com" },
+                { icon: "linkedin", url: "https://linkedin.com" },
+            ],
+        },
+        {
             name: "Krishna Dhanuk",
-            position: "National Chapter Representative",
+            position: "Outreach Manager",
             level: "Bachelor in Mechanical Engineering",
             college: "Pulchowk Campus",
             image: "/images/krishna_dhanuk.png",
@@ -52,43 +75,8 @@ let executives: Member[][] = [
                 { icon: "linkedin", url: "https://linkedin.com" },
             ],
         },
-        {
-            name: "Shrey Upadhyaya",
-            position: "Project Manager",
-            level: "Bachelor in Computer Engineering",
-            college: "Pulchowk Campus",
-            image: "/images/shrey_upadhyaya.png",
-            links: [
-                { icon: "facebook", url: "https://facebook.com/" },
-                { icon: "instagram", url: "https://instagram.com" },
-                { icon: "linkedin", url: "https://linkedin.com" },
-            ],
-        },
-        {
-            name: "Divas Poudel",
-            position: "Project Manager",
-            level: "Bachelor in Computer Engineering",
-            college: "Pulchowk Campus",
-            links: [
-                { icon: "facebook", url: "https://facebook.com/" },
-                { icon: "instagram", url: "https://instagram.com" },
-                { icon: "linkedin", url: "https://linkedin.com" },
-            ],
-        },
     ],
     [
-        {
-            name: "Bibek Gautam",
-            position: "Event Manager",
-            level: "Bachelor in Computer Engineering",
-            college: "Pulchowk Campus",
-            image: "/images/bibek_gautam.png",
-            links: [
-                { icon: "facebook", url: "https://facebook.com/" },
-                { icon: "instagram", url: "https://instagram.com" },
-                { icon: "linkedin", url: "https://linkedin.com" },
-            ],
-        },
         {
             name: "Prashant Sharma",
             position: "Event Manager",
@@ -101,65 +89,65 @@ let executives: Member[][] = [
                 { icon: "linkedin", url: "https://linkedin.com" },
             ],
         },
-    ],
-    [
         {
-            name: "Roshan Giri",
-            position: "Outreach Manager",
-            level: "Bachelor in Aerospace Engineering",
-            college: "Pulchowk Campus",
-            image: "/images/roshan_giri.png",
-            links: [
-                { icon: "facebook", url: "https://facebook.com/" },
-                { icon: "instagram", url: "https://instagram.com" },
-                { icon: "linkedin", url: "https://linkedin.com" },
-            ],
-        },
-        {
-            name: "Prajjwal Pandey",
-            position: "Webmaster",
-            level: "Bachelor in Computer Engineering",
-            college: "Pulchowk Campus",
-            links: [
-                { icon: "facebook", url: "https://facebook.com/" },
-                { icon: "instagram", url: "https://instagram.com" },
-                { icon: "linkedin", url: "https://linkedin.com" },
-            ],
-        },
-        {
-            name: "Aashirbad Bhandari",
-            position: "Webmaster",
-            level: "Bachelor in Electrical Engineering",
-            college: "Pulchowk Campus",
-            links: [
-                { icon: "facebook", url: "https://facebook.com/" },
-                { icon: "instagram", url: "https://instagram.com" },
-                { icon: "linkedin", url: "https://linkedin.com" },
-            ],
-        },
-    ],
-    [
-        {
-            name: "Dhiraj Thapa",
-            position: "Graphic Designer",
-            level: "Bachelor in Computer Engineering",
-            college: "Pulchowk Campus",
-            links: [
-                { icon: "facebook", url: "https://facebook.com/" },
-                { icon: "instagram", url: "https://instagram.com" },
-                { icon: "linkedin", url: "https://linkedin.com" },
-            ],
-        },
-        {
-            name: "Tirsana Dhami",
-            position: "Social Media Manager",
+            name: "Ishan Simkhada",
+            position: "Graphics Designer",
             level: "Bachelor in Civil Engineering",
             college: "Pulchowk Campus",
-            image: "/images/tirsana_dhami.png",
+            image: "/images/ishan_simkhada.png",
+            links: [
+                { icon: "facebook", url: "https://www.facebook.com/ishaanchamp101" },
+                { icon: "instagram", url: "https://www.instagram.com/ishaanchamp101/" },
+                { icon: "linkedin", url: "https://www.linkedin.com/in/ishan-simkhada-5535ba264/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+            ],
+        },
+        {
+            name: "Niharika Bhattarai",
+            position: "Finance Manager",
+            level: "Bachelor in Civil Engineering",
+            college: "Pulchowk Campus",
             links: [
                 { icon: "facebook", url: "https://facebook.com/" },
                 { icon: "instagram", url: "https://instagram.com" },
                 { icon: "linkedin", url: "https://linkedin.com" },
+            ],
+        },
+    ],
+    [
+        {
+            name: "Shishir Acharya",
+            position: "Research Sub-Coordinator",
+            level: "Bachelor in Aerospace Engineering",
+            college: "Pulchowk Campus",
+            links: [
+                { icon: "facebook", url: "https://facebook.com/" },
+                { icon: "instagram", url: "https://instagram.com" },
+                { icon: "linkedin", url: "https://linkedin.com" },
+            ],
+        },
+        {
+            name: "Chahana Thapa Magar",
+            position: "Research Sub-Coordinator",
+            level: "Bachelor in Mechanical Engineering",
+            college: "Pulchowk Campus",
+            links: [
+                { icon: "facebook", url: "https://facebook.com/" },
+                { icon: "instagram", url: "https://instagram.com" },
+                { icon: "linkedin", url: "https://linkedin.com" },
+            ],
+        },
+    ],
+    [
+        {
+            name: "Sandip Katel",
+            position: "IT Head",
+            level: "Bachelor in Computer Engineering",
+            college: "Pulchowk Campus",
+            image: "/images/sandip_katel.png",
+            links: [
+                { icon: "facebook", url: "https://www.facebook.com/sandip.katel.9/" },
+                { icon: "instagram", url: "https://instagram.com" },
+                { icon: "linkedin", url: "https://www.linkedin.com/in/sandip-katel-7904b9198/" },
             ],
         },
     ],

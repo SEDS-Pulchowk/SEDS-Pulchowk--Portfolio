@@ -6,6 +6,7 @@ import Program from "@/components/Program";
 import who_we_are from "public/images/who_we_are.jpg";
 import SolarSystem from "@/components/SolarSystem";
 import TailStar from "@/components/TailStar";
+import DirectMessage from "@/components/DirectMessage";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -31,7 +32,7 @@ export default function Home() {
             </p>
           </div>
           <Link href="/join-seds">
-          <button className={styles.join_us_button}>Join Us</button></Link>
+          <button className={styles.join_us_button}>Join SEDS</button></Link>
         </section>
       </div>
 
@@ -131,6 +132,7 @@ export default function Home() {
           )}
         </div>
       </section>
+      <DirectMessage />
     </>
   );
 }

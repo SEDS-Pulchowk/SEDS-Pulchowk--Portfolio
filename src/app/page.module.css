@@ -7,22 +7,18 @@
 }
 
 .hero_banner::after {
-    content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      margin-top: 0;
-      width: 100vw;
-      height: 100vh;
-      background-image: url("/hero_background.png");
-      background-size: contain;
-      background-position: center;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/hero_background.png");
+  background-size: contain;
+  background-position: center;
   z-index: -2;
-  mask-image: radial-gradient(
-    ellipse at center,
-    black 30%,
-    transparent 90%
-  );
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 90%);
   -webkit-mask-image: radial-gradient(
     ellipse at center,
     black 30%,
@@ -40,7 +36,7 @@
 }
 
 .main_text_wrapper {
-    max-width: 60vw;
+  max-width: 60vw;
 }
 
 .main_header {
@@ -58,11 +54,18 @@
 
 .join_us_button {
   padding: 8px 16px;
-  border: 2px solid var(--gradient-start);
+  border: 2px inset var(--gradient-start);
   font-variant: small-caps;
   font-weight: 700;
   border-radius: 32px;
   max-width: fit-content;
+}
+
+.join_us_button:hover {
+  border-color: var(--gradient-end);
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .about_header {

@@ -29,7 +29,7 @@ const App = () => {
           rotation: (Math.random() - 0.5) * 360,
         },
       ]);
-    }, 10000);
+    }, 60000);
 
     return () => clearInterval(interval);
   }, []);
