@@ -7,7 +7,6 @@ import { Facebook, Instagram, LinkedIn, Discord } from "./icons";
 
 export default function Footer() {
   return (
-    <>
       <footer className={styles.footer}>
         <div className={styles.footer_upper}>
           <Link href="/" className={styles.logo_wrapper}>
@@ -127,6 +126,5 @@ export default function Footer() {
           </div>
         </div>
       </footer>
-    </>
   );
 }

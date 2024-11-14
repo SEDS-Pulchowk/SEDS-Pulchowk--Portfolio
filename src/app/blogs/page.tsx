@@ -1,17 +1,54 @@
-import { Tweet } from "react-tweet";
+"use client";
 import styles from "./page.module.css";
-import tweetsId from "./data";
+import Blogs from "./blogs_data";
+import Link from "next/link";
+import { useEffect } from "react";
 
-export default function Blogs() {
+export default function MediumEmbed() {
+  useEffect(() => {
+    // Load the iframely script dynamically
+    const script = document.createElement("script");
+    script.src = "https://static.medium.com/embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
-    <div className={styles.blogs_container}>
-      <h3>We are working on it.</h3>
-      <small className="text-primary">It is just a test model.</small>
-      <hr />
-      <div className={styles.container}>
-        {tweetsId.map((id, index) => (
-          <Tweet key={index} id={id} />
+    <div className={styles.blogs_main}>
+      <div className={styles.main_text}>
+        <h2>
+          Our Celestial <span className="gradient_text">Chronicles</span>
+        </h2>
+        <h6 className="text-danger">We are working on it.</h6>
+        <hr />
+      </div>
+      <div className={styles.blogs_container}>
+        {Blogs.map((blog, index) => (
+          <div
+            key={index}
+            className={`iframely-embed ${styles.content}`}
+            dangerouslySetInnerHTML={{
+               __html: `<a class="m-story" href=${blog.url}>${blog.headline}</a>`
+            }}
+          />
         ))}
+        {/*To DO: Image not working*/}
+      </div>
+      <div>
+        <hr />
+        <small>
+          Wanna a post too.{" "}
+          <Link
+            href="/#direct-message"
+            className="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+          >
+            Contact Us
+          </Link>
+        </small>
       </div>
     </div>
   );

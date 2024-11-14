@@ -132,7 +132,7 @@ export default function Home() {
           )}
         </div>
       </section>
-      <DirectMessage />
+      <DirectMessage/>
     </>
   );
 }
