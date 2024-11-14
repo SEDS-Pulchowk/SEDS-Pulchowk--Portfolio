@@ -120,10 +120,11 @@ let executives: Member[][] = [
     ],
     [
         {
-            name: "Shishir Acharya",
+            name: "Chahana Thapa Magar",
             position: "Research Sub-Coordinator",
-            level: "Bachelor in Aerospace Engineering",
+            level: "Bachelor in Mechanical Engineering",
             college: "Pulchowk Campus",
+            image: "/images/chahana_magar.jpg",
             links: [
                 { icon: "facebook", url: "https://facebook.com/" },
                 { icon: "instagram", url: "https://instagram.com" },
@@ -131,11 +132,10 @@ let executives: Member[][] = [
             ],
         },
         {
-            name: "Chahana Thapa Magar",
+            name: "Shishir Acharya",
             position: "Research Sub-Coordinator",
-            level: "Bachelor in Mechanical Engineering",
+            level: "Bachelor in Aerospace Engineering",
             college: "Pulchowk Campus",
-            image: "/images/chahana_magar.jpg",
             links: [
                 { icon: "facebook", url: "https://facebook.com/" },
                 { icon: "instagram", url: "https://instagram.com" },

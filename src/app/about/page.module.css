@@ -13,6 +13,7 @@
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   gap: 32px;
+  text-align: justify;
 }
 
 .about_image {
@@ -36,7 +37,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
   gap: 64px;
   margin: auto;
 }
@@ -68,27 +68,23 @@
     display: flex;
     gap: 32px;
     white-space: nowrap;
-    animation: autoScroll 300s linear infinite;
-}
+    animation: autoScroll 200s linear infinite;
+    /* To Do : Make the cards go round and round instead of going linearly always */
+  }
 
-.executives_row {
+  .executives_row {
     display: flex;
-    flex-shrink: 0; 
-    margin-top: 0;
-}
-
-.executives_wrapper:hover .executives_container,
-.executives_wrapper:active .executives_container,
-.executives_wrapper:focus-within .executives_container {
-    animation-play-state: paused;
-}
-
-.executives_card {
     flex-shrink: 0;
-    min-width: 300px;
-}
+    margin-top: 0;
+  }
 
-  .executives_card:hover {
+  .executives_wrapper:hover .executives_container,
+  .executives_wrapper:active .executives_container,
+  .executives_wrapper:focus-within .executives_container {
+    animation-play-state: paused;
+  }
+
+.executives_card:hover {
     transform: translateY(-2px);
   }
 
@@ -106,7 +102,7 @@
       transform: translateX(50%);
     }
     100% {
-      transform: translateX(2600px);
+      transform: translateX(2500px);
     }
   }
 }
@@ -119,16 +115,25 @@
 }
 
 @media (max-width: 738px) {
-    .executives_wrapper {
-        padding: 0;
-    }
+  .about_us {
+    margin: 100px 30px 50px 30px;
+  }
 
-    .executives_container {
-        animation: none;
-        flex-direction: column;
-    }
-    .executives_row {
-        display: flex;
-        flex-direction: column;
-      }
+  .executives_wrapper {
+    padding: 0;
+    background-color: red;
+  }
+
+  .executives_container {
+    animation: none;
+    flex-direction: column;
+  }
+  .executives_row {
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+  }
+  .executives_card {
+    width: 80px;
+  }
 }

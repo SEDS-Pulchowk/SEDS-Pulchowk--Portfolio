@@ -1,4 +1,6 @@
-"use clint";
+// About page component
+
+"use client";
 
 import styles from "./page.module.css";
 import MemberCard from "@/components/MemberCard";
@@ -58,3 +60,4 @@ export default function About() {
     </>
   );
 }
+

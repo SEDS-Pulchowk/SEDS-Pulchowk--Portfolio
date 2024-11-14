@@ -127,7 +127,7 @@
 
 .hamburger {
   display: none;
-  margin-right: 4vw;
+  margin-right: 40px;
   margin-top: 8px;
   align-items: center;
 }
@@ -232,5 +232,11 @@
   .hamburger_btn {
     height: 1.5rem;
     margin-top: 2px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hamburger{
+  margin-right: 10px;
   }
 }
