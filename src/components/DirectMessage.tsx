@@ -8,7 +8,7 @@ function DirectMessage() {
     <>
     <div data-bs-theme="dark" className={`${styles.direct_message_container}`}>
     < hr/>
-      <h3>Leave a Message</h3>
+      <h3>Leave a <span className="gradient_text">Message</span></h3>
       <form
         action="https://getform.io/f/ebpdyplb"
         method="POST"

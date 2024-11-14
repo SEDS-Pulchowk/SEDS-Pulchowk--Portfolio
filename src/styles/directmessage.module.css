@@ -1,29 +1,28 @@
-.messge_button {
+/* .messge_button {
     border-radius: 40px;
     padding: 3px 8px;
     font-weight: 600;
     font-variant: small-caps;
-}
+} */
 
-.messge_button:hover {
+/* .messge_button:hover {
     -webkit-text-fill-color: transparent;
     color: var(--gradient-start);
     background: var(--gradient);
     border-color: var(--gradient-end);
     background-clip: text;
-}
+} */
 
 .direct_message_container {
     text-align: center;
     margin: 10px auto;
-    margin-top: -110px;
     display: absolute;
-  width: 370px;
+    width: 350px;
 }
 
 .direct_message_container hr {
-    width: 200%;
-    margin-left: -50%;
+    width: 180%;
+    margin-left: -137px;
 }
 
 .direct_message_container :not(input) {

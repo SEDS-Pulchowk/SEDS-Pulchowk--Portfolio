@@ -35,12 +35,12 @@ export default function Footer() {
                   href="https://www.google.com/maps/place/Center+for+Energy+Studies/@27.6824252,85.3202171,418m/data=!3m1!1e3!4m14!1m7!3m6!1s0x39eb19cbf6b89eb7:0x951b3c8ac733e3ec!2sInstitute+of+Engineering,+Pulchowk+Campus!8m2!3d27.6812752!4d85.3172175!16s%2Fg%2F11c494jtbg!3m5!1s0x39eb19b647ec4263:0x33745c3bb36f27f!8m2!3d27.6831632!4d85.3208455!16s%2Fg%2F1hf0ywzs_?authuser=0&entry=ttu&g_ep=EgoyMDI0MTExMC4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                 >
-                  IOE Pulchowk Campus, Lalitpur, Nepal
+                  Pulchowk Engineering Campus, IOE, Lalitpur, Nepal
                 </Link>
               </span>
             </div>
             <div>
-              Email:
+              Email: &nbsp;
               <span className={styles.contact_link}>
                 <Link href="mailto:seds@pcampus.edu.np" target="_blank">
                   seds@pcampus.edu.np
@@ -48,7 +48,7 @@ export default function Footer() {
               </span>
             </div>
             <div>
-              Contact:
+              Contact: &nbsp;
               <span className={styles.contact_link}>
                 <Link href="tel:9817899305" target="_blank">
                   9817899305

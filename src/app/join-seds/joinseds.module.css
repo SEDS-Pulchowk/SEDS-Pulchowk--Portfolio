@@ -76,11 +76,10 @@
 
   
   .submit_button {
-    border: 2px solid var(--gradient-start);
+    border: 2px outset var(--gradient-start);
     border-radius: 40px;
     margin: 10px auto;
     padding: 8px 16px;
-    font-size: larger;
     font-weight: bold;
     font-variant: small-caps;
     width: 50%;
@@ -89,10 +88,10 @@
 
 .submit_button:hover {
   -webkit-text-fill-color: transparent;
-  color: var(--gradient-start);
-  background: var(--gradient);
-  border-color: var(--gradient-end);
-  background-clip: text;
+    color: var(--gradient-start);
+    background: var(--gradient);
+    border-color: var(--gradient-end);
+    background-clip: text;
 }
 
 

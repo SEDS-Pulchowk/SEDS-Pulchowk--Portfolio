@@ -53,6 +53,7 @@
 
 .contact {
   gap: 4px;
+  text-align: center;
   color: #b3b3b3;
 }
 
@@ -124,3 +125,15 @@
     font-size: 0.6rem;
   }
 }
+
+@media  (max-width: 420px) {
+  .contact {
+      font-size: 0.6em;
+      padding-left: 20px;
+  }
+
+  .logo_text {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+} 
