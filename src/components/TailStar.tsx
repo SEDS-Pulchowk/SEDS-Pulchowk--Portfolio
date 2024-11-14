@@ -23,11 +23,11 @@ const App = () => {
           id: Date.now(),
           startX: (Math.random()) * window.innerWidth,
           startY: (Math.random()) * window.innerHeight,
-          flyX: (Math.random() - 0.5) * window.innerWidth,
-          flyY: (Math.random()  - 0.5) * window.innerHeight,
+          flyX: (Math.random() - 0.5) * window.innerWidth * 2,
+          flyY: (Math.random()  - 0.5) * window.innerHeight * 2,
         },
       ]);
-    }, 60);
+    }, 30000);
 
     return () => clearInterval(interval);
   }, []);

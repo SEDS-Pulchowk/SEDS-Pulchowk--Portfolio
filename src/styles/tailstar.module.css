@@ -38,6 +38,7 @@
     }
     100% {
       transform: translate(var(--fly-x), var(--fly-y));
+      opacity: 0;
     }
   }
   

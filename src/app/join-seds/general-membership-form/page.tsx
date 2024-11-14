@@ -115,7 +115,7 @@ function NewGeneralMemberForm() {
   }
 
   return (
-    <form action="/action_page.php" method="get">
+    <form action="/action_page.php" method="get" autoComplete="on">
       <div className={styles.form_section}>
         <p>Welcome on board ✨</p>
 
@@ -200,8 +200,8 @@ function NewGeneralMemberForm() {
         />
       </div>
       <div className={styles.form_section}>
-        <label htmlFor="survey">
-          How did you hear about SEDS-Pulchowk? &nbsp;{" "}
+        <label>
+          How did you hear about SEDS-Pulchowk? &nbsp;
           <span className="text-danger">*</span>
         </label>
         <div className="form-check">
@@ -314,8 +314,8 @@ function NewGeneralMemberForm() {
         ></textarea>
       </div>
       <div className={styles.form_section}>
-        <label htmlFor="survey">
-          Have you ever been member of any other SEDS chapter before? &nbsp;{" "}
+        <label>
+          Have you ever been member of any other SEDS chapter before? &nbsp;
           &nbsp; <span className="text-danger">*</span>
         </label>
         <div className="form-check">
@@ -361,7 +361,7 @@ function NewGeneralMemberForm() {
         className={styles.form_section}
         style={{ display: "flex", flexDirection: "column" }}
       >
-        <label htmlFor="esewa-payment">Scan to pay your membership fee:</label>
+        <label>Scan to pay your membership fee:</label>
         <Image
           src="/Media/Payment/e-sewa-QR.png"
           alt="Esewa: 9817899305 Siddhant Yadav"
@@ -393,7 +393,7 @@ function NewGeneralMemberForm() {
 
 function ExistingMemberForm() {
   return (
-    <form action="/action_page.php" method="get">
+    <form action="/action_page.php" method="get" autoComplete="on">
       <div className={styles.form_section}>
         <p>
           Wanna be part of SEDS-Pulchowk for another tenure, then this page is
@@ -464,7 +464,7 @@ function ExistingMemberForm() {
         className={styles.form_section}
         style={{ display: "flex", flexDirection: "column" }}
       >
-        <label htmlFor="esewa-payment">Scan to pay your membership fee:</label>
+        <label>Scan to pay your membership fee:</label>
         <Image
           src="/Media/Payment/e-sewa-QR.png"
           alt="Esewa: 9817899305 Siddhant Yadav"

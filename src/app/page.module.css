@@ -27,8 +27,8 @@
 }
 
 .section {
+  margin: auto;
   margin-left: 64px;
-  margin-bottom: 128px;
 }
 
 .programs_section {
@@ -47,7 +47,6 @@
 }
 
 .main_text {
-  margin-top: 8px;
   margin-bottom: 32px;
   color: var(--text-light);
 }

@@ -12,13 +12,11 @@ function DirectMessage() {
       <form
         action="https://getform.io/f/ebpdyplb"
         method="POST"
-        autoComplete="on"
       >
         <div
           className={`form-group ${formStyles.form_section}`}
           style={{ minWidth: "300px", width: "40%" }}
         >
-          <label htmlFor="full-name"></label>
           <input
             type="full-name"
             name="Name"
