@@ -22,6 +22,7 @@ let executives: Member[][] = [
             position: "Vice-president",
             level: "Bachelor in Electrical Engineering",
             college: "Pulchowk Campus",
+            image: "/images/arpit_pokharel.jpg",
             links: [
                 { icon: "facebook", url: "https://facebook.com/" },
                 { icon: "instagram", url: "https://instagram.com" },
@@ -97,7 +98,6 @@ let executives: Member[][] = [
             position: "Graphics Designer",
             level: "Bachelor in Civil Engineering",
             college: "Pulchowk Campus",
-            // image: "/images/ishan_simkhada.png",
             image: "/images/ishan_simkhada.jpg",
             links: [
                 { icon: "facebook", url: "https://www.facebook.com/ishaanchamp101" },
@@ -136,6 +136,7 @@ let executives: Member[][] = [
             position: "Research Sub-Coordinator",
             level: "Bachelor in Aerospace Engineering",
             college: "Pulchowk Campus",
+            image: "/images/shishir_acharya.jpg",
             links: [
                 { icon: "facebook", url: "https://facebook.com/" },
                 { icon: "instagram", url: "https://instagram.com" },
@@ -149,7 +150,6 @@ let executives: Member[][] = [
             position: "IT Head",
             level: "Bachelor in Computer Engineering",
             college: "Pulchowk Campus",
-            // image: "/images/sandip_katel.png",
             image: "/images/sandip_katel.jpg",
             links: [
                 { icon: "facebook", url: "https://www.facebook.com/sandip.katel.9/" },
