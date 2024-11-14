@@ -74,21 +74,25 @@
     min-width: 150px;
 }
 
-.submit_button {
-  margin: 10px auto;
-  padding: 8px 16px;
-  border: 2px solid var(--gradient-start);
-  font-variant: small-caps;
-  font-weight: 2em;
-  border-radius: 32px;
-  width: 70%;
-  min-width: 100px;
+  
+  .submit_button {
+    border: 2px solid var(--gradient-start);
+    border-radius: 40px;
+    margin: 10px auto;
+    padding: 8px 16px;
+    font-size: larger;
+    font-weight: bold;
+    font-variant: small-caps;
+    width: 50%;
+    min-width: 100px;
 }
 
 .submit_button:hover {
-  background: var(--gradient);
-  background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: var(--gradient-start);
+  background: var(--gradient);
+  border-color: var(--gradient-end);
+  background-clip: text;
 }
 
 

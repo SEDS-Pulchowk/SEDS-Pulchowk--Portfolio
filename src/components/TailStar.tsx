@@ -1,7 +1,7 @@
 "use clint";
 
 import { useEffect, useState } from "react";
-import styles from "@/styles/tailstar.module.css"
+import styles from "@/styles/tailstar.module.css";
 
 const App = () => {
   interface Star {
@@ -10,9 +10,8 @@ const App = () => {
     startY: number;
     flyX: number;
     flyY: number;
-    rotation: number;
   }
-  
+
   const [stars, setStars] = useState<Star[]>([]);
 
   useEffect(() => {
@@ -22,21 +21,22 @@ const App = () => {
         ...stars,
         {
           id: Date.now(),
-          startX: Math.random() * window.innerWidth,
-          startY: Math.random() * window.innerHeight,
+          startX: (Math.random()) * window.innerWidth,
+          startY: (Math.random()) * window.innerHeight,
           flyX: (Math.random() - 0.5) * window.innerWidth,
-          flyY: (Math.random() - 0.5) * window.innerHeight,
-          rotation: (Math.random() - 0.5) * 360,
+          flyY: (Math.random()  - 0.5) * window.innerHeight,
         },
       ]);
-    }, 60000);
+    }, 60);
 
     return () => clearInterval(interval);
   }, []);
 
-const handleAnimationEnd = (id: number) => {
+  const handleAnimationEnd = (id: number) => {
     setStars((stars) => stars.filter((star) => star.id !== id));
-};
+  };
+
+  // stars.map((star) => console.log(Math.atan((star.flyY-star.startY)/(star.flyX-star.startX)) * 180 / Math.PI));
 
   return (
     <div className={styles.star_container}>
@@ -44,13 +44,19 @@ const handleAnimationEnd = (id: number) => {
         <div
           key={star.id}
           className={styles.star}
-          style={{
-            left: `${star.startX}px`,
-            top: `${star.startY}px`,
-            "--fly-x": `${star.flyX}px`,
-            "--fly-y": `${star.flyY}px`,
-            "--rotation": `${star.rotation}deg`,
-          } as React.CSSProperties}
+          style={
+            {
+              left: `${star.startX}px`,
+              top: `${star.startY}px`,
+              "--fly-x": `${star.flyX}px`,
+              "--fly-y": `${star.flyY}px`,
+              "--initial-rotation": `${
+                (Math.atan2(star.flyY - star.startY, star.flyX - star.startX) *
+                  180) /
+                Math.PI
+              }deg`,
+            } as React.CSSProperties
+          }
           onAnimationEnd={() => handleAnimationEnd(star.id)}
         />
       ))}
