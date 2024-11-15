@@ -29,9 +29,8 @@ export default function MediumEmbed() {
       </div>
       <div className={styles.blogs_container}>
         {Blogs.map((blog, index) => (
-          <Link href={blog.url}>
+          <Link key={index} href={blog.url}>
           <div
-            key={index}
             className={`iframely-embed ${styles.content}`}
             dangerouslySetInnerHTML={{
               __html: `<a class="m-story" href=${blog.url} >${blog.headline}</a>  
