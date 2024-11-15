@@ -1,4 +1,4 @@
-.blogs_main{
+.blogs_main {
   width: 85vw;
   margin: 100px auto 10px auto;
   text-align: center;
@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   padding: 20px 0;
   gap: 32px;
 }
@@ -19,6 +19,17 @@
   display: flex;
   width: 350px;
   height: auto;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b9/Youtube_loading_symbol_1_%28wobbly%29.gif"); /*Loading image if didn't load*/
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.content_image {
+  display: block;
+  width: 350px;
+  position: absolute;
+  mask-image: linear-gradient(#ffffff 5px, transparent 80%);
 }
 
 .main_text h2 {
@@ -26,7 +37,9 @@
 }
 
 .content * {
-  border: none !important;
-  box-shadow: 0px 0px 10px 0px #b1aeaea3 !important;
   border-radius: 10px;
+}
+
+.loading_gif {
+  z-index: -2;
 }

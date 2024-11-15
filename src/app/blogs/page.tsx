@@ -2,6 +2,7 @@
 import styles from "./page.module.css";
 import Blogs from "./blogs_data";
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect } from "react";
 
 export default function MediumEmbed() {
@@ -32,11 +33,11 @@ export default function MediumEmbed() {
             key={index}
             className={`iframely-embed ${styles.content}`}
             dangerouslySetInnerHTML={{
-               __html: `<a class="m-story" href=${blog.url}>${blog.headline}</a>`
+              __html: `<a class="m-story" href=${blog.url} style="z-index: 10">${blog.headline}</a> 
+                         <img src=${blog.imageUrl} alt=${blog.headline} class=${styles.content_image} width={300} height={200}/>`,
             }}
           />
         ))}
-        {/*To DO: Image not working*/}
       </div>
       <div>
         <hr />

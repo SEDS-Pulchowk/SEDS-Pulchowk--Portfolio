@@ -17,12 +17,16 @@
     text-align: center;
     margin: 10px auto;
     display: absolute;
-    width: 350px;
+    width: 340px;
 }
 
 .direct_message_container hr {
     width: 180%;
     margin-left: -137px;
+}
+
+.direct_message_container h3 {
+    font-size: 25px;
 }
 
 .direct_message_container :not(input) {
