@@ -7,7 +7,6 @@ let executives: Member[][] = [
             position: "President",
             level: "Bachelor in Mechanical Engineering",
             college: "Pulchowk Campus",
-            // image: "/images/siddhant_yadav.png",
             image: "/images/siddhant_yadav.jpg",
             links: [
                 { icon: "facebook", url: "https://facebook.com/" },
@@ -122,7 +121,7 @@ let executives: Member[][] = [
         {
             name: "Chahana Thapa Magar",
             position: "Research Sub-Coordinator",
-            level: "Bachelor in Mechanical Engineering",
+            level: "Bachelor in Chemical Engineering",
             college: "Pulchowk Campus",
             image: "/images/chahana_magar.jpg",
             links: [
