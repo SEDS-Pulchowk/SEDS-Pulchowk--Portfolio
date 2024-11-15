@@ -20,7 +20,7 @@ export function JoinSeds({ membershipType = "general" }: JoinSedsProps) {
             selected === "general" ? styles.navbar_button_active : ""
           }`}
         >
-          General Membership
+          General Member
         </button>
       </Link>
       <Link href="/join-seds/executive-form">
@@ -30,7 +30,7 @@ export function JoinSeds({ membershipType = "general" }: JoinSedsProps) {
             selected === "executive" ? styles.navbar_button_active : ""
           }`}
         >
-          Executive Comitee
+          Executive Member
         </button>
       </Link>
     </div>

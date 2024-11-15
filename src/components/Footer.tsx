@@ -44,8 +44,8 @@ export default function Footer() {
               </span>
               , &nbsp;
               <span className={styles.contact_link}>
-                <Link href="tel:9866140676" target="_blank">
-                  9866140676
+                <Link href="tel:9762786755" target="_blank">
+                  9762786755
                 </Link>
               </span>
             </div>

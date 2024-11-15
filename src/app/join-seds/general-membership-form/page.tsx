@@ -27,7 +27,7 @@ export default function GeneralForm() {
               Being a member of SEDS Pulchowk comes with numerous benefits,
               including:
             </p>
-            <ul style={{ marginLeft: "10px" }}>
+            <ol>
               <li>
                 <strong>Priority Access:</strong> Students will receive first
                 priority for all workshops, seminars, and events organized by
@@ -43,7 +43,7 @@ export default function GeneralForm() {
                 <strong>Project Involvement:</strong> Get the chance to work on
                 exciting space-related projects within SEDS Pulchowk.
               </li>
-            </ul>
+            </ol>
             <br />
             <h4>Membership Fee</h4>
             <div style={{ marginLeft: "20px" }}>
