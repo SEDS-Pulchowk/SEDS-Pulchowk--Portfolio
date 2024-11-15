@@ -168,8 +168,7 @@
   width: var(--jupitor-size);
   margin-top: calc(-0.5 * var(--jupitor-size));
   margin-left: calc(-0.5 * var(--jupitor-size));
-  /* background: #c76e2a; */
-  background: radial-gradient(ellipse at center, #c76e7a 0%, #808080 100%);
+  background: radial-gradient(ellipse at 8px , #c99039 6%, #a59186 15%, #d8ca9d 70%, #e3dccb 100%);
 }
 
 .saturn {
@@ -192,17 +191,16 @@
 .saturn:after {
   position: absolute;
   content: "";
-  height: calc(0.5 * var(--saturn-size));
-  width: calc(1.2 * var(--saturn-size));
-  left: calc(9.35 * var(--saturn-size));
-  top: calc(-0.3 * var(--saturn-size));
-  transform: rotateZ(-93deg);
-  border-radius: 50% 50% 50% 50%;
-  box-shadow: 0 3px 0 1px #987641, 6px 1px 0 #987641, -6px 1px 0 #987641;
+  height: calc(0.45 * var(--saturn-size));
+  width: calc(1.4 * var(--saturn-size));
+  left: calc(9.3 * var(--saturn-size));
+  top: calc(-0.25 * var(--saturn-size));
+  border-radius: 50%;
+  box-shadow: 0 2px 0 1px #987641, 7px 1px 0 #987641, -7px 1px 0 #987641;
   --start-rotation: 30deg;
   animation: orb calc(var(--year-in-second) * 29.4285) linear infinite;
   animation-direction: reverse;
-  transform-origin: 52% 60%;
+  transform-origin: 54% 65%;
 }
 
 .uranus {
@@ -236,7 +234,6 @@
   width: var(--neptune-size);
   margin-top: calc(-0.5 * var(--neptune-size));
   margin-left: calc(-0.5 * var(--neptune-size));
-  /* background: #175ebb; */
   background: #2990b5;
 }
 

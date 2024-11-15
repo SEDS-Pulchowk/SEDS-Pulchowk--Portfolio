@@ -29,25 +29,27 @@ export default function MediumEmbed() {
       </div>
       <div className={styles.blogs_container}>
         {Blogs.map((blog, index) => (
+          <Link href={blog.url}>
           <div
             key={index}
             className={`iframely-embed ${styles.content}`}
             dangerouslySetInnerHTML={{
-              __html: `<a class="m-story" href=${blog.url} style="z-index: 10">${blog.headline}</a> 
+              __html: `<a class="m-story" href=${blog.url} >${blog.headline}</a>  
                          <img src=${blog.imageUrl} alt=${blog.headline} class=${styles.content_image} width={300} height={200}/>`,
-            }}
+            }} 
           />
+         </Link>
         ))}
       </div>
       <div>
         <hr />
         <small>
-          Wanna a post too.{" "}
+          Wanna launch your blog into orbit.{" "}
           <Link
             href="/#direct-message"
             className="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
           >
-            Contact Us
+            Send Link
           </Link>
         </small>
       </div>
