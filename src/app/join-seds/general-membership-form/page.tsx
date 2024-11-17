@@ -3,6 +3,8 @@
 import { ChangeEvent, useState, useEffect, FormEvent } from "react";
 import Image from "next/image";
 import styles from "../joinseds.module.css";
+import { PaperPlaneCheck } from "@/components/Molecules/icons";
+import buttonStyles from "@/styles/Atoms/buttonstyles.module.css";
 import { JoinSeds } from "../joinseds";
 
 interface OrginalFormProps {
@@ -400,9 +402,12 @@ function NewGeneralMemberForm() {
       </div>
       <button
         type="submit"
-        className={`btn btn-normal ${styles.submit_button}`}
+        className={`btn btn-normal ${buttonStyles.click_button}`}
       >
+        <PaperPlaneCheck />
+        &nbsp;
         Submit
+        &nbsp; &nbsp; &nbsp;
       </button>
     </form>
   );
@@ -503,9 +508,12 @@ function ExistingMemberForm() {
       </div>
       <button
         type="submit"
-        className={`btn btn-normal ${styles.submit_button}`}
+        className={`btn btn-normal ${buttonStyles.click_button}`}
       >
+        <PaperPlaneCheck />
+         &nbsp;
         Submit
+        &nbsp; &nbsp; &nbsp;
       </button>
     </form>
   );

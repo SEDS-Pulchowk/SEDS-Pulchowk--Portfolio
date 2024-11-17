@@ -1,4 +1,5 @@
 import styles from "@/styles/Molecules/directmessage.module.css";
+import buttonStyles from "@/styles/Atoms/buttonstyles.module.css";
 import formStyles from "@/app/join-seds/joinseds.module.css";
 import { PaperPlane } from "./icons";
 
@@ -58,7 +59,7 @@ function DirectMessage() {
             required
           ></textarea>
         </div>
-        <div className={`${formStyles.submit_button} ${styles.messge_button}`}>
+        <div className={`${buttonStyles.click_button} ${styles.messge_button}`}>
           <button id="submit" type="submit">
             <PaperPlane />
             &nbsp; &nbsp; Send Message

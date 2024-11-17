@@ -96,14 +96,6 @@
 .join_us {
   padding: 2px 8px;
   font-weight: 700;
-  font-variant: small-caps;
-  border: 2px outset var(--gradient-start);
-  border-radius: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  transition: all 200ms ease-in-out;
 }
 
 .star {
@@ -111,12 +103,6 @@
   opacity: 0;
   transition: opacity 200ms ease-in-out, scale 200ms ease-in-out;
   scale: 0;
-}
-
-.join_us:hover {
-  background: var(--gradient);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .join_us:hover > .star {

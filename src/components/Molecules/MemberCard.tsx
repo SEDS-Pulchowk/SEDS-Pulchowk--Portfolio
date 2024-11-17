@@ -1,5 +1,5 @@
 import { Member, SocialIcon } from "@/types";
-import { Facebook, Instagram, LinkedIn } from "./icons";
+import { Facebook, Instagram, LinkedIn } from "../Molecules/icons";
 import styles from "@/styles/Molecules/membercard.module.css";
 import Link from "next/link";
 import Image from "next/image";

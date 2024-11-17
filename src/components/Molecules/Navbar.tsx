@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Star } from "./icons";
 import styles from "@/styles/Molecules/navbar.module.css";
+import buttonStyles from "@/styles/Atoms/buttonstyles.module.css";
 import logo from "public/logo.svg";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -63,7 +64,7 @@ function NavbarItems() {
         </Link>
       </li>
       <Link href="/join-seds" className={styles.link}>
-        <button className={styles.join_us}>
+        <button className={`${buttonStyles.click_button} ${styles.join_us}`}>
           <span className={styles.star}>
             <Star />
           </span>
