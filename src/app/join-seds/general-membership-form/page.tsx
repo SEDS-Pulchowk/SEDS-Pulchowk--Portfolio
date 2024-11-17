@@ -1,12 +1,29 @@
 "use client";
 
-import { ChangeEvent, useState, useEffect } from "react";
+import { ChangeEvent, useState, useEffect, FormEvent } from "react";
 import Image from "next/image";
 import styles from "../joinseds.module.css";
 import { JoinSeds } from "../joinseds";
 
 interface OrginalFormProps {
   memberType: string;
+}
+
+function Submit(e: FormEvent<HTMLFormElement>) {
+  e.preventDefault();
+
+  const form = e.currentTarget;
+  const scriptURL =
+    "https://script.google.com/a/macros/pcampus.edu.np/s/AKfycbyaCtFMrHnVKvTV_UdgJP0ffSAQfxLli6CM3qO1lOWrU2v1EY4bw6iNoNYjvR0w95geDg/exec";
+
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) =>
+      alert("Thank you! Your form has been submitted successfully.")
+    )
+    .then(() => {
+      window.location.reload();
+    })
+    .catch((error) => console.error("Error!", error.message));
 }
 
 export default function GeneralForm() {
@@ -46,10 +63,10 @@ export default function GeneralForm() {
             </ol>
             <br />
             <h4>Membership Fee</h4>
-            <div style={{ marginLeft: "20px" }}>
+            <div style={{ marginLeft: "5px" }}>
               <em>For New Members: Nrs. 150/-</em>
               <br />
-              <em>For Existing Members/Renewal: Nrs. 45/-</em>
+              <em>For Existing Members: Nrs. 45/-</em>
             </div>
             <br />
             <p>
@@ -65,7 +82,7 @@ export default function GeneralForm() {
             </p>{" "}
             <select
               className={`form-select ${styles.select_dropdown}`}
-              name="member-type"
+              name="Member-Type"
               onChange={(e) => set_membership_type(e.target.value)}
               aria-label="Membership type select"
             >
@@ -115,7 +132,7 @@ function NewGeneralMemberForm() {
   }
 
   return (
-    <form action="/action_page.php" method="get" autoComplete="on">
+    <form onSubmit={(e) => Submit(e)} autoComplete="on">
       <div className={styles.form_section}>
         <p>Welcome on board ✨</p>
 
@@ -133,7 +150,7 @@ function NewGeneralMemberForm() {
         </label>
         <input
           type="full-name"
-          name="full-name"
+          name="Full-Name"
           className="form-control"
           id="full-name"
           required
@@ -148,7 +165,7 @@ function NewGeneralMemberForm() {
         </label>
         <input
           type="text"
-          name="class-roll-no"
+          name="Class-Roll-No"
           className="form-control"
           id="roll-no"
           placeholder="078BCT077"
@@ -164,7 +181,7 @@ function NewGeneralMemberForm() {
         </label>
         <input
           type="number"
-          name="mobile-no"
+          name="Mobile-No"
           className="form-control"
           id="mobile-no"
           placeholder="9700000000"
@@ -177,7 +194,7 @@ function NewGeneralMemberForm() {
         </label>
         <input
           type="email"
-          name="campus-email"
+          name="Campus-Email"
           className="form-control"
           id="email"
           placeholder="078bct077.sandip@pcampus.edu.np"
@@ -193,7 +210,7 @@ function NewGeneralMemberForm() {
         </label>
         <input
           type="date"
-          name="dob"
+          name="DOB"
           className="form-control"
           id="dob"
           required
@@ -208,7 +225,7 @@ function NewGeneralMemberForm() {
           <input
             className="form-check-input"
             type="radio"
-            name="source"
+            name="Source"
             id="socialMedia"
             value="Social Media"
             onChange={(e) => toggleSourceType(e)}
@@ -222,7 +239,7 @@ function NewGeneralMemberForm() {
           <input
             className="form-check-input"
             type="radio"
-            name="source"
+            name="Source"
             id="workshops"
             value="Workshops"
             onChange={(e) => toggleSourceType(e)}
@@ -235,7 +252,7 @@ function NewGeneralMemberForm() {
           <input
             className="form-check-input"
             type="radio"
-            name="source"
+            name="Source"
             id="poster"
             value="Promotional Poster"
             onChange={(e) => toggleSourceType(e)}
@@ -248,7 +265,7 @@ function NewGeneralMemberForm() {
           <input
             className="form-check-input"
             type="radio"
-            name="source"
+            name="Source"
             id="events"
             value="Events"
             onChange={(e) => toggleSourceType(e)}
@@ -261,7 +278,7 @@ function NewGeneralMemberForm() {
           <input
             className="form-check-input"
             type="radio"
-            name="source"
+            name="Source"
             id="other"
             value="Other"
             onChange={(e) => toggleSourceType(e)}
@@ -283,7 +300,7 @@ function NewGeneralMemberForm() {
         <textarea
           className="form-control"
           id="reason-to-join-seds"
-          name="reason"
+          name="Reason-to-Join"
           rows={2}
         ></textarea>
       </div>
@@ -296,7 +313,7 @@ function NewGeneralMemberForm() {
         <textarea
           className="form-control"
           id="expectation-from-seds"
-          name="expectation"
+          name="Expectation-form-SEDS"
           rows={2}
         ></textarea>
       </div>
@@ -309,7 +326,7 @@ function NewGeneralMemberForm() {
         <textarea
           className="form-control"
           id="contribution-to-seds"
-          name="contribution"
+          name="Contribution-to-SEDS"
           rows={2}
         ></textarea>
       </div>
@@ -322,7 +339,7 @@ function NewGeneralMemberForm() {
           <input
             className="form-check-input"
             type="radio"
-            name="member-of-seds-chapter-before"
+            name="Member-of-SEDS-Chapter-Before"
             id="member-before"
             value="yes"
             required
@@ -335,7 +352,7 @@ function NewGeneralMemberForm() {
           <input
             className="form-check-input"
             type="radio"
-            name="member-of-seds-chapter-before"
+            name="Member-of-SEDS-Chapter-Before"
             id="not-member-before"
             value="no"
           />
@@ -351,7 +368,7 @@ function NewGeneralMemberForm() {
         </label>
         <input
           className="form-control"
-          name="member-photo"
+          name="Member-Photo"
           type="file"
           id="photo"
           required
@@ -375,7 +392,7 @@ function NewGeneralMemberForm() {
         </label>
         <input
           className="form-control"
-          name="receipt"
+          name="Receipt"
           type="file"
           id="receipt"
           required
@@ -412,7 +429,7 @@ function ExistingMemberForm() {
         <label htmlFor="full-name">Full Name:</label>
         <input
           type="full-name"
-          name="full-name"
+          name="Full-Name"
           className="form-control"
           id="full-name"
         />
@@ -424,7 +441,7 @@ function ExistingMemberForm() {
         <label htmlFor="roll-no">Class Roll Number:</label>
         <input
           type="text"
-          name="class-roll-no"
+          name="Class-Roll-No"
           className="form-control"
           id="roll-no"
           placeholder="078BCT077"
@@ -440,7 +457,7 @@ function ExistingMemberForm() {
         </label>
         <input
           type="text"
-          name="membership-no"
+          name="Membership-No"
           className="form-control"
           id="membership-no"
           placeholder="PUL-081-SEDS-005"
@@ -453,7 +470,7 @@ function ExistingMemberForm() {
         </label>
         <input
           type="email"
-          name="campus-email"
+          name="Campus-Email"
           className="form-control"
           id="email"
           placeholder="078bct077.sandip@pcampus.edu.np"
@@ -478,7 +495,7 @@ function ExistingMemberForm() {
         </label>
         <input
           className="form-control"
-          name="receipt"
+          name="Receipt"
           type="file"
           id="receipt"
           required
