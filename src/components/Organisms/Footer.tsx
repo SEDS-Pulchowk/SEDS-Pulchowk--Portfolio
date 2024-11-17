@@ -1,9 +1,9 @@
 
-import styles from "@/styles/footer.module.css";
+import styles from "@/styles/Organisms/footer.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "public/logo.svg";
-import { Facebook, Instagram, LinkedIn, Discord } from "./icons";
+import { Facebook, Instagram, LinkedIn, Discord } from "@/components/Molecules/icons";
 
 export default function Footer() {
   return (

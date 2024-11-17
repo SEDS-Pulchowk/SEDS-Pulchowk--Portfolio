@@ -97,7 +97,6 @@
   padding: 2px 8px;
   font-weight: 700;
   font-variant: small-caps;
-  /* TODO: gradient doesn't work with border-radius */
   border: 2px outset var(--gradient-start);
   border-radius: 32px;
   display: flex;
@@ -136,29 +135,6 @@
   height: 1.8rem;
 }
 
-.sidenav_wrapper {
-  height: 100%;
-  position: fixed;
-  z-index: 9;
-  top: 0;
-  right: 0;
-  overflow-x: hidden;
-  visibility: hidden;
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-color: var(--background);
-  opacity: 0.5;
-}
-
-.sidenav_wrapper_shown {
-  width: 100%;
-  visibility: visible;
-}
-
 .sidenav {
   background-color: var(--background);
   margin-left: auto;
@@ -172,21 +148,6 @@
   font-size: 1.5rem;
   gap: 24px;
   transition: all 100ms ease-in-out;
-}
-
-.sidenav_wrapper_shown .sidenav {
-  width: 50%;
-}
-
-.sidenav_close_btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  height: 32px;
-  width: 32px;
 }
 
 @media (max-width: 1024px) {
@@ -210,8 +171,6 @@
 
   .hamburger {
     display: flex;
-    /* align-items: center;
-    justify-content: center; */
   }
 
 }
@@ -219,10 +178,6 @@
 @media (max-width: 640px) {
   .navbar {
     width: 90vw;
-  }
-
-  .sidenav_wrapper_shown .sidenav {
-    width: 100%;
   }
 
   .logo_text {

@@ -1,7 +1,7 @@
 "use clint";
 
 import { useEffect, useState } from "react";
-import styles from "@/styles/tailstar.module.css";
+import styles from "@/styles/Atoms/tailstar.module.css";
 
 const App = () => {
   interface Star {

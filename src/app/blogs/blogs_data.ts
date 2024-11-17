@@ -1,6 +1,7 @@
 //
 // Copy URL and Heading(alt) from  Medium and create new opject inside array 
 //URL format: https://medium.com/@username/....
+//If there is no image in post it is optional
 
 let Blogs = [
     {url: "https://medium.com/@michaeltrigg/40-things-you-might-not-know-about-planet-earth-our-solar-system-and-the-universe-4deee7c6a53f",
@@ -31,6 +32,10 @@ let Blogs = [
     {url: "https://medium.com/@frenchrobson/spacex-mars-on-the-menu-e11ae7caf33a",
         headline: "SpaceX: Mars on the Menu?",
         imageUrl: "https://miro.medium.com/v2/resize:fit:828/format:webp/0*CzSc2JMTauPs6V06"
+    },
+
+    {url: "https://medium.com/@starwalk/venus-veers-past-saturn-mars-snuggles-a-double-star-and-full-moonlight-floods-the-night-sky-ac4311c5a74b",
+        headline: "Venus Veers past Saturn, Mars Snuggles a Double Star, and Full Moonlight Floods the Night Sky!",
     },
 
 ]

@@ -84,10 +84,10 @@
 }
 
 .submit_button:hover {
-  -webkit-text-fill-color: transparent;
+  border: 2px inset var(--gradient-end);
   color: var(--gradient-start);
   background: var(--gradient);
-  border-color: var(--gradient-end);
+  -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 

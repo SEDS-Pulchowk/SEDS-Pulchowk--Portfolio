@@ -1,17 +1,19 @@
-import styles from "@/styles/directmessage.module.css";
+import styles from "@/styles/Molecules/directmessage.module.css";
 import formStyles from "@/app/join-seds/joinseds.module.css";
 import { PaperPlane } from "./icons";
 
-
 function DirectMessage() {
   return (
-    <div data-bs-theme="dark" className={`${styles.direct_message_container}`} id="direct-message">
-    < hr/>
-      <h3>Space Station:<span className="gradient_text"> Message Bay</span></h3>
-      <form
-        action="https://getform.io/f/ebpdyplb"
-        method="POST"
-      >
+    <div
+      data-bs-theme="dark"
+      className={`${styles.direct_message_container}`}
+      id="direct-message"
+    >
+      <hr />
+      <h3>
+        Space Station:<span className="gradient_text"> Message Bay</span>
+      </h3>
+      <form action="https://getform.io/f/ebpdyplb" method="POST">
         <div
           className={`form-group ${formStyles.form_section}`}
           style={{ minWidth: "300px", width: "40%" }}
@@ -59,8 +61,7 @@ function DirectMessage() {
         <div className={`${formStyles.submit_button} ${styles.messge_button}`}>
           <button id="submit" type="submit">
             <PaperPlane />
-            &nbsp; &nbsp;
-            Send Message
+            &nbsp; &nbsp; Send Message
           </button>
         </div>
       </form>

@@ -2,7 +2,6 @@
 import styles from "./page.module.css";
 import Blogs from "./blogs_data";
 import Link from "next/link";
-import Image from "next/image";
 import { useEffect } from "react";
 
 export default function MediumEmbed() {
@@ -35,7 +34,7 @@ export default function MediumEmbed() {
               className={`iframely-embed ${styles.content}`}
               dangerouslySetInnerHTML={{
                 __html: `<a class="m-story" href=${blog.url} >${blog.headline}</a>  
-                         <img src=${blog.imageUrl} alt=${blog.headline} class=${styles.content_image} width={300} height={200}/>`,
+                         <img src=${blog.imageUrl || "https://miro.medium.com/v2/resize:fit:1400/1*2Ccm1VIYlLt6pMq5snIgwQ.gif"} alt=${blog.headline} class=${styles.content_image} width={300} height={200}/>`,
               }}
             />
           </Link>
@@ -49,7 +48,7 @@ export default function MediumEmbed() {
             href="/#direct-message"
             className="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
           >
-            Send Link
+            Contact us
           </Link>
         </small>
       </div>

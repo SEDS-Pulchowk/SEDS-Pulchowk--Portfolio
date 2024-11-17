@@ -3,7 +3,7 @@
 "use client";
 
 import styles from "./page.module.css";
-import MemberCard from "@/components/MemberCard";
+import MemberCard from "@/components/Molecules/MemberCard";
 import executives from "./executives";
 import Image from "next/image";
 import who_we_are from "/public/images/who_we_are.jpg";
@@ -60,4 +60,3 @@ export default function About() {
     </>
   );
 }
-

@@ -2,26 +2,29 @@
 
 import Image from "next/image";
 import { Star } from "./icons";
-import styles from "@/styles/navbar.module.css";
+import styles from "@/styles/Molecules/navbar.module.css";
 import logo from "public/logo.svg";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars,
+import {
+  faBars,
   faCode,
   faBlog,
   faInfoCircle,
-  faListCheck
- } from "@fortawesome/free-solid-svg-icons";
+  faListCheck,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
-  // const [sideNavShown, setSideNavShown] = useState(false);
-
   return (
     <div className={styles.navbar_wrapper}>
       <div className={styles.navbar_border}>
         <nav className={styles.navbar}>
           <Link href="/" className={styles.logo_wrapper}>
-            <Image alt="Seds-Pulchowk Logo" className={styles.logo_image} src={logo} />
+            <Image
+              alt="Seds-Pulchowk Logo"
+              className={styles.logo_image}
+              src={logo}
+            />
             <h3 className={styles.logo_text}>
               SEDS-<span className="gradient_text">Pulchowk</span>
             </h3>
@@ -29,35 +32,9 @@ export default function Navbar() {
           <ul className={styles.navbar_large}>
             <NavbarItems />
           </ul>
-          {/* <button
-            className={styles.hamburger}
-            onClick={() => setSideNavShown(true)}
-          >
-            <Hamburger />
-          </button> */}
-          <HamburgerButton />
+          <HamburgerButtonItems />
         </nav>
       </div>
-
-      {/* <div
-        className={`${styles.sidenav_wrapper} ${
-          sideNavShown ? styles.sidenav_wrapper_shown : ""
-        }`}
-      >
-        <div
-          className={styles.overlay}
-          onClick={() => setSideNavShown(false)}
-        ></div>
-        <button
-          onClick={() => setSideNavShown(false)}
-          className={styles.sidenav_close_btn}
-        >
-          <Close />
-        </button>
-        <ul className={styles.sidenav}>
-          <NavbarItems />
-        </ul>
-      </div> */}
     </div>
   );
 }
@@ -68,26 +45,21 @@ function NavbarItems() {
       <li className={styles.navbar_item}>
         <Link href="/#Programs" className={styles.link}>
           <span>Programs</span>
-          {/* <span className={styles.navbar_circle}><Circle /></span> */}
         </Link>
       </li>
-      {/* TODO: Show projects when clicked */}
       <li className={styles.navbar_item}>
         <Link href="/#Projects" className={styles.link}>
           <span>Projects</span>
-          {/* <span className={styles.navbar_circle}><Circle /></span> */}
         </Link>
       </li>
       <li className={styles.navbar_item}>
         <Link href="/blogs" className={styles.link}>
           <span>Blogs</span>
-          {/* <span className={styles.navbar_circle}><Circle /></span> */}
         </Link>
       </li>
       <li className={styles.navbar_item}>
         <Link href="/about" className={styles.link}>
           <span>About Us</span>
-          {/* <span className={styles.navbar_circle}><Circle /></span> */}
         </Link>
       </li>
       <Link href="/join-seds" className={styles.link}>
@@ -95,7 +67,7 @@ function NavbarItems() {
           <span className={styles.star}>
             <Star />
           </span>
-          <span>Join Us</span>
+          <span>Join SEDS</span>
           <span className={styles.star}>
             <Star />
           </span>
@@ -105,7 +77,7 @@ function NavbarItems() {
   );
 }
 
-function HamburgerButton() {
+function HamburgerButtonItems() {
   return (
     <div
       data-bs-theme="dark"
@@ -120,34 +92,34 @@ function HamburgerButton() {
         aria-haspopup="true"
         aria-expanded="false"
       >
-        <FontAwesomeIcon className={styles.hamburger_btn} icon={faBars} size="2x"/>
+        <FontAwesomeIcon
+          className={styles.hamburger_btn}
+          icon={faBars}
+          size="2x"
+        />
       </button>
       <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <Link href="/#Programs" className="dropdown-item">
-        <FontAwesomeIcon icon={faCode} />
-          <span>&nbsp;  Programs</span>
+          <FontAwesomeIcon icon={faCode} />
+          <span>&nbsp; Programs</span>
         </Link>
         <Link href="/#Projects" className="dropdown-item">
           <FontAwesomeIcon icon={faListCheck} />
           <span>&nbsp; Projects</span>
         </Link>
         <Link href="/blogs" className="dropdown-item">
-          <FontAwesomeIcon icon={faBlog}/>
+          <FontAwesomeIcon icon={faBlog} />
           <span>&nbsp; Blogs</span>
         </Link>
         <Link href="/about" className="dropdown-item">
-        <FontAwesomeIcon icon={faInfoCircle} />
+          <FontAwesomeIcon icon={faInfoCircle} />
           <span>&nbsp; About Us</span>
         </Link>
         <Link href="/join-seds" className="dropdown-item">
           <button className={styles.join_us}>
-             <span className={styles.star}>
-              <Star />
-            </span> 
-            <span>Join Us</span>
-             <span className={styles.star}>
-              <Star />
-            </span> 
+            <span className={styles.star}></span>
+            <span>Join SEDS</span>
+            <span className={styles.star}></span>
           </button>
         </Link>
       </div>

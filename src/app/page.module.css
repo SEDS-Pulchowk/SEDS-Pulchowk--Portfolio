@@ -52,22 +52,6 @@
   color: var(--text-light);
 }
 
-.join_us_button {
-  padding: 8px 16px;
-  border: 2px inset var(--gradient-start);
-  font-variant: small-caps;
-  font-weight: 700;
-  border-radius: 32px;
-  max-width: fit-content;
-}
-
-.join_us_button:hover {
-  border-color: var(--gradient-end);
-  background: var(--gradient);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .about_section {
   margin: 32px 10px 50px 50px;
 }

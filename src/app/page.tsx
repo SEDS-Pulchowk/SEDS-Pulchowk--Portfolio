@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import styles from "./page.module.css";
-import Program from "@/components/Program";
+import Program from "@/components/Molecules/Program";
 import who_we_are from "public/images/who_we_are.jpg";
-import SolarSystem from "@/components/SolarSystem";
-import TailStar from "@/components/TailStar";
-import DirectMessage from "@/components/DirectMessage";
+import SolarSystem from "@/components/Atoms/SolarSystem";
+import TailStar from "@/components/Atoms/TailStar";
+import DirectMessage from "@/components/Molecules/DirectMessage";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -16,8 +16,8 @@ export default function Home() {
   return (
     <>
       <div className={styles.hero_banner}>
-          <SolarSystem />
-          <TailStar />
+        <SolarSystem />
+        <TailStar />
         <section className={styles.section}>
           <div className={styles.main_text_wrapper}>
             <h1 className={styles.main_header}>
@@ -31,8 +31,6 @@ export default function Home() {
               Lorem ipsum is the industrial language too be used
             </p>
           </div>
-          <Link href="/join-seds">
-          <button className={styles.join_us_button}>Join SEDS</button></Link>
         </section>
       </div>
 
@@ -132,7 +130,7 @@ export default function Home() {
           )}
         </div>
       </section>
-      <DirectMessage/>
+      <DirectMessage />
     </>
   );
 }
