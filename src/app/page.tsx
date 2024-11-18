@@ -7,8 +7,7 @@ import who_we_are from "public/images/who_we_are.jpg";
 import SolarSystem from "@/components/Atoms/SolarSystem";
 import TailStar from "@/components/Atoms/TailStar";
 import DirectMessage from "@/components/Molecules/DirectMessage";
-import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function Home() {
   let [selected, set_selected] = useState<"programs" | "projects">("programs");
@@ -96,41 +95,61 @@ export default function Home() {
               <span>Projects</span>
             </button>
           </div>
-          {selected == "programs" ? (
-            <div className={styles.program_items}>
-              <Program
-                title="Space A.I Art Challenges"
-                description="Space A.I Art chLLWNFWA I targest to wards the yound mind to ecplore the vast ocean of S.i and become the king og the pirates, gum gum, sorry cannon mhhhh, ahhh, ehh, aah, mhh, thing"
-                image="/images/ai_space_art_cover.png"
-                start={new Date(1703163822933)}
-                end={new Date(1703163822933)}
-                location="Online"
-              />
-
-              <Program
-                title="Space A.I Art Challenges"
-                description="Space A.I Art chLLWNFWA I targest to wards the yound mind to ecplore the vast ocean of S.i and become the king og the pirates, gum gum, sorry cannon mhhhh, ahhh, ehh, aah, mhh, thing"
-                image="/images/ai_space_art_cover.png"
-                start={new Date(1703163822933)}
-                end={new Date(1703163822933)}
-                location="Online"
-              />
-
-              <Program
-                title="Space A.I Art Challenges"
-                description="Space A.I Art chLLWNFWA I targest to wards the yound mind to ecplore the vast ocean of S.i and become the king og the pirates, gum gum, sorry cannon mhhhh, ahhh, ehh, aah, mhh, thing"
-                image="/images/ai_space_art_cover.png"
-                start={new Date(1703163822933)}
-                end={new Date(1703163822933)}
-                location="Online"
-              />
-            </div>
-          ) : (
-            <div>{/* TODO: */}</div>
-          )}
+          {selected == "programs" ? ProgramsProjects("program") : ProgramsProjects("project")}
         </div>
       </section>
       <DirectMessage />
     </>
   );
 }
+
+function ProgramsProjects() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [showLoadMoreButton, setShowLoadMoreButton] = useState(false);
+
+  const ref = useRef(null);
+
+  useEffect(() => {
+    if(ref.current) {
+      setShowLoadMoreButton(ref.current.scrollHeight !== 2 * ref.current.clientHeight);
+    }
+  }, []);
+
+  return (
+    <div ref={ref} className={styles.program_items}>
+      <Program
+        title="Space A.I Art Challenges"
+        description="Space A.I Art chLLWNFWA I targest to wards the yound mind to ecplore the vast ocean of S.i and become the king og the pirates, gum gum, sorry cannon mhhhh, ahhh, ehh, aah, mhh, thing"
+        image="/images/ai_space_art_cover.png"
+        start={new Date(1703163822933)}
+        end={new Date(1703163822933)}
+        location="Online"
+      />
+
+      <Program
+        title="Space A.I Art Challenges"
+        description="Space A.I Art chLLWNFWA I targest to wards the yound mind to ecplore the vast ocean of S.i and become the king og the pirates, gum gum, sorry cannon mhhhh, ahhh, ehh, aah, mhh, thing"
+        image="/images/ai_space_art_cover.png"
+        start={new Date(1703163822933)}
+        end={new Date(1703163822933)}
+        location="Online"
+      />
+
+      <Program
+        title="Space A.I Art Challenges"
+        description="Space A.I Art chLLWNFWA I targest to wards the yound mind to ecplore the vast ocean of S.i and become the king og the pirates, gum gum, sorry cannon mhhhh, ahhh, ehh, aah, mhh, thing"
+        image="/images/ai_space_art_cover.png"
+        start={new Date(1703163822933)}
+        end={new Date(1703163822933)}
+        location="Online"
+      />
+      {showLoadMoreButton && (
+        <button onClick={() => setIsOpen(!isOpen)} className={styles.load_more_button}>
+          {isOpen ? "Show Less" : "Load More"}
+        </button>
+      )}
+    </div>
+  );
+}
+
+

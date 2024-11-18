@@ -6,7 +6,7 @@ import styles from "./page.module.css";
 import MemberCard from "@/components/Molecules/MemberCard";
 import executives from "./executives";
 import Image from "next/image";
-import who_we_are from "/public/images/who_we_are.jpg";
+import executives_2081 from "/public/images/executives_2081.jpg";
 
 export default function About() {
   return (
@@ -33,7 +33,7 @@ export default function About() {
           <Image
             alt="Picture of SEDS-Pulchowk members and guests during NASA Space Apps Hackathon"
             className={styles.about_image}
-            src={who_we_are}
+            src={executives_2081}
           />
         </div>
       </section>
