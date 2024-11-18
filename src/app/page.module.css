@@ -125,13 +125,23 @@
   align-content: space-around;
   justify-content: space-between;
   gap: 32px;
+  height: 100%;
+}
+
+.load_button {
+  width: 25%;
+  border: 1px solid var(--gradient-end);
+  color: var(--gradient-end);
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.load_button:hover {
+  background-color: var(--gradient-end);
+  color: white;
 }
 
 @media (max-width: 1024px) {
-  /* .solar_system_wrapper {
-        right: -100px;
-    }  */
-
   .main_header {
     font-size: 3rem;
   }
@@ -147,9 +157,6 @@
 }
 
 @media (max-width: 728px) {
-  /* .solar_system_wrapper {
-        right: -150px;
-    } */
 
   .section {
     margin-left: 32px;

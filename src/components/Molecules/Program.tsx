@@ -1,4 +1,5 @@
-import { ArrowUpRight, Clock, LocationPin } from "./icons";
+import React from "react";
+import { ArrowUpRight, Clock, LocationPin, Hourglass } from "./icons";
 import styles from "@/styles/Molecules/program.module.css";
 import humanize from "humanize-duration";
 import Image from "next/image";
@@ -35,7 +36,7 @@ export default function Program({
         >
           {Date.now() > end.getTime()
             ? "Closed"
-            : humanize(end.getTime() - Date.now(), { largest: 1 })}
+            : humanize(end.getTime() - Date.now(), { largest: 1 }) } {Date.now() > end.getTime() ? "" : <Hourglass />}
         </div>
       </div>
       <h3 className={styles.title}>{title}</h3>

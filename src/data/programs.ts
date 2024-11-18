@@ -1,12 +1,12 @@
 const programs = [
   {
-    id: 2301,
-    title: "NASA Space Apps Challenge",
+    id: 2402,
+    title: "Canset Workshop",
     description:
-      "The NASA Space Apps Challenge is an international hackathon that occurs over 48 hours in cities around the world. The event embraces collaborative problem solving with a goal of producing relevant open-source solutions to address global needs applicable to both life on Earth and in space.",
-    image: "/images/Programs/space_app_challenge.png",
-    start: new Date(1703163822933),
-    end: new Date(1703163822933),
+      "A CanSat workshop is an educational event where participants design, build, and launch small satellites called CanSats. These miniature satellites are about the size of a soda can and are used to collect data from the atmosphere.",
+    image: "/images/Programs/cansat_pic.png",
+    start: new Date(1705977600000),
+    end: new Date(1706372800000),
     location: "Pulchowk Campus",
   },
   {
@@ -20,13 +20,13 @@ const programs = [
     location: "Online",
   },
   {
-    id: 2302,
-    title: "Canset Workshop",
+    id: 2301,
+    title: "NASA Space Apps Challenge",
     description:
-      "A CanSat workshop is an educational event where participants design, build, and launch small satellites called CanSats. These miniature satellites are about the size of a soda can and are used to collect data from the atmosphere.",
-    image: "/images/Programs/cansat_pic.png",
-    start: new Date(1703163822933),
-    end: new Date(1703163822933),
+      "The NASA Space Apps Challenge is an international hackathon that occurs over 48 hours in cities around the world. The event embraces collaborative problem solving with a goal of producing relevant open-source solutions to address global needs applicable to both life on Earth and in space.",
+    image: "/images/Programs/space_app_challenge.png",
+    start: new Date(1696646400000),
+    end: new Date(1696732800000),
     location: "Pulchowk Campus",
   },
 ];

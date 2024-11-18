@@ -2,13 +2,15 @@
 
 import Image from "next/image";
 import styles from "./page.module.css";
-import Program from "@/components/Molecules/Program";
 import who_we_are from "public/images/executives/who_we_are.jpg";
 import SolarSystem from "@/components/Atoms/SolarSystem";
 import TailStar from "@/components/Atoms/TailStar";
 import DirectMessage from "@/components/Molecules/DirectMessage";
+import Program from "@/components/Molecules/Program";
+import Project from "@/components/Molecules/Project";
 import programs from "@/data/programs";
-import { useState, useEffect, useRef } from "react";
+import projects from "@/data/projects";
+import { useState, useEffect } from "react";
 
 export default function Home() {
   let [selected, set_selected] = useState<"programs" | "projects">("programs");
@@ -66,7 +68,7 @@ export default function Home() {
 
       <section
         className={`${styles.section} ${styles.programs_section}`}
-        id="Programs"
+        id="Programs-and-Projects"
       >
         <div className={styles.programs_section_inner}>
           <div className={styles.programs_section_background}></div>
@@ -104,44 +106,75 @@ export default function Home() {
   );
 }
 
-function ProgramsAndProjects({ selected }: { selected: "programs" | "projects" }) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [showLoadMoreButton, setShowLoadMoreButton] = useState(false);
-
-  const ref = useRef<HTMLDivElement>(null);
+function useIsMobile(breakpoint = 720) {
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    if (ref.current) {
-      setShowLoadMoreButton(
-        ref.current.scrollHeight !== 2 * ref.current.clientHeight
-      );
-    }
-  }, []);
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < breakpoint);
+    };
+
+    checkMobile();
+
+    // Add event listener
+    window.addEventListener("resize", checkMobile);
+
+    // Cleanup
+    return () => window.removeEventListener("resize", checkMobile);
+  }, [breakpoint]);
+
+  return isMobile;
+}
+
+function ProgramsAndProjects({
+  selected,
+}: {
+  selected: "programs" | "projects";
+}) {
+  const isMobile = useIsMobile();
+  const [isOpen, setIsOpen] = useState(false);
+
+  {
+    /*TODO: Make following code efficient with cleanup*/
+  }
+  const programsToRender =
+    isMobile && !isOpen ? programs.slice(0, 2) : programs;
+  const projectsToRender =
+    isMobile && !isOpen ? projects.slice(0, 2) : projects;
 
   return (
-    <div ref={ref} className={styles.program_items}>
-      {selected == "programs" ? (
-        programs.map((program) => (
-          <Program
-            key={program.id}
-            title={program.title}
-            description={program.description}
-            image={program.image}
-            start={program.start}
-            end={program.end}
-            location={program.location}
-          />
-        ))
+    <div className={styles.program_items}>
+      {selected === "programs"
+        ? programsToRender.map((program) => (
+            <Program
+              key={program.id}
+              title={program.title}
+              description={program.description}
+              image={program.image}
+              start={program.start}
+              end={program.end}
+              location={program.location}
+            />
+          ))
+        : projectsToRender.map((project) => (
+            <Project
+              key={project.id}
+              title={project.title}
+              description={project.description}
+              image={project.image}
+              year={project.year}
+            />
+          ))}
+      {isMobile ? (
+        <button
+          type="button"
+          onClick={() => setIsOpen(!isOpen)}
+          className={styles.load_button}
+        >
+          {isOpen ? "Show Less..." : "Load More..."}
+        </button>
       ) : (
         ""
-      )}
-      {showLoadMoreButton && (
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className={styles.load_more_button}
-        >
-          {isOpen ? "Show Less" : "Load More"}
-        </button>
       )}
     </div>
   );

@@ -177,7 +177,7 @@
   margin-top: calc(-0.5 * var(--saturn-orbit-size));
   margin-left: calc(-0.5 * var(--saturn-orbit-size));
   --start-rotation: 235deg;
-  animation: orb calc(var(--year-in-second) * 29.4285) linear infinite;
+  animation: orb calc(1s * 29.4285) linear infinite;
 }
 
 .saturn:before {
@@ -193,14 +193,13 @@
   content: "";
   height: calc(0.45 * var(--saturn-size));
   width: calc(1.4 * var(--saturn-size));
-  left: calc(9.3 * var(--saturn-size));
-  top: calc(-0.25 * var(--saturn-size));
+  left: calc(9.31 * var(--saturn-size));
+  top: calc(-0.2 * var(--saturn-size));
   border-radius: 50%;
   box-shadow: 0 2px 0 1px #987641, 7px 1px 0 #987641, -7px 1px 0 #987641;
-  --start-rotation: 80deg;
-  animation: orb calc(var(--year-in-second) * 29.4285) linear infinite;
+  --start-rotation: 115deg;
+  animation: orb calc(1s * 29.4285) linear infinite;
   animation-direction: reverse;
-  transform-origin: 54% 65%;
 }
 
 .uranus {

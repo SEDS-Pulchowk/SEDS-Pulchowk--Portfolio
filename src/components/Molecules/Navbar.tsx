@@ -44,12 +44,12 @@ function NavbarItems() {
   return (
     <>
       <li className={styles.navbar_item}>
-        <Link href="/#Programs" className={styles.link}>
+        <Link href="/#Programs-and-Projects" className={styles.link}>
           <span>Programs</span>
         </Link>
       </li>
       <li className={styles.navbar_item}>
-        <Link href="/#Projects" className={styles.link}>
+        <Link href="/#Programs-and-Projects" className={styles.link}>
           <span>Projects</span>
         </Link>
       </li>
@@ -100,11 +100,11 @@ function HamburgerButtonItems() {
         />
       </button>
       <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <Link href="/#Programs" className="dropdown-item">
+        <Link href="/#Programs-and-Projects" className="dropdown-item">
           <FontAwesomeIcon icon={faCode} />
           <span>&nbsp; Programs</span>
         </Link>
-        <Link href="/#Projects" className="dropdown-item">
+        <Link href="/#Programs-and-Projects" className="dropdown-item">
           <FontAwesomeIcon icon={faListCheck} />
           <span>&nbsp; Projects</span>
         </Link>
