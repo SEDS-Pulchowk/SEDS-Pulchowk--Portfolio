@@ -3,10 +3,11 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Program from "@/components/Molecules/Program";
-import who_we_are from "public/images/who_we_are.jpg";
+import who_we_are from "public/images/executives/who_we_are.jpg";
 import SolarSystem from "@/components/Atoms/SolarSystem";
 import TailStar from "@/components/Atoms/TailStar";
 import DirectMessage from "@/components/Molecules/DirectMessage";
+import programs from "@/data/programs";
 import { useState, useEffect, useRef } from "react";
 
 export default function Home() {
@@ -95,7 +96,7 @@ export default function Home() {
               <span>Projects</span>
             </button>
           </div>
-          {selected == "programs" ? ProgramsProjects("program") : ProgramsProjects("project")}
+          <ProgramsAndProjects selected={selected} />
         </div>
       </section>
       <DirectMessage />
@@ -103,53 +104,45 @@ export default function Home() {
   );
 }
 
-function ProgramsProjects() {
+function ProgramsAndProjects({ selected }: { selected: "programs" | "projects" }) {
   const [isOpen, setIsOpen] = useState(false);
   const [showLoadMoreButton, setShowLoadMoreButton] = useState(false);
 
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if(ref.current) {
-      setShowLoadMoreButton(ref.current.scrollHeight !== 2 * ref.current.clientHeight);
+    if (ref.current) {
+      setShowLoadMoreButton(
+        ref.current.scrollHeight !== 2 * ref.current.clientHeight
+      );
     }
   }, []);
 
   return (
     <div ref={ref} className={styles.program_items}>
-      <Program
-        title="Space A.I Art Challenges"
-        description="Space A.I Art chLLWNFWA I targest to wards the yound mind to ecplore the vast ocean of S.i and become the king og the pirates, gum gum, sorry cannon mhhhh, ahhh, ehh, aah, mhh, thing"
-        image="/images/ai_space_art_cover.png"
-        start={new Date(1703163822933)}
-        end={new Date(1703163822933)}
-        location="Online"
-      />
-
-      <Program
-        title="Space A.I Art Challenges"
-        description="Space A.I Art chLLWNFWA I targest to wards the yound mind to ecplore the vast ocean of S.i and become the king og the pirates, gum gum, sorry cannon mhhhh, ahhh, ehh, aah, mhh, thing"
-        image="/images/ai_space_art_cover.png"
-        start={new Date(1703163822933)}
-        end={new Date(1703163822933)}
-        location="Online"
-      />
-
-      <Program
-        title="Space A.I Art Challenges"
-        description="Space A.I Art chLLWNFWA I targest to wards the yound mind to ecplore the vast ocean of S.i and become the king og the pirates, gum gum, sorry cannon mhhhh, ahhh, ehh, aah, mhh, thing"
-        image="/images/ai_space_art_cover.png"
-        start={new Date(1703163822933)}
-        end={new Date(1703163822933)}
-        location="Online"
-      />
+      {selected == "programs" ? (
+        programs.map((program) => (
+          <Program
+            key={program.id}
+            title={program.title}
+            description={program.description}
+            image={program.image}
+            start={program.start}
+            end={program.end}
+            location={program.location}
+          />
+        ))
+      ) : (
+        ""
+      )}
       {showLoadMoreButton && (
-        <button onClick={() => setIsOpen(!isOpen)} className={styles.load_more_button}>
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className={styles.load_more_button}
+        >
           {isOpen ? "Show Less" : "Load More"}
         </button>
       )}
     </div>
   );
 }
-
-
