@@ -1,29 +1,18 @@
 const detail = [
   {
-    title: "Space A.I Art Challenges",
+    title: "Germination & Comparison of Space-Flown Holy Basil Seeds",
     description:
-      "Space A.I Art chLLWNFWA I targest to wards the yound mind to ecplore the vast ocean of S.i and become the king og the pirates, gum gum, sorry cannon mhhhh, ahhh, ehh, aah, mhh, thing",
-    image: "/images/ai_space_art_cover.png",
-    start: new Date(1703163822933),
-    end: new Date(1703163822933),
+      "This project aims to study the impact of spaceflight on the germination and growth of holy basil seeds by comparing the performance of space-flown seeds with their earthbound counterparts.",
+    image: "/images/projects/AHiS.png",
+    year: 2022,
     location: "Online",
   },
   {
-    title: "Canset Workshop",
+    title: "SEDS Earth Information",
     description:
-      "A CanSat workshop is an educational event where participants design, build, and launch small satellites called CanSats. These miniature satellites are about the size of a soda can and are used to collect data from the atmosphere.",
-    image: "/images/ai_space_art_cover.png",
-    start: new Date(1703163822933),
-    end: new Date(1703163822933),
-    location: "Online",
-  },
-  {
-    title: "Space A.I Art Challenges",
-    description:
-      "Space A.I Art chLLWNFWA I targest to wards the yound mind to ecplore the vast ocean of S.i and become the king og the pirates, gum gum, sorry cannon mhhhh, ahhh, ehh, aah, mhh, thing",
-    image: "/images/ai_space_art_cover.png",
-    start: new Date(1703163822933),
-    end: new Date(1703163822933),
+      "The SEDS Earth Information project aims to leverage satellite data to monitor and analyze Earth's environmental changes, contributing to sustainable development and disaster management.",
+    image: "/images/projects/earth_information.png",
+    year: 2024,
     location: "Online",
   },
 ];

@@ -13,7 +13,7 @@
 .footer_upper {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 12px;
 }
 
@@ -75,7 +75,7 @@
 @media (max-width: 720px) {
   .footer {
     width: 100%;
-    border-radius: 0px;
+    border-radius: 10px 10px 0 0;
     margin-bottom: 0px;
   }
 

@@ -31,7 +31,7 @@ export default function About() {
             too be used
           </p>
           <Image
-            alt="Picture of SEDS-Pulchowk members and guests during NASA Space Apps Hackathon"
+            alt="Some Executive Committee members of SEDS 2081"
             className={styles.about_image}
             src={executives_2081}
           />
