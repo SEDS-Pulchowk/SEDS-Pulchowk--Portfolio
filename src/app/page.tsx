@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import styles from "./page.module.css";
-import who_we_are from "public/images/executives/who_we_are.jpg";
+import who_we_are from "/public/images/Executives/who_we_are.jpg";
 import SolarSystem from "@/components/Atoms/SolarSystem";
 import TailStar from "@/components/Atoms/TailStar";
 import DirectMessage from "@/components/Molecules/DirectMessage";

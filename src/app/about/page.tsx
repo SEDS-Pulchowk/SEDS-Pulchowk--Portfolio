@@ -6,7 +6,7 @@ import styles from "./page.module.css";
 import MemberCard from "@/components/Molecules/MemberCard";
 import executives from "./executives";
 import Image from "next/image";
-import executives_2081 from "/public/images/executives/executives_2081.jpg";
+import executives_2081 from "/public/images/Executives/executives_2081.jpg";
 
 export default function About() {
   return (
