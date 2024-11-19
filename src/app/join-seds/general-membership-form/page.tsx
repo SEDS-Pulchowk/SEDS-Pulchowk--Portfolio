@@ -365,7 +365,7 @@ function NewGeneralMemberForm() {
           </label>
         </div>
       </div>
-      <div className={`mb-3 ${styles.form_section}`}>
+      {/* <div className={`mb-3 ${styles.form_section}`}>
         <label htmlFor="photo" className="form-label">
           Upload Your Recent Photo: &nbsp;{" "}
           <span className="text-danger">*</span>
@@ -401,7 +401,7 @@ function NewGeneralMemberForm() {
           id="receipt"
           required
         />
-      </div>
+      </div> */}
       <button
         type="submit"
         className={`btn btn-normal ${buttonStyles.click_button}`}
