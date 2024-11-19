@@ -7,7 +7,7 @@ let executives: Member[][] = [
             position: "President",
             level: "Bachelor in Mechanical Engineering",
             college: "Pulchowk Campus",
-            image: "/images/Executives/arpit_pokharel.jpgsiddhant_yadav.jpg",
+            image: "/images/Executives/siddhant_yadav.jpg",
             links: [
                 { icon: "facebook", url: "https://facebook.com/" },
                 { icon: "instagram", url: "https://instagram.com" },
