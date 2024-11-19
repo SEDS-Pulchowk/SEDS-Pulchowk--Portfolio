@@ -16,7 +16,7 @@ function Submit(e: FormEvent<HTMLFormElement>) {
 
   const form = e.currentTarget;
   const scriptURL =
-    "https://script.google.com/macros/s/AKfycbxAPA0xfCbMbGudDPVjAs_qWWXnsH5jLHij6Jsks9nP1EcRVyiG-Zw2bhypx2_DGC4D3Q/exechttps://script.google.com/macros/s/AKfycby1aPvy-MriFg2dgiwAVB57HoJA0Vvu4ry6RiCJN8i5gWggb2EyulaSo1GlrHTrK9IaDA/exec";
+    "https://script.google.com/macros/s/AKfycby1aPvy-MriFg2dgiwAVB57HoJA0Vvu4ry6RiCJN8i5gWggb2EyulaSo1GlrHTrK9IaDA/exec";
 
   fetch(scriptURL, { method: "POST", body: new FormData(form) })
     .then((response) =>
@@ -365,7 +365,7 @@ function NewGeneralMemberForm() {
           </label>
         </div>
       </div>
-      {/* <div className={`mb-3 ${styles.form_section}`}>
+      <div className={`mb-3 ${styles.form_section}`}>
         <label htmlFor="photo" className="form-label">
           Upload Your Recent Photo: &nbsp;{" "}
           <span className="text-danger">*</span>
@@ -401,7 +401,7 @@ function NewGeneralMemberForm() {
           id="receipt"
           required
         />
-      </div> */}
+      </div>
       <button
         type="submit"
         className={`btn btn-normal ${buttonStyles.click_button}`}
