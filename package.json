@@ -18,7 +18,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-tweet": "^3.2.1",
-    "react-twitter-widgets": "^1.11.0"
+    "react-twitter-widgets": "^1.11.0",
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
     "@types/humanize-duration": "^3.27.4",
