@@ -11,57 +11,23 @@ interface OrginalFormProps {
   memberType: string;
 }
 
-// function Submit(e: FormEvent<HTMLFormElement>) {
-//   e.preventDefault();
-
-//   const form = e.currentTarget;
-//   const scriptURL =
-//     "https://script.google.com/a/macros/pcampus.edu.np/s/AKfycbyaCtFMrHnVKvTV_UdgJP0ffSAQfxLli6CM3qO1lOWrU2v1EY4bw6iNoNYjvR0w95geDg/exec";
-
-//   fetch(scriptURL, { method: "POST", body: new FormData(form) })
-//     .then((response) =>
-//       alert(
-//         "Thank you! Your form has been submitted successfully. Soon You will receive a confirmation email."
-//       )
-//     )
-//     .then(() => {
-//       window.location.reload();
-//     })
-//     .catch((error) => console.error("Error!", error.message));
-// }
-
 function Submit(e: FormEvent<HTMLFormElement>) {
   e.preventDefault();
+
   const form = e.currentTarget;
-  const formData = new FormData(form);
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbxAPA0xfCbMbGudDPVjAs_qWWXnsH5jLHij6Jsks9nP1EcRVyiG-Zw2bhypx2_DGC4D3Q/exechttps://script.google.com/macros/s/AKfycby1aPvy-MriFg2dgiwAVB57HoJA0Vvu4ry6RiCJN8i5gWggb2EyulaSo1GlrHTrK9IaDA/exec";
 
-  // Ensure all form values are converted to strings
-  const formDataObject = Object.fromEntries(
-    Array.from(formData.entries()).map(([key, value]) => [key, String(value)])
-  );
-
-  const scriptURL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL";
-
-  const payload = new URLSearchParams(formDataObject).toString();
-
-  fetch(scriptURL, {
-    method: "POST",
-    mode: "no-cors", // Important for cross-origin requests
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
-    },
-    body: payload,
-  })
-    .then((response) => {
-      // Since no-cors mode doesn't allow reading response,
-      // we'll assume success based on no error
-      alert("Form submitted successfully!");
-      form.reset();
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) =>
+      alert(
+        "Thank you! Your form has been submitted successfully. Soon You will receive a confirmation email."
+      )
+    )
+    .then(() => {
+      window.location.reload();
     })
-    .catch((error) => {
-      console.error("Submission Error:", error);
-      alert("An error occurred while submitting the form");
-    });
+    .catch((error) => console.error("Error!", error.message));
 }
 
 export default function GeneralForm() {
@@ -170,7 +136,7 @@ function NewGeneralMemberForm() {
   }
 
   return (
-    <form onSubmit={(e) => Submit(e)} autoComplete="on">
+    <form onSubmit={(e) => Submit(e)} name="Googel_Sheet_1" autoComplete="on">
       <div className={styles.form_section}>
         <p>Welcome on board ✨</p>
 
@@ -399,7 +365,7 @@ function NewGeneralMemberForm() {
           </label>
         </div>
       </div>
-      <div className={`mb-3 ${styles.form_section}`}>
+      {/* <div className={`mb-3 ${styles.form_section}`}>
         <label htmlFor="photo" className="form-label">
           Upload Your Recent Photo: &nbsp;{" "}
           <span className="text-danger">*</span>
@@ -435,7 +401,7 @@ function NewGeneralMemberForm() {
           id="receipt"
           required
         />
-      </div>
+      </div> */}
       <button
         type="submit"
         className={`btn btn-normal ${buttonStyles.click_button}`}
