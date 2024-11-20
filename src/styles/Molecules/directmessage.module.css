@@ -15,6 +15,6 @@
     font-size: 25px;
 }
 
-.direct_message_container :not(input) {
+.direct_message_container :not(input):not(textarea) {
     font-variant: small-caps;
 }

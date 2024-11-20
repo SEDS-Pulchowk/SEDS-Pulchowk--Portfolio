@@ -81,27 +81,38 @@ button {
   -webkit-text-fill-color: transparent;
 }
 
-@media  (max-width: 728px) {
-    :root {
-        --earth-size: 8px;
-    }
-} 
-
-@media  (max-width: 620px) {
-    :root {
-        --earth-size: 6px;
-    }
-} 
-
-@media  (max-width: 420px) {
-    h1 {
-        font-size: 30px !important;
-    }
-
-    h2 {
-      font-size: 25px !important;
+@media (max-width: 728px) {
+  :root {
+    --earth-size: 8px;
   }
-    h3 {
-      font-size: 20px !important;
+}
+
+@media (max-width: 620px) {
+  :root {
+    --earth-size: 6px;
   }
-} 
+}
+
+@media (max-width: 420px) {
+  body {
+    padding: 0;
+  }
+  
+  h1 {
+    font-size: 30px !important;
+  }
+
+  h2 {
+    font-size: 25px !important;
+  }
+  h3 {
+    font-size: 20px !important;
+  }
+}
+
+@media (max-width: 378px) {
+  body {
+    transform: scale(0.9);
+    transform-origin: top left;
+  }
+}

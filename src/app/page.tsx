@@ -85,8 +85,7 @@ export default function Home() {
               }`}
             >
               {/* TODO: Use icons */}
-              <span>🎉</span>
-              <span>Programs</span>
+              <span>🎉 Programs</span>
             </button>
             <button
               onClick={() => set_selected("projects")}
@@ -94,8 +93,7 @@ export default function Home() {
                 selected == "projects" ? styles.active : ""
               }`}
             >
-              <span>🚀</span>
-              <span>Projects</span>
+              <span>🚀 Projects</span>
             </button>
           </div>
           <ProgramsAndProjects selected={selected} />
@@ -169,7 +167,7 @@ function ProgramsAndProjects({
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className={styles.load_button}
+          className="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
         >
           {isOpen ? "Show Less..." : "Load More..."}
         </button>

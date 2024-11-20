@@ -127,10 +127,17 @@
   .executives_row {
     display: flex;
     flex-direction: column;
-    margin-left: -45vw;
+    margin-left: -55vw;
   }
   
   .executives_card {
     width: 20%;
+  }
+}
+
+@media (max-width: 420px) {
+  .about_us {
+    margin-left: 12px;
+    margin-right: 12px;
   }
 }

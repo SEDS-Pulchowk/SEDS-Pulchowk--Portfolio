@@ -117,10 +117,8 @@ function HamburgerButtonItems() {
           <span>&nbsp; About Us</span>
         </Link>
         <Link href="/join-seds" className="dropdown-item">
-          <button className={styles.join_us}>
-            <span className={styles.star}></span>
+          <button className={`${buttonStyles.click_button} ${styles.join_us}`}>
             <span>Join SEDS</span>
-            <span className={styles.star}></span>
           </button>
         </Link>
       </div>
