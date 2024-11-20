@@ -14,7 +14,7 @@ function DirectMessage() {
       <h3>
         Space Station:<span className="gradient_text"> Message Bay</span>
       </h3>
-      <form action="https://getform.io/f/ebpdyplb" method="POST">
+      <form action="https://getform.io/f/avrrmjya" method="POST">  {/*It is getform form susbmission technique with 50 free submission */}
         <div
           className={`form-group ${formStyles.form_section}`}
           style={{ minWidth: "300px", width: "40%" }}
