@@ -75,7 +75,7 @@ button {
 }
 
 .gradient_text {
-  color: --gradient-start;
+  color: var(--gradient-start);
   background: var(--gradient);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -100,5 +100,8 @@ button {
 
     h2 {
       font-size: 25px !important;
+  }
+    h3 {
+      font-size: 20px !important;
   }
 } 

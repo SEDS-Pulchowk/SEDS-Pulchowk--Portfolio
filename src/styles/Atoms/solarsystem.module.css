@@ -168,7 +168,7 @@
   width: var(--jupitor-size);
   margin-top: calc(-0.5 * var(--jupitor-size));
   margin-left: calc(-0.5 * var(--jupitor-size));
-  background: radial-gradient(ellipse at 80% 50% , #c98f39bb 5%, #a59186a1 20%, #d8ca9d8d 70%, #e3dccb90 80%) top left no-repeat, radial-gradient(ellipse at 10% 30% , #c98f39 10%, #a59186 20%, #d8ca9d 70%, #e3dccb 100%) top left no-repeat;
+  background: radial-gradient(ellipse at 80% 50% , #a77221bb 5%, #a59186a1 20%, #d8ca9d8d 70%, #e3dccb90 80%) top left no-repeat, radial-gradient(ellipse at 10% 30% , #a46302e8 5%, #a59186 20%, #d8ca9d 70%, #e3dccb 100%) top left no-repeat;
 }
 
 .saturn {
