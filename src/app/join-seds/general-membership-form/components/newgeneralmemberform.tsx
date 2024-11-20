@@ -3,59 +3,75 @@
 import { ChangeEvent, useState, FormEvent } from "react";
 import Image from "next/image";
 import styles from "../../joinseds.module.css";
-import { PaperPlaneCheck } from "@/components/Molecules/icons";
+import { PaperPlaneCheck, InfiniteSpin } from "@/components/Molecules/icons";
 import buttonStyles from "@/styles/Atoms/buttonstyles.module.css";
+import Link from "next/link";
 
-function Submit(e: FormEvent<HTMLFormElement>) {
-  e.preventDefault();
+export default function NewGeneralMemberForm() {
+  const [submitted, setSubmitted] = useState(false);
+  const [othersSelected, setOthersSelected] = useState(false);
 
-  const form = e.currentTarget;
-  const fileInput = form.querySelector(
-    'input[type="file"]'
-  ) as HTMLInputElement;
+  function Submit(e: FormEvent<HTMLFormElement>) {
+      e.preventDefault();
+      setSubmitted(true);
 
-  const scriptURL =
-    "https://script.google.com/macros/s/AKfycby9RWMzBwGQ7m0FAvakGIn_Nbgyrv7he6sDcEh8JkYhztaUyChjbGme7w-DyaM8MAFfMw/exec";
+    const form = e.currentTarget;
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbw8jDc9iAZhErfsl0g0BaRIsn_ucDbN2sKMNxeUsB7prWs8FEYAPkk5HQfpoeSrTIbltg/exec";
 
-  const file = fileInput?.files?.[0];
-  if (file) {
-    const reader = new FileReader();
-    reader.onload = async function () {
-      const base64File = reader.result?.toString().split(",")[1]; // Get Base64 part
+    const photoInput = form.querySelector(
+      'input[name="Member-Photo"]'
+    ) as HTMLInputElement;
+    const receiptInput = form.querySelector(
+      'input[name="Receipt"]'
+    ) as HTMLInputElement;
 
-      const formData = new FormData(form);
-      formData.append("fileBase64", base64File || "");
-      formData.append("fileName", file.name);
+    const formData = new FormData(form);
 
-      fetch(scriptURL, { method: "POST", body: formData })
-        .then((response) => {
+    const handleFile = (fileInput: HTMLInputElement, fieldName: string) => {
+      return new Promise((resolve, reject) => {
+        const file = fileInput?.files?.[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function () {
+            const base64File = reader.result?.toString().split(",")[1];
+            formData.append(`${fieldName}_Base64`, base64File || "");
+            formData.append(`${fieldName}_Name`, file.name);
+            resolve(null);
+          };
+          reader.onerror = reject;
+          reader.readAsDataURL(file);
+        } else {
+          resolve(null);
+        }
+      });
+    };
+
+    Promise.all([
+      handleFile(photoInput, "Member-Photo"),
+      handleFile(receiptInput, "Receipt"),
+    ])
+      .then(() => {
+        return fetch(scriptURL, {
+          method: "POST",
+          body: formData,
+        });
+      })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.result === "success") {
           alert(
             "Thank you! Your form has been submitted successfully. Soon You will receive a confirmation email."
           );
-        })
-        .then(() => {
-          window.location.reload();
-        })
-        .catch((error) => console.error("Error!", error.message));
-    };
-    reader.readAsDataURL(file);
-  } else {
-    alert("No file selected! Submitting without file.");
-    fetch(scriptURL, { method: "POST", body: new FormData(form) })
-      .then((response) => {
-        alert(
-          "Thank you! Your form has been submitted successfully. Soon You will receive a confirmation email."
-        );
+        } else {
+          console.error("Error!", data.error);
+        }
       })
       .then(() => {
         window.location.reload();
       })
       .catch((error) => console.error("Error!", error.message));
   }
-}
-
-export default function NewGeneralMemberForm() {
-  const [othersSelected, setOthersSelected] = useState(false);
 
   function toggleSourceType(e: ChangeEvent<HTMLInputElement>) {
     if (e.target.value == "Other") {
@@ -303,7 +319,7 @@ export default function NewGeneralMemberForm() {
         </label>
         <input
           className="form-control"
-          name="Member_Photo"
+          name="Member-Photo"
           type="file"
           id="photo"
           required
@@ -337,9 +353,26 @@ export default function NewGeneralMemberForm() {
         type="submit"
         className={`btn btn-normal ${buttonStyles.click_button}`}
       >
-        <PaperPlaneCheck />
-        &nbsp; Submit &nbsp; &nbsp; &nbsp;
+        {submitted ? (
+          <InfiniteSpin />
+        ) : (
+          <>
+            <PaperPlaneCheck />
+            &nbsp; Submit &nbsp; &nbsp; &nbsp;
+          </>
+        )}
       </button>
+      <hr />
+      <small className="text-muted">
+        If it is taking too long then Space Signal Faltered:{" "}
+        <Link
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdSDDmtw7h-KzOlTVU8fOvH2CZD8SDXo8erx2OSFHv5Lamesg/viewform?usp=sf_link"
+          className="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+        >
+          Click here
+        </Link>{" "}
+        to sync connection
+      </small>
     </form>
   );
 }

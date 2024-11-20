@@ -14,7 +14,7 @@
   border-radius: 20px;
   box-shadow: 1px 1px 8px 1px #c5c4c4;
   display: inline-block;
-  height: 1.75em;
+  height: 1.6em;
   width: 99%;
   align-content: center;
   font-weight: bolder;
@@ -63,7 +63,7 @@
 }
 
 .form_section_text_area {
-  min-width: 350px !important;
+  min-width: 340px !important;
   width: 100%;
 }
 
@@ -87,8 +87,9 @@
 
 @media (max-width: 728px) {
   .application_form {
-    width: 90%;
+    width: 100%;
   }
+
 }
 
 @media (max-width: 620px) {
@@ -104,5 +105,9 @@
 
   .form_outline {
     margin: 0;
+  }
+
+  .navbar_button {
+    font-weight: 400;
   }
 }

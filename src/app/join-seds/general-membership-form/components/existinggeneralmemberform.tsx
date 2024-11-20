@@ -1,33 +1,53 @@
 "use client";
 
-import { FormEvent } from "react";
+import { FormEvent, useState } from "react";
 import Image from "next/image";
 import styles from "../../joinseds.module.css";
-import { PaperPlaneCheck } from "@/components/Molecules/icons";
+import { PaperPlaneCheck, InfiniteSpin } from "@/components/Molecules/icons";
 import buttonStyles from "@/styles/Atoms/buttonstyles.module.css";
+import Link from "next/link";
 
-function Submit(e: FormEvent<HTMLFormElement>) {
-  e.preventDefault();
+export default function ExistingMemberForm() {
 
-  const form = e.currentTarget;
-  const fileInput = form.querySelector(
-    'input[type="file"]'
-  ) as HTMLInputElement;
+  const [submitted, setSubmitted] = useState(false);
 
-  const scriptURL =
-    "https://script.google.com/macros/s/AKfycbwayuECDcRsnuE6ATK-KHjHuf7M40O4hlt-EACnRCaPNGSjKzcA9oBr3z_1OzBoQvuC/exec";
+  function Submit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setSubmitted(true);
 
-  const file = fileInput?.files?.[0];
-  if (file) {
-    const reader = new FileReader();
-    reader.onload = async function () {
-      const base64File = reader.result?.toString().split(",")[1]; // Get Base64 part
+    const form = e.currentTarget;
+    const fileInput = form.querySelector(
+      'input[type="file"]'
+    ) as HTMLInputElement;
 
-      const formData = new FormData(form);
-      formData.append("fileBase64", base64File || "");
-      formData.append("fileName", file.name);
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbwayuECDcRsnuE6ATK-KHjHuf7M40O4hlt-EACnRCaPNGSjKzcA9oBr3z_1OzBoQvuC/exec";
 
-      fetch(scriptURL, { method: "POST", body: formData })
+    const file = fileInput?.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = async function () {
+        const base64File = reader.result?.toString().split(",")[1]; // Get Base64 part
+
+        const formData = new FormData(form);
+        formData.append("fileBase64", base64File || "");
+        formData.append("fileName", file.name);
+
+        fetch(scriptURL, { method: "POST", body: formData })
+          .then((response) => {
+            alert(
+              "Thank you! Your form has been submitted successfully. Soon You will receive a confirmation email."
+            );
+          })
+          .then(() => {
+            window.location.reload();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      };
+      reader.readAsDataURL(file);
+    } else {
+      alert("No file selected! Submitting without file.");
+      fetch(scriptURL, { method: "POST", body: new FormData(form) })
         .then((response) => {
           alert(
             "Thank you! Your form has been submitted successfully. Soon You will receive a confirmation email."
@@ -37,24 +57,9 @@ function Submit(e: FormEvent<HTMLFormElement>) {
           window.location.reload();
         })
         .catch((error) => console.error("Error!", error.message));
-    };
-    reader.readAsDataURL(file);
-  } else {
-    alert("No file selected! Submitting without file.");
-    fetch(scriptURL, { method: "POST", body: new FormData(form) })
-      .then((response) => {
-        alert(
-          "Thank you! Your form has been submitted successfully. Soon You will receive a confirmation email."
-        );
-      })
-      .then(() => {
-        window.location.reload();
-      })
-      .catch((error) => console.error("Error!", error.message));
+    }
   }
-}
 
-export default function ExistingMemberForm() {
   return (
     <form onSubmit={(e) => Submit(e)} name="Googel_Sheet_1" autoComplete="on">
       <div className={styles.form_section}>
@@ -151,9 +156,26 @@ export default function ExistingMemberForm() {
         type="submit"
         className={`btn btn-normal ${buttonStyles.click_button}`}
       >
-        <PaperPlaneCheck />
-        &nbsp; Submit &nbsp; &nbsp; &nbsp;
+        {submitted ? (
+          <InfiniteSpin />
+        ) : (
+          <>
+            <PaperPlaneCheck />
+            &nbsp; Submit &nbsp; &nbsp; &nbsp;
+          </>
+        )}
       </button>
+      <hr />
+      <small className="text-muted">
+        If it is taking too long then Space Signal Faltered:{" "}
+        <Link
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdSDDmtw7h-KzOlTVU8fOvH2CZD8SDXo8erx2OSFHv5Lamesg/viewform?usp=sf_link"
+          className="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+        >
+          Click here
+        </Link>{" "}
+        to sync connection
+      </small>
     </form>
   );
 }
