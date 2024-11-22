@@ -22,11 +22,11 @@ export default function Home() {
         <TailStar />
         <section className={styles.section}>
           <div className={styles.main_text_wrapper}>
-            <h1 className={styles.main_header}>
+            <h2 className={styles.main_header}>
               To the <span className="gradient_text">stars </span>
               <br />
               by <span className="gradient_text">efforts</span>
-            </h1>
+            </h2>
             <p className={styles.main_text}>
               <strong>Ready to Launch Ideas?</strong> At SEDS-Pulchowk, we push
               the boundaries of space research, transforming groundbreaking
