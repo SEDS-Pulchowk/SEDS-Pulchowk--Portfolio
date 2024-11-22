@@ -353,7 +353,7 @@ export default function NewGeneralMemberForm() {
         type="submit"
         className={`btn btn-normal ${buttonStyles.click_button}`}
       >
-        {submitted ? (
+        {!submitted ? (
           <RocketLaunch />
         ) : (
           <>
@@ -364,14 +364,14 @@ export default function NewGeneralMemberForm() {
       </button>
       <hr />
       <small className="text-muted">
-        If it is taking too long then Space Signal Faltered:
+        If it is taking too long then space signal faltered:&nbsp;
         <Link
           href="https://docs.google.com/forms/d/e/1FAIpQLSdSDDmtw7h-KzOlTVU8fOvH2CZD8SDXo8erx2OSFHv5Lamesg/viewform?usp=sf_link"
           className="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
         >
           Click here
         </Link>
-        to sync connection
+        &nbsp;to sync connection
       </small>
     </form>
   );

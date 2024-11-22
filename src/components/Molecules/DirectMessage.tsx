@@ -98,8 +98,8 @@ function DirectMessage() {
             required
           ></textarea>
         </div>
-        <div className={`${buttonStyles.click_button} ${styles.messge_button}`}>
-          <button id="submit" type="submit">
+        <div>
+          <button id="submit" type="submit" className={`${buttonStyles.click_button} ${styles.messge_button}`}>
             {submitted ? (
               <RocketLaunch />
             ) : (
