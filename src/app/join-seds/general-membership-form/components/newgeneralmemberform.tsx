@@ -249,7 +249,7 @@ export default function NewGeneralMemberForm() {
           Why do you want to join SEDS-Pulchowk?
         </label>
         <textarea
-          className="form-control"
+          className={`form-control ${styles.form_section_text_area_input}`}
           id="reason-to-join-seds"
           name="Reason-to-Join"
           rows={2}
@@ -262,7 +262,7 @@ export default function NewGeneralMemberForm() {
           What are your expectation from SEDS-Pulchowk?
         </label>
         <textarea
-          className="form-control"
+          className={`form-control ${styles.form_section_text_area_input}`}
           id="expectation-from-seds"
           name="Expectation-form-SEDS"
           rows={2}
@@ -275,7 +275,7 @@ export default function NewGeneralMemberForm() {
           How could you contribute in exploration and development of space?
         </label>
         <textarea
-          className="form-control"
+          className={`form-control ${styles.form_section_text_area_input}`}
           id="contribution-to-seds"
           name="Contribution-to-SEDS"
           rows={2}

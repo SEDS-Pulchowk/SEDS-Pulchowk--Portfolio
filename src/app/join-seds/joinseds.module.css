@@ -63,7 +63,7 @@
 }
 
 .form_section_text_area {
-  min-width: 340px !important;
+  min-width: 330px !important;
   width: 100%;
 }
 
@@ -109,5 +109,11 @@
 
   .navbar_button {
     font-weight: 400;
+  }
+}
+
+@media (max-width: 420px) {
+  .form_section_text_area_input{
+
   }
 }
