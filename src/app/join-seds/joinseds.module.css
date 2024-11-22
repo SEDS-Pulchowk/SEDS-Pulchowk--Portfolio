@@ -111,9 +111,3 @@
     font-weight: 400;
   }
 }
-
-@media (max-width: 420px) {
-  .form_section_text_area_input{
-
-  }
-}
