@@ -23,9 +23,9 @@ export default function Home() {
         <section className={styles.section}>
           <div className={styles.main_text_wrapper}>
             <h2 className={styles.main_header}>
-              To the <span className="gradient_text">stars </span>
+            <span>उदेश्य के लिनु?</span>
               <br />
-              by <span className="gradient_text">efforts</span>
+            <span className={`gradient_text ${styles.main_answer}`}> उडी छुनु चन्द्र एक</span>
             </h2>
             <p className={styles.main_text}>
               <strong>Ready to Launch Ideas?</strong> At SEDS-Pulchowk, we push
