@@ -3,7 +3,7 @@
 import { ChangeEvent, useState, FormEvent } from "react";
 import Image from "next/image";
 import styles from "../../joinseds.module.css";
-import { PaperPlaneCheck, InfiniteSpin } from "@/components/Molecules/icons";
+import { PaperPlaneCheck, RocketLaunch } from "@/components/Molecules/icons";
 import buttonStyles from "@/styles/Atoms/buttonstyles.module.css";
 import Link from "next/link";
 
@@ -12,8 +12,8 @@ export default function NewGeneralMemberForm() {
   const [othersSelected, setOthersSelected] = useState(false);
 
   function Submit(e: FormEvent<HTMLFormElement>) {
-      e.preventDefault();
-      setSubmitted(true);
+    e.preventDefault();
+    setSubmitted(true);
 
     const form = e.currentTarget;
     const scriptURL =
@@ -354,7 +354,7 @@ export default function NewGeneralMemberForm() {
         className={`btn btn-normal ${buttonStyles.click_button}`}
       >
         {submitted ? (
-          <InfiniteSpin />
+          <RocketLaunch />
         ) : (
           <>
             <PaperPlaneCheck />
@@ -364,13 +364,13 @@ export default function NewGeneralMemberForm() {
       </button>
       <hr />
       <small className="text-muted">
-        If it is taking too long then Space Signal Faltered:{" "}
+        If it is taking too long then Space Signal Faltered:
         <Link
           href="https://docs.google.com/forms/d/e/1FAIpQLSdSDDmtw7h-KzOlTVU8fOvH2CZD8SDXo8erx2OSFHv5Lamesg/viewform?usp=sf_link"
           className="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
         >
           Click here
-        </Link>{" "}
+        </Link>
         to sync connection
       </small>
     </form>

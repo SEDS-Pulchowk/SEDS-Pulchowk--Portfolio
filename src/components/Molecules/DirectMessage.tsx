@@ -5,7 +5,7 @@ import styles from "@/styles/Molecules/directmessage.module.css";
 import buttonStyles from "@/styles/Atoms/buttonstyles.module.css";
 import formStyles from "@/app/join-seds/joinseds.module.css";
 import emailjs from "@emailjs/browser";
-import { PaperPlane, InfiniteSpin } from "./icons";
+import { PaperPlane, RocketLaunch } from "./icons";
 
 function DirectMessage() {
   const [submitted, setSubmitted] = useState(false);
@@ -16,7 +16,9 @@ function DirectMessage() {
     e.preventDefault();
     setSubmitted(true);
 
-    {/*Using EmailJS for sending email*/}
+    {
+      /*Using EmailJS for sending email*/
+    }
     if (form.current) {
       emailjs
         .sendForm(
@@ -99,7 +101,7 @@ function DirectMessage() {
         <div className={`${buttonStyles.click_button} ${styles.messge_button}`}>
           <button id="submit" type="submit">
             {submitted ? (
-              <InfiniteSpin />
+              <RocketLaunch />
             ) : (
               <>
                 <PaperPlane />
