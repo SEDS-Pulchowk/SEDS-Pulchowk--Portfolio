@@ -340,12 +340,12 @@ export function Calendar() {
 
 export function RocketLaunch() {
   return (
-    <svg width="300" height="30" xmlns="http://www.w3.org/2000/svg">
+    <svg width="100" height="25" xmlns="http://www.w3.org/2000/svg">
       <g id="rocket">
-        <rect x="0" y="7" width="30" height="16" fill="grey" rx="4" />
+        <rect x="0" y="4" width="30" height="16" fill="grey" rx="4" />
         <text
           x="15"
-          y="18"
+          y="15"
           font-family="Arial"
           font-size="8"
           text-anchor="middle"
@@ -353,12 +353,12 @@ export function RocketLaunch() {
         >
           SEDS
         </text>
-        <polygon points="30,7 45,15 30,23" fill="#0047ff" />
-        <polygon points="0,10 -3,4 -16,10" fill="#8500ff" />
-        <polygon points="0,20 -3,26 -16,20" fill="#8500ff" />
+        <polygon points="30,4 45,12 30,20" fill="#0047ff" />
+        <polygon points="0,7 -3,1 -16,7" fill="#8500ff" />
+        <polygon points="0,17 -3,23 -16,17" fill="#8500ff" />
         <g id="flames">
-          <polygon points="-1,10 -30,15 -1,20" fill="orange" />
-          <polygon points="-1,12 -24,15 -1,18" fill="yellow" />
+          <polygon points="-1,7 -30,12 -1,17" fill="orange" />
+          <polygon points="-1,9 -24,12 -1,15" fill="yellow" />
         </g>
       </g>
 
@@ -367,9 +367,9 @@ export function RocketLaunch() {
         xlinkHref="#rocket"
         attributeName="transform"
         type="translate"
-        from="-30 0"
-        to="330 0"
-        dur="3s"
+        from="-40 0"
+        to="140 0"
+        dur="1.5s"
         repeatCount="indefinite"
         additive="replace"
       />
@@ -379,7 +379,7 @@ export function RocketLaunch() {
         attributeName="transform"
         type="scale"
         values="2 1; 0.9 1; 2 1"
-        dur="0.2s"
+        dur="0.12s"
         repeatCount="indefinite"
       />
     </svg>
