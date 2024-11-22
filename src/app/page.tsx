@@ -22,15 +22,18 @@ export default function Home() {
         <TailStar />
         <section className={styles.section}>
           <div className={styles.main_text_wrapper}>
-            <h1 className={styles.main_header}>
+            <h2 className={styles.main_header}>
               To the <span className="gradient_text">stars </span>
               <br />
               by <span className="gradient_text">efforts</span>
-            </h1>
+            </h2>
             <p className={styles.main_text}>
-              Lorem ipsum is the industrial language too be used so that match
-              this sentence no to create this site lets go on with the flow
-              Lorem ipsum is the industrial language too be used
+              <strong>Ready to Launch Ideas?</strong> At SEDS-Pulchowk, we push
+              the boundaries of space research, transforming groundbreaking
+              concepts into reality. Dive into the future of exploration, where
+              cutting-edge innovation meets endless discovery!
+              <br />
+              ...
             </p>
           </div>
         </section>
@@ -46,17 +49,16 @@ export default function Home() {
         </h2>
         <div className={styles.about_content}>
           <p className={styles.about_text}>
-            Lorem ipsum is the industrial language too be used so that match
-            this sentence no to create this site lets go on with the flow Lorem
-            ipsum is the industrial language too be used Lorem ipsum is the
-            industrial language too be used so that match this sentence no to
-            create this site lets go on with the flow Lorem ipsum is the i
+            Founded in 2019, SEDS-Pulchowk is a leading partner of SEDS Nepal,
+            dedicated to advancing space exploration through cutting-edge
+            research, innovation, and outreach programs. We empower the next
+            generation of engineers, scientists, and visionaries by pushing the
+            boundaries of space technology and fostering a vibrant community of
+            space enthusiasts committed to shaping the future of space
+            exploration.
             <br />
             <br />
-            ndustrial language too be used Lorem ipsum is the industrial
-            language too be used so that match this sentence no to create this
-            site lets go on with the flow Lorem ipsum is the industrial language
-            too be used{" "}
+            ...
           </p>
           <Image
             alt="Picture of SEDS-Pulchowk members and guests during NASA Space Apps Hackathon"

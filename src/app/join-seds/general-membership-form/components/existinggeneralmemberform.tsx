@@ -3,12 +3,11 @@
 import { FormEvent, useState } from "react";
 import Image from "next/image";
 import styles from "../../joinseds.module.css";
-import { PaperPlaneCheck, InfiniteSpin } from "@/components/Molecules/icons";
+import { PaperPlaneCheck, RocketLaunch } from "@/components/Molecules/icons";
 import buttonStyles from "@/styles/Atoms/buttonstyles.module.css";
 import Link from "next/link";
 
 export default function ExistingMemberForm() {
-
   const [submitted, setSubmitted] = useState(false);
 
   function Submit(e: FormEvent<HTMLFormElement>) {
@@ -157,7 +156,7 @@ export default function ExistingMemberForm() {
         className={`btn btn-normal ${buttonStyles.click_button}`}
       >
         {submitted ? (
-          <InfiniteSpin />
+          <RocketLaunch />
         ) : (
           <>
             <PaperPlaneCheck />
@@ -167,13 +166,13 @@ export default function ExistingMemberForm() {
       </button>
       <hr />
       <small className="text-muted">
-        If it is taking too long then Space Signal Faltered:{" "}
+        If it is taking too long then Space Signal Faltered:
         <Link
           href="https://docs.google.com/forms/d/e/1FAIpQLSdSDDmtw7h-KzOlTVU8fOvH2CZD8SDXo8erx2OSFHv5Lamesg/viewform?usp=sf_link"
           className="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
         >
           Click here
-        </Link>{" "}
+        </Link>
         to sync connection
       </small>
     </form>

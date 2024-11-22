@@ -338,27 +338,50 @@ export function Calendar() {
   );
 }
 
-export function InfiniteSpin() {
+export function RocketLaunch() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" width="150px" height="25px">
-      <path
-        fill="none"
-        stroke="#FFFFFF"
-        stroke-width="15"
-        stroke-linecap="round"
-        stroke-dasharray="300 385"
-        stroke-dashoffset="0"
-        d="M275 75c0 31-27 50-50 50-58 0-92-100-150-100-28 0-50 22-50 50s23 50 50 50c58 0 92-100 150-100 24 0 50 19 50 50Z"
-      >
-        <animate
-          attributeName="stroke-dashoffset"
-          calcMode="spline"
-          dur="2"
-          values="685;-685"
-          keySplines="0 0 1 1"
-          repeatCount="indefinite"
-        ></animate>
-      </path>
+    <svg width="300" height="30" xmlns="http://www.w3.org/2000/svg">
+      <g id="rocket">
+        <rect x="0" y="7" width="30" height="16" fill="grey" rx="4" />
+        <text
+          x="15"
+          y="18"
+          font-family="Arial"
+          font-size="8"
+          text-anchor="middle"
+          fill="white"
+        >
+          SEDS
+        </text>
+        <polygon points="30,7 45,15 30,23" fill="#0047ff" />
+        <polygon points="0,10 -3,4 -16,10" fill="#8500ff" />
+        <polygon points="0,20 -3,26 -16,20" fill="#8500ff" />
+        <g id="flames">
+          <polygon points="-1,10 -30,15 -1,20" fill="orange" />
+          <polygon points="-1,12 -24,15 -1,18" fill="yellow" />
+        </g>
+      </g>
+
+      {/* <!-- Animation --> */}
+      <animateTransform
+        xlinkHref="#rocket"
+        attributeName="transform"
+        type="translate"
+        from="-30 0"
+        to="330 0"
+        dur="3s"
+        repeatCount="indefinite"
+        additive="replace"
+      />
+
+      <animateTransform
+        xlinkHref="#flames"
+        attributeName="transform"
+        type="scale"
+        values="2 1; 0.9 1; 2 1"
+        dur="0.2s"
+        repeatCount="indefinite"
+      />
     </svg>
   );
 }

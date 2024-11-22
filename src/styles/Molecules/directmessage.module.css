@@ -1,20 +1,20 @@
-
 .direct_message_container {
-    text-align: center;
-    margin: 10px auto;
-    display: absolute;
-    width: 340px;
+  text-align: center;
+  margin: 10px auto;
+  display: absolute;
+  width: 340px;
 }
 
 .direct_message_container hr {
-    width: 180%;
-    margin-left: -137px;
+  width: 180%;
+  margin-left: -137px;
 }
 
 .direct_message_container h3 {
-    font-size: 25px;
+  font-size: 25px;
+  margin-bottom: 15px;
 }
 
 .direct_message_container :not(input):not(textarea) {
-    font-variant: small-caps;
+  font-variant: small-caps;
 }
