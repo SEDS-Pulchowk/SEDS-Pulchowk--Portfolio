@@ -27,10 +27,7 @@ export default function About() {
             exploration.
             <br />
             <br />
-            ndustrial language too be used Lorem ipsum is the industrial
-            language too be used so that match this sentence no to create this
-            site lets go on with the flow Lorem ipsum is the industrial language
-            too be used
+            ....
           </p>
           <Image
             alt="Some Executive Committee members of SEDS 2081"

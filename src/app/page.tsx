@@ -32,6 +32,8 @@ export default function Home() {
               the boundaries of space research, transforming groundbreaking
               concepts into reality. Dive into the future of exploration, where
               cutting-edge innovation meets endless discovery!
+              <br />
+              ...
             </p>
           </div>
         </section>
@@ -56,10 +58,7 @@ export default function Home() {
             exploration.
             <br />
             <br />
-            ndustrial language too be used Lorem ipsum is the industrial
-            language too be used so that match this sentence no to create this
-            site lets go on with the flow Lorem ipsum is the industrial language
-            too be used{" "}
+            ...
           </p>
           <Image
             alt="Picture of SEDS-Pulchowk members and guests during NASA Space Apps Hackathon"
