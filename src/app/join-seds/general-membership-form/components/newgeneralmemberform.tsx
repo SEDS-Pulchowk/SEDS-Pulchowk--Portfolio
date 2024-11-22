@@ -353,7 +353,7 @@ export default function NewGeneralMemberForm() {
         type="submit"
         className={`btn btn-normal ${buttonStyles.click_button}`}
       >
-        {!submitted ? (
+        {submitted ? (
           <RocketLaunch />
         ) : (
           <>
