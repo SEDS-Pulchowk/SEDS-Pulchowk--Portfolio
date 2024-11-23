@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://seds.pcampus.edu.np
+
+# Sitemaps
+Sitemap: https://seds.pcampus.edu.np/sitemap.xml
