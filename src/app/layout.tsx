@@ -23,6 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta
+          name="google-site-verification"
+          content="9vmeU2bnulJ0AYjdQtA1m4iO4K-PrNWUpURwn-W8dWM"
+        />
         <link rel="icon" href="/logo.svg" sizes="any" />
       </head>
       <body className={inter.className}>
