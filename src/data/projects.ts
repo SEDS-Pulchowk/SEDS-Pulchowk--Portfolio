@@ -12,7 +12,7 @@ const projects = [
     title: "Cansat Launching and Testing",
     description:
       "Our SEDS team successfully conducted a CanSat launch as a demonstration of the entire CanSat deployment and operation process. The launch took place from the top of the ICTC building on the final day of the LOCUS event showcasing the practical implementation of Cansat and it's operation. This hands-on event showcased the capabilities of our CanSat, from its design and testing to its real-time data collection during flight. ",
-    image: "/images/Projects/cansat_launching.png",
+    image: "/images/Projects/cansat_launching.JPG",
     year: 2024,
   },
   {

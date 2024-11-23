@@ -23,11 +23,39 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta
           name="google-site-verification"
           content="9vmeU2bnulJ0AYjdQtA1m4iO4K-PrNWUpURwn-W8dWM"
         />
-        <link rel="icon" href="/logo.svg" sizes="any" />
+        <meta
+          name="description"
+          content="We are an enthusiastic, research-oriented group of engineers committed to pushing the
+              boundaries of space technology."
+        />
+
+        <meta property="og:title" content="SEDS-Pulchowk" />
+        <meta
+          property="og:description"
+          content="Official page of SEDS-Pulchowk, Nepal."
+        />
+        <meta
+          property="og:image"
+          content="https://seds.pacmpus.edu.np/images/Profile.png"
+        />
+        <meta property="og:url" content="https://seds.pacmpus.edu.np" />
+        <meta property="og:type" content="website" />
+
+        <meta name="twitter:site" content="@Seds_Pulchowk" />
+        <meta name="twitter:title" content="SEDS-Pulchowk" />
+        <meta
+          name="twitter:description"
+          content="Official page of SEDS-Pulchowk, Nepal."
+        />
+        <meta
+          name="twitter:image"
+          content="https://seds.pacmpus.edu.np/images/Profile.png"
+        />
       </head>
       <body className={inter.className}>
         <Navbar />

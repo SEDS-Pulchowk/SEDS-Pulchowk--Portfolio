@@ -1,25 +1,26 @@
 .about_us {
   margin: 100px 64px;
-  text-transform: capitalize;
 }
 
 .about_header {
+  text-transform: capitalize;
   font-size: 3rem;
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .about_content {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  gap: 32px;
+  gap: 18px;
   text-align: justify;
+  text-transform: normal;
 }
 
 .about_image {
   max-width: 100%;
   height: auto;
-  border-radius: 32px 0px 0px 32px;
+  border-radius: 24px 0px 0px 24px;
 }
 
 .executives_section {
@@ -52,7 +53,7 @@
 @media (max-width: 1478px) {
   .executives_wrapper {
     position: relative;
-    width: 80vw;
+    width: 90vw;
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
@@ -85,7 +86,7 @@
   }
 
   .executives_card:hover {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
   }
 
   @keyframes autoScroll {
@@ -123,13 +124,13 @@
     animation: none;
     flex-direction: column;
   }
-  
+
   .executives_row {
     display: flex;
     flex-direction: column;
     margin-left: -55vw;
   }
-  
+
   .executives_card {
     width: 20%;
   }
@@ -139,5 +140,58 @@
   .about_us {
     margin-left: 12px;
     margin-right: 12px;
+  }
+  
+  .executives_section {
+    margin-bottom: 0;
+  }
+
+  .executives_header {
+    margin-bottom: 0;
+  }
+
+  .executives_wrapper {
+    padding: 0;
+    margin: auto;
+  }
+
+  .executives_container {
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .executives_row {
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    margin-left: -60vw;
+  }
+
+  .executives_card {
+    transform: scale(0.7);
+    margin: -20px !important;
+  }
+
+  .executives_card:hover {
+    transform: scale(0.7);
+  }
+}
+
+@media (max-width: 420px) {
+  .executives_container {
+    gap: 0;
+  }
+
+  .executives_row {
+    gap: 0;
+  }
+
+  .executives_card {
+    transform: scale(0.65);
+  }
+
+  .executives_card:hover {
+    transform: scale(0.65);
   }
 }

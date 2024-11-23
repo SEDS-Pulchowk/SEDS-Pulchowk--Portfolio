@@ -12,7 +12,7 @@
 .navbar {
   margin: 20px 5px;
   border-radius: 20px;
-  box-shadow: 1px 1px 8px 1px #c5c4c4;
+  box-shadow: 0px 0px 2px 1px #c5c4c4;
   display: inline-block;
   height: 1.6em;
   width: 99%;
@@ -63,7 +63,7 @@
 }
 
 .form_section_text_area {
-  min-width: 340px !important;
+  min-width: 320px !important;
   width: 100%;
 }
 
@@ -109,5 +109,15 @@
 
   .navbar_button {
     font-weight: 400;
+  }
+}
+
+@media (max-width: 420px) {
+  .application_form {
+    padding: 0 5px;
+  }
+  
+  .form_outline {
+    margin: 0;
   }
 }

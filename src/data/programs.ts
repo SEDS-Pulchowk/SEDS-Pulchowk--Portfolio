@@ -7,10 +7,10 @@ const programs = [
     image: "/images/Programs/cansat_workshop.jpg",
     start: new Date("23 Jan 2024"),
     end: new Date("27 Jan 2024"),
-    location: "Pulchowk Campus",
+    location: "G Hall, Pulchowk Campus",
   },
   {
-    id: 2302,
+    id: 2303,
     title: "Space A.I Art Challenges",
     description:
       "With 30+ participants from diverse fields, the AI Space Art Challenge, organized by SEDS-Pulchowk, explored the fusion of artificial intelligence and artistic expression by using AI tools to create innovative and imaginative space-themed artworks. The challenge encourages participants to push the boundaries of creativity and technology, resulting in unique visual representations of space.",
@@ -20,14 +20,24 @@ const programs = [
     location: "Online",
   },
   {
-    id: 2301,
+    id: 2302,
     title: "NASA Space Apps Challenge",
     description:
       "SEDS - Pulchowk and NRCC teamed up to host the NASA Space Apps Challenges 2023. Participants accepted the challenge and did their best to tackle them using the data provided by world's leading space agencies. The hackathon was a physical and straight 36 hours event. The event embraced collaborative problem solving with a goal of producing relevant open-source solutions to address global needs applicable to both life on Earth and in space.",
     image: "/images/Programs/space_app_challenge.png",
     start: new Date("07 Oct 2023"),
     end: new Date("08 Oct 2023"),
-    location: "Pulchowk Campus",
+    location: "Library Hall, Pulchowk Campus",
+  },
+  {
+    id: 2301,
+    title: "Solar Observation",
+    description:
+      "Despite challenging weather conditions, we managed to conduct a brief but meaningful solar observation session during the SEDS (Students for the Exploration and Development of Space) orientation program in collaboration with Nepal Astronomical Society (NASO). Although visibility was limited, participants had the opportunity to glimpse our nearest star, making the orientation program even more engaging and educational. We thank NASO for their expert guidance in making this celestial observation possible despite the circumstances.",
+    image: "/images/Programs/solar_observation.JPG",
+    start: new Date("13 Jul 2023"),
+    end: new Date("13 Jul 2023"),
+    location: "Library Hall, Pulchowk Campus",
   },
 ];
 

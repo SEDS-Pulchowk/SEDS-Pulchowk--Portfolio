@@ -101,7 +101,7 @@ export default function Home() {
                 onClick={() => setIsOpen(!isOpen)}
                 className="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
               >
-                {isOpen ? "Read Less..." : "Read More..."}
+                <small>{isOpen ? "Read Less..." : "Read More..."}</small>
               </button>
             ) : (
               ""
