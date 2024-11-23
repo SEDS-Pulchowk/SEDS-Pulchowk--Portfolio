@@ -37,19 +37,27 @@
 }
 
 .main_text_wrapper {
-  max-width: 60vw;
+  max-width: 65vw;
 }
 
 .main_header {
-  font-size: 4rem;
-  text-transform: capitalize;
-  line-height: 128%;
-  font-weight: 700;
+  width: fit-content;
+  font-weight: 600;
+  text-align: right;
+}
+
+.main_header::first-line {
+  font-size: 3rem !important;
+}
+
+.main_answer {
+  padding: 10px;
+  font-size: 4rem !important;
+  margin-top: -15px;
 }
 
 .main_text {
   margin-bottom: 32px;
-  color: var(--text-light);
 }
 
 .about_section {
@@ -72,6 +80,14 @@
   max-width: 100%;
   height: auto;
   border-radius: 32px 0px 0px 32px;
+}
+
+.paragraph_style {
+  -webkit-line-clamp: 8;
+  line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
 }
 
 .programs_section_inner {
@@ -139,6 +155,10 @@
     font-size: 2rem;
   }
 
+  .about_content {
+    grid-template-columns: 1fr;
+  }
+
   .program_items {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -149,6 +169,14 @@
     margin-left: 32px;
   }
 
+  .main_header::first-line {
+    font-size: 1.9rem !important;
+  }
+
+  .main_answer {
+    font-size: 2.8rem !important;
+  }
+
   .programs_section,
   .about_section {
     margin-right: 32px;
@@ -156,10 +184,6 @@
 
   .main_header {
     font-size: 2.5rem;
-  }
-
-  .about_content {
-    grid-template-columns: 1fr;
   }
 
   .about_header,
@@ -180,6 +204,14 @@
   .section {
     margin-left: 12px;
     margin-right: 12px;
+  }
+
+  .main_header::first-line {
+    font-size: 1.6rem !important;
+  }
+
+  .main_answer {
+    font-size: 2.15rem !important;
   }
 
   .program_button {

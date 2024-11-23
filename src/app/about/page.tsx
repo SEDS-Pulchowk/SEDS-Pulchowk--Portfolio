@@ -21,13 +21,19 @@ export default function About() {
             At SEDS-Pulchowk, we believe that the future of space exploration is
             built through collaboration. We welcome enthusiasts from all
             engineering disciplines at IOE Pulchowk, as each individual’s unique
-            skills and perspectives are essential to driving innovation. Join us
-            in creating an environment where creativity, research, and teamwork
-            come together to push the boundaries of technology and space
-            exploration.
+            skills and perspectives are essential to driving innovation. As
+            passionate research lovers, we are always seeking to learn, grow,
+            and push the boundaries of space technology. We continuously work on
+            our development, inspiring each other to reach new heights through
+            teamwork and creativity.
             <br />
             <br />
-            ....
+            Once you join the SEDS-Pulchowk family, you become part of a
+            close-knit community driven by a shared purpose. We support one
+            another in our journey, creating not only professional connections
+            but lifelong friendships. Together, we are committed to advancing
+            space exploration and contributing to the future of space
+            technology.
           </p>
           <Image
             alt="Some Executive Committee members of SEDS 2081"

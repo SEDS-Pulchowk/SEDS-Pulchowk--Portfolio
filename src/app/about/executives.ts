@@ -55,7 +55,7 @@ let executives: Member[][] = [
       ],
     },
     {
-      name: "Mansi Thapa",
+      name: "Manasi Thapa",
       position: "Vice Secretary",
       level: "Bachelor in Mechanical Engineering",
       college: "Pulchowk Campus",

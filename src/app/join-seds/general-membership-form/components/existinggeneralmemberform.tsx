@@ -142,6 +142,10 @@ export default function ExistingMemberForm() {
       <div className={`mb-3 ${styles.form_section}`}>
         <label htmlFor="receipt" className="form-label">
           Upload Receipt: &nbsp; <span className="text-danger">*</span>
+          <br />
+          <small className="text-muted">
+            Upload 1 supported file. Max 2 MB
+          </small>
         </label>
         <input
           className="form-control"
