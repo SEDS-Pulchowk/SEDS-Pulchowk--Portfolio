@@ -14,7 +14,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 2px;
 }
 
 .logo_wrapper {
@@ -41,7 +41,6 @@
 }
 
 .socials {
-  font-size: 0.9rem;
   display: flex;
   align-items: flex-end;
   justify-content: space-evenly;
@@ -54,7 +53,7 @@
   flex-direction: column;
   display: flex;
   flex-direction: row;
-  gap: 5px;
+  gap: 3px;
   align-items: center;
 }
 
@@ -111,7 +110,7 @@
 
 @media  (max-width: 480px) {
   .contact {
-      font-size: 0.6em;
+      font-size: 0.7em;
       padding-left: 20px;
   }
 
@@ -120,7 +119,12 @@
     font-weight: 600;
   }
 
-  .social_icon{
+  .socials {
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  .social_text{
     display: none;
   }
 } 
