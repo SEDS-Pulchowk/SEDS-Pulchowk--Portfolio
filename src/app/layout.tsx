@@ -54,7 +54,7 @@ export default function RootLayout({
         />
         <meta
           name="twitter:image"
-          content="https://seds.pacmpus.edu.np/public/images/public/images/Executives/executives_2081.jpg"
+          content="https://seds.pacmpus.edu.np/public/images/Executives/executives_2081.jpg"
         />
       </head>
       <body className={inter.className}>
