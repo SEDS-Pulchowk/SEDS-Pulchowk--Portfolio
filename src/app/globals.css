@@ -108,7 +108,10 @@ button {
   h3 {
     font-size: 20px !important;
   }
-  p, li, label {
-    font-size: 12px !important;
+
+  p,
+  li,
+  label, em {
+    font-size: 14px !important;
   }
 }

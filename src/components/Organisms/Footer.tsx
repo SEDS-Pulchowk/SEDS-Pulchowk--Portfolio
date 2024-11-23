@@ -62,7 +62,7 @@ export default function Footer() {
               <span className={styles.social_icon}>
                 <Facebook />
               </span>
-              <p>Facebook</p>
+              <small className={styles.social_text}>Facebook</small>
             </div>
           </Link>
           <Link href="https://www.instagram.com/sedspulchowk/">
@@ -70,7 +70,7 @@ export default function Footer() {
               <span className={styles.social_icon}>
                 <Instagram />
               </span>
-              <p>Instagram</p>
+              <small className={styles.social_text}>Instagram</small>
             </div>
           </Link>
           <Link href="https://www.linkedin.com/company/seds-pulchowk/">
@@ -78,7 +78,7 @@ export default function Footer() {
               <span className={styles.social_icon}>
                 <LinkedIn />
               </span>
-              <p>LinkedIn</p>
+              <small className={styles.social_text}>LinkedIn</small>
             </div>
           </Link>
           <Link href="https://discord.gg/gtfaf7Q4NB">
@@ -86,7 +86,7 @@ export default function Footer() {
               <span className={styles.social_icon}>
                 <Discord />
               </span>
-              <p>Discord</p>
+              <small className={styles.social_text}>Discord</small>
             </div>
           </Link>
         </div>

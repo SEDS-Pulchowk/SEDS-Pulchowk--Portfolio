@@ -36,7 +36,8 @@ export default function Program({
         >
           {Date.now() > end.getTime()
             ? "Closed"
-            : humanize(end.getTime() - Date.now(), { largest: 1 }) } {Date.now() > end.getTime() ? "" : <Hourglass />}
+            : humanize(end.getTime() - Date.now(), { largest: 1 })}{" "}
+          {Date.now() > end.getTime() ? "" : <Hourglass />}
         </div>
       </div>
       <h3 className={styles.title}>{title}</h3>
@@ -44,16 +45,16 @@ export default function Program({
       <div className={styles.flex_wrapper}>
         <div className={styles.info_wrapper}>
           <div className={styles.info}>
-            <span style={{ height: "16px" }}>
+            <span style={{ height: "5px" }}>
               <Clock />
             </span>
-            {formatDate(start, end)}
+            <small>{formatDate(start, end)}</small>
           </div>
           <div className={styles.info}>
-            <span style={{ height: "16px" }}>
+            <span style={{ height: "5px" }}>
               <LocationPin />
             </span>
-            {location}
+            <small>{location}</small>
           </div>
         </div>
         <div>

@@ -1,5 +1,5 @@
 import React from "react";
-import {Calendar} from "./icons";
+import { Calendar } from "./icons";
 import styles from "@/styles/Molecules/program.module.css";
 import Image from "next/image";
 
@@ -30,14 +30,13 @@ export default function Project({
       <div className={styles.flex_wrapper}>
         <div className={styles.info_wrapper}>
           <div className={styles.info}>
-            <span style={{ height: "16px" }}>
+            <span style={{ height: "5px" }}>
               <Calendar />
             </span>
-            {year}
+            <small>{year}</small>
           </div>
         </div>
-        <div>
-        </div>
+        <div></div>
       </div>
     </div>
   );
