@@ -10,7 +10,7 @@ import Link from "next/link";
 export default function NewGeneralMemberForm() {
   const [submitted, setSubmitted] = useState(false);
   const [othersSelected, setOthersSelected] = useState(false);
-  const [othersValue, changeOthersValue] = useState("");
+  // const [othersValue, changeOthersValue] = useState("");
 
   function Submit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -75,9 +75,8 @@ export default function NewGeneralMemberForm() {
   }
 
   function toggleSourceType(e: ChangeEvent<HTMLInputElement>) {
-    if (e.target.value == "Other") {
+    if (e.target.value === "Other") {
       setOthersSelected(true);
-      console.log("others is selected and it is " + othersSelected);
     } else {
       setOthersSelected(false);
     }
@@ -184,7 +183,7 @@ export default function NewGeneralMemberForm() {
             required
           />
           <label className="form-check-label" htmlFor="socialMedia">
-            Social Media (Facebook, Instagram, LinkedIn, News etc)
+            Social Media
           </label>
         </div>
         <div className="form-check">
@@ -232,7 +231,7 @@ export default function NewGeneralMemberForm() {
             type="radio"
             name="Source"
             id="other"
-            value={othersValue}
+            value="Other"
             onChange={(e) => toggleSourceType(e)}
           />
           <label className="form-check-label" htmlFor="other"></label>
@@ -240,7 +239,7 @@ export default function NewGeneralMemberForm() {
             type="text"
             placeholder="Others.."
             disabled={!othersSelected}
-            onChange={(e) => changeOthersValue(e.target.value)}
+            // onChange={(e) => changeOthersValue(e.target.value)}
           />
         </div>
       </div>

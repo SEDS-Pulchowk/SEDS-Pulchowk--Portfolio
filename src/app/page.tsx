@@ -45,10 +45,9 @@ export default function Home() {
         <section className={styles.section}>
           <div className={styles.main_text_wrapper}>
             <h2 className={styles.main_header}>
-              <span>उदेश्य के लिनु?</span>
+              <span className={styles.main_question}>उदेश्य के लिनु?</span>
               <br />
               <span className={`gradient_text ${styles.main_answer}`}>
-                {" "}
                 उडी छुनु चन्द्र एक
               </span>
             </h2>
