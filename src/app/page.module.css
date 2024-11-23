@@ -139,9 +139,9 @@
   margin-top: -30px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  align-content: space-around;
-  justify-content: space-between;
-  gap: 32px;
+  align-content: space-evenly;
+  justify-content: space-evenly;
+  gap: 22px;
   height: 100%;
 }
 
@@ -223,5 +223,15 @@
     padding: 4px 12px;
     border-radius: 20px;
     font-weight: 550;
+  }
+}
+
+@media (max-width: 378px) {
+  .main_header::first-line {
+    font-size: 1.4rem !important;
+  }
+
+  .main_answer {
+    font-size: 1.8rem !important;
   }
 }
