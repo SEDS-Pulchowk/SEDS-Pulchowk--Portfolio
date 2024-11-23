@@ -12,8 +12,30 @@ import programs from "@/data/programs";
 import projects from "@/data/projects";
 import { useState, useEffect } from "react";
 
+function useIsMobile(breakpoint = 720) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < breakpoint);
+    };
+
+    checkMobile();
+
+    // Add event listener
+    window.addEventListener("resize", checkMobile);
+
+    // Cleanup
+    return () => window.removeEventListener("resize", checkMobile);
+  }, [breakpoint]);
+
+  return isMobile;
+}
+
 export default function Home() {
   let [selected, set_selected] = useState<"programs" | "projects">("programs");
+  const isMobile = useIsMobile();
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
@@ -23,17 +45,18 @@ export default function Home() {
         <section className={styles.section}>
           <div className={styles.main_text_wrapper}>
             <h2 className={styles.main_header}>
-            <span>उदेश्य के लिनु?</span>
+              <span>उदेश्य के लिनु?</span>
               <br />
-            <span className={`gradient_text ${styles.main_answer}`}> उडी छुनु चन्द्र एक</span>
+              <span className={`gradient_text ${styles.main_answer}`}>
+                {" "}
+                उडी छुनु चन्द्र एक
+              </span>
             </h2>
             <p className={styles.main_text}>
-              <strong>Ready to Launch Ideas?</strong> At SEDS-Pulchowk, we push
-              the boundaries of space research, transforming groundbreaking
-              concepts into reality. Dive into the future of exploration, where
-              cutting-edge innovation meets endless discovery!
-              <br />
-              ...
+              Driven by research, collaboration, and innovation, we are pushing
+              the boundaries of space exploration to new frontiers. Together, we
+              ignite curiosity, inspire progress, and shape the future of space
+              technology.
             </p>
           </div>
         </section>
@@ -48,18 +71,42 @@ export default function Home() {
           We Are
         </h2>
         <div className={styles.about_content}>
-          <p className={styles.about_text}>
-            Founded in 2019, SEDS-Pulchowk is a leading partner of SEDS Nepal,
-            dedicated to advancing space exploration through cutting-edge
-            research, innovation, and outreach programs. We empower the next
-            generation of engineers, scientists, and visionaries by pushing the
-            boundaries of space technology and fostering a vibrant community of
-            space enthusiasts committed to shaping the future of space
-            exploration.
-            <br />
-            <br />
-            ...
-          </p>
+          <div className={styles.about_text}>
+            <p className={isMobile && !isOpen ? styles.paragraph_style : ""}>
+              Founded in 2019, SEDS-Pulchowk is a leading partner of SEDS Nepal,
+              dedicated to advancing space exploration through cutting-edge
+              research, innovation, and outreach programs. We are an
+              enthusiastic, research-oriented group committed to pushing the
+              boundaries of space technology. Our team of passionate engineers,
+              scientists, and visionaries is driven by a shared curiosity to
+              explore the unknown and contribute to the global space community.
+              With a focus on continuous learning and development, we empower
+              the next generation of space enthusiasts by fostering a vibrant,
+              collaborative environment.
+              <br />
+              <br />
+              Our members engage in a diverse range of space-related projects,
+              from satellite development to space science research, actively
+              shaping the future of space exploration. We are excited about the
+              future of SEDS, constantly striving to innovate and inspire
+              through our groundbreaking work, while promoting the importance of
+              space science in addressing global challenges. As we continue to
+              expand our reach and deepen our impact, we remain dedicated to
+              creating opportunities that will inspire and propel the next wave
+              of space exploration.
+            </p>
+            {isMobile ? (
+              <button
+                type="button"
+                onClick={() => setIsOpen(!isOpen)}
+                className="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              >
+                {isOpen ? "Read Less..." : "Read More..."}
+              </button>
+            ) : (
+              ""
+            )}
+          </div>
           <Image
             alt="Picture of SEDS-Pulchowk members and guests during NASA Space Apps Hackathon"
             className={styles.about_image}
@@ -104,26 +151,6 @@ export default function Home() {
       <DirectMessage />
     </>
   );
-}
-
-function useIsMobile(breakpoint = 720) {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < breakpoint);
-    };
-
-    checkMobile();
-
-    // Add event listener
-    window.addEventListener("resize", checkMobile);
-
-    // Cleanup
-    return () => window.removeEventListener("resize", checkMobile);
-  }, [breakpoint]);
-
-  return isMobile;
 }
 
 function ProgramsAndProjects({

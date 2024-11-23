@@ -33,8 +33,15 @@ export default function MediumEmbed() {
               key={index}
               className={`iframely-embed ${styles.content}`}
               dangerouslySetInnerHTML={{
-                __html: `<a class="m-story" href=${blog.url} >${blog.headline}</a>  
-                         <img src=${blog.imageUrl || "https://miro.medium.com/v2/resize:fit:1400/1*2Ccm1VIYlLt6pMq5snIgwQ.gif"} alt=${blog.headline} class=${styles.content_image} width={300} height={200}/>`,
+                __html: `<a class="m-story" href=${blog.url} >${
+                  blog.headline
+                }</a>  
+                         <img src=${
+                           blog.imageUrl ||
+                           "https://miro.medium.com/v2/resize:fit:1400/1*2Ccm1VIYlLt6pMq5snIgwQ.gif"
+                         } alt=${blog.headline} class=${
+                  styles.content_image
+                } width={300} height={200}/>`,
               }}
             />
           </Link>

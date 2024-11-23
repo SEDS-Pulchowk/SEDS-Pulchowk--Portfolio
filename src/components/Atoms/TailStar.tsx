@@ -27,7 +27,7 @@ const App = () => {
           flyY: (Math.random()  - 0.5) * window.innerHeight * 2,
         },
       ]);
-    }, 30000);
+    }, 33333);
 
     return () => clearInterval(interval);
   }, []);
@@ -52,8 +52,8 @@ const App = () => {
               "--fly-y": `${star.flyY}px`,
               "--initial-rotation": `${
                 (Math.atan2(star.flyY - star.startY, star.flyX - star.startX) *
-                  180) /
-                Math.PI
+                  180 /
+                Math.PI)
               }deg`,
             } as React.CSSProperties
           }
