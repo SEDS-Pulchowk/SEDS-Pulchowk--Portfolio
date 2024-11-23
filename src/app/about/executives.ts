@@ -9,9 +9,15 @@ let executives: Member[][] = [
       college: "Pulchowk Campus",
       image: "/images/Executives/siddhant_yadav.jpg",
       links: [
-        { icon: "facebook", url: "https://facebook.com/" },
-        { icon: "instagram", url: "https://instagram.com" },
-        { icon: "linkedin", url: "https://linkedin.com" },
+        {
+          icon: "facebook",
+          url: "https://www.facebook.com/profile.php?id=100011697075495",
+        },
+        { icon: "instagram", url: "https://www.instagram.com/siddhant4815/" },
+        {
+          icon: "linkedin",
+          url: "https://www.linkedin.com/in/siddhant-yadav-6669a0185/",
+        },
       ],
     },
   ],
@@ -23,9 +29,15 @@ let executives: Member[][] = [
       college: "Pulchowk Campus",
       image: "/images/Executives/arpit_pokharel.jpg",
       links: [
-        { icon: "facebook", url: "https://facebook.com/" },
-        { icon: "instagram", url: "https://instagram.com" },
-        { icon: "linkedin", url: "https://linkedin.com" },
+        {
+          icon: "facebook",
+          url: "https://www.facebook.com/profile.php?id=100094240345334",
+        },
+        { icon: "instagram", url: "https://www.instagram.com/sedspulchowk/" },
+        {
+          icon: "linkedin",
+          url: "https://www.linkedin.com/company/seds-pulchowk/",
+        },
       ],
     },
     {
@@ -35,9 +47,15 @@ let executives: Member[][] = [
       college: "Pulchowk Campus",
       image: "/images/Executives/prajjwal_pandey.jpg",
       links: [
-        { icon: "facebook", url: "https://facebook.com/" },
-        { icon: "instagram", url: "https://instagram.com" },
-        { icon: "linkedin", url: "https://linkedin.com" },
+        {
+          icon: "facebook",
+          url: "https://www.facebook.com/profile.php?id=100094240345334",
+        },
+        { icon: "instagram", url: "https://www.instagram.com/sedspulchowk/" },
+        {
+          icon: "linkedin",
+          url: "https://www.linkedin.com/company/seds-pulchowk/",
+        },
       ],
     },
   ],
@@ -49,9 +67,15 @@ let executives: Member[][] = [
       college: "Pulchowk Campus",
       image: "/images/Executives/roshan_giri.png",
       links: [
-        { icon: "facebook", url: "https://facebook.com/" },
-        { icon: "instagram", url: "https://instagram.com" },
-        { icon: "linkedin", url: "https://linkedin.com" },
+        {
+          icon: "facebook",
+          url: "https://www.facebook.com/profile.php?id=100094240345334",
+        },
+        { icon: "instagram", url: "https://www.instagram.com/sedspulchowk/" },
+        {
+          icon: "linkedin",
+          url: "https://www.linkedin.com/company/seds-pulchowk/",
+        },
       ],
     },
     {
@@ -61,9 +85,15 @@ let executives: Member[][] = [
       college: "Pulchowk Campus",
       image: "/images/Executives/mansi_thapa.jpg",
       links: [
-        { icon: "facebook", url: "https://facebook.com/" },
-        { icon: "instagram", url: "https://instagram.com" },
-        { icon: "linkedin", url: "https://linkedin.com" },
+        {
+          icon: "facebook",
+          url: "https://www.facebook.com/profile.php?id=100094240345334",
+        },
+        { icon: "instagram", url: "https://www.instagram.com/sedspulchowk/" },
+        {
+          icon: "linkedin",
+          url: "https://www.linkedin.com/company/seds-pulchowk/",
+        },
       ],
     },
     {
@@ -73,9 +103,15 @@ let executives: Member[][] = [
       college: "Pulchowk Campus",
       image: "/images/Executives/krishna_dhanuk.png",
       links: [
-        { icon: "facebook", url: "https://facebook.com/" },
-        { icon: "instagram", url: "https://instagram.com" },
-        { icon: "linkedin", url: "https://linkedin.com" },
+        {
+          icon: "facebook",
+          url: "https://www.facebook.com/profile.php?id=100094240345334",
+        },
+        { icon: "instagram", url: "https://www.instagram.com/sedspulchowk/" },
+        {
+          icon: "linkedin",
+          url: "https://www.linkedin.com/company/seds-pulchowk/",
+        },
       ],
     },
   ],
@@ -87,9 +123,15 @@ let executives: Member[][] = [
       college: "Pulchowk Campus",
       image: "/images/Executives/prashant_sharma.png",
       links: [
-        { icon: "facebook", url: "https://facebook.com/" },
-        { icon: "instagram", url: "https://instagram.com" },
-        { icon: "linkedin", url: "https://linkedin.com" },
+        {
+          icon: "facebook",
+          url: "https://www.facebook.com/profile.php?id=100094240345334",
+        },
+        { icon: "instagram", url: "https://www.instagram.com/sedspulchowk/" },
+        {
+          icon: "linkedin",
+          url: "https://www.linkedin.com/company/seds-pulchowk/",
+        },
       ],
     },
     {
@@ -114,35 +156,53 @@ let executives: Member[][] = [
       college: "Pulchowk Campus",
       image: "/images/Executives/neharika_bhattarai.jpg",
       links: [
-        { icon: "facebook", url: "https://facebook.com/" },
-        { icon: "instagram", url: "https://instagram.com" },
-        { icon: "linkedin", url: "https://linkedin.com" },
+        {
+          icon: "facebook",
+          url: "https://www.facebook.com/profile.php?id=100094240345334",
+        },
+        { icon: "instagram", url: "https://www.instagram.com/sedspulchowk/" },
+        {
+          icon: "linkedin",
+          url: "https://www.linkedin.com/company/seds-pulchowk/",
+        },
       ],
     },
   ],
   [
     {
       name: "Chahana Thapa Magar",
-      position: "Research Sub-Coordinator",
+      position: "Research and project Sub Coordinator",
       level: "Bachelor in Chemical Engineering",
       college: "Pulchowk Campus",
       image: "/images/Executives/chahana_magar.jpg",
       links: [
-        { icon: "facebook", url: "https://facebook.com/" },
-        { icon: "instagram", url: "https://instagram.com" },
-        { icon: "linkedin", url: "https://linkedin.com" },
+        {
+          icon: "facebook",
+          url: "https://www.facebook.com/profile.php?id=100073550209334&mibextid=ZbWKwL",
+        },
+        {
+          icon: "instagram",
+          url: "https://www.instagram.com/_._yooohooo_._/profilecard/?igsh=YW5yajhuajJuMm9h",
+        },
+        {
+          icon: "linkedin",
+          url: "https://www.linkedin.com/company/seds-pulchowk/",
+        },
       ],
     },
     {
       name: "Shishir Acharya",
-      position: "Research Sub-Coordinator",
+      position: "Research and project Sub Coordinator ",
       level: "Bachelor in Aerospace Engineering",
       college: "Pulchowk Campus",
       image: "/images/Executives/shishir_acharya.jpg",
       links: [
-        { icon: "facebook", url: "https://facebook.com/" },
-        { icon: "instagram", url: "https://instagram.com" },
-        { icon: "linkedin", url: "https://linkedin.com" },
+        { icon: "facebook", url: "https://www.facebook.com/share/1G1qgbWxyy/" },
+        { icon: "instagram", url: "https://www.instagram.com/sedspulchowk/" },
+        {
+          icon: "linkedin",
+          url: "https://www.linkedin.com/in/shishir-acharya-729a07281",
+        },
       ],
     },
   ],
@@ -155,7 +215,7 @@ let executives: Member[][] = [
       image: "/images/Executives/sandip_katel.jpg",
       links: [
         { icon: "facebook", url: "https://www.facebook.com/sandip.katel.9/" },
-        { icon: "instagram", url: "https://instagram.com" },
+        { icon: "instagram", url: "https://www.instagram.com/sedspulchowk/" },
         {
           icon: "linkedin",
           url: "https://www.linkedin.com/in/sandip-katel-7904b9198/",

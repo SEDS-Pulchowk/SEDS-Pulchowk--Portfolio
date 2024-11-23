@@ -197,7 +197,7 @@ function ProgramsAndProjects({
           onClick={() => setIsOpen(!isOpen)}
           className="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
         >
-          {isOpen ? "Show Less..." : "Load More..."}
+          <small>{isOpen ? "Show Less..." : "Load More..."}</small>
         </button>
       ) : (
         ""
