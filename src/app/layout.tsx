@@ -41,7 +41,7 @@ export default function RootLayout({
         />
         <meta
           property="og:image"
-          content="https://seds.pacmpus.edu.np/images/Profile.png"
+          content="https://seds.pacmpus.edu.np/public/images/Executives/executives_2081.jpg"
         />
         <meta property="og:url" content="https://seds.pacmpus.edu.np" />
         <meta property="og:type" content="website" />
@@ -54,7 +54,7 @@ export default function RootLayout({
         />
         <meta
           name="twitter:image"
-          content="https://seds.pacmpus.edu.np/images/Profile.png"
+          content="https://seds.pacmpus.edu.np/public/images/Executives/executives_2081.jpg"
         />
       </head>
       <body className={inter.className}>
