@@ -1,4 +1,4 @@
-/*FOr New general member and exesting members renewal form*/
+/*For New general member and exesting members renewal form*/
 // "use client";
 
 // import { useState, useEffect } from "react";
@@ -104,14 +104,32 @@
 //   return formMain;
 // }
 
+
+// function FormBody({ memberType }: FormBodyProps) {
+//   const [formMain, setFormMain] = useState(<></>);
+
+//   useEffect(() => {
+//     if (memberType == "new-member") {
+//       setFormMain(<NewGeneralMemberForm />);
+//     } else if (memberType == "existing-member") {
+//       setFormMain(<ExistingMemberForm />);
+//     } else {
+//       setFormMain(<small>Select membership type to open a form</small>);
+//     }
+//   }, [memberType]);
+
+//   return formMain;
+// }
+
+
+
+
 /*Only for New general members */
 "use client";
 
-import { useState, useEffect } from "react";
 import styles from "../joinseds.module.css";
 import { JoinSeds } from "../joinseds";
 import NewGeneralMemberForm from "./components/newgeneralmemberform";
-import ExistingMemberForm from "./components/existinggeneralmemberform";
 
 interface FormBodyProps {
   memberType: string;
@@ -159,25 +177,9 @@ export default function GeneralForm() {
             </p>
           </div>
           <hr />
-          <FormBody memberType="new-member" />
+          <NewGeneralMemberForm />
         </div>
       </section>
     </div>
   );
-}
-
-function FormBody({ memberType }: FormBodyProps) {
-  const [formMain, setFormMain] = useState(<></>);
-
-  useEffect(() => {
-    if (memberType == "new-member") {
-      setFormMain(<NewGeneralMemberForm />);
-    } else if (memberType == "existing-member") {
-      setFormMain(<ExistingMemberForm />);
-    } else {
-      setFormMain(<small>Select membership type to open a form</small>);
-    }
-  }, [memberType]);
-
-  return formMain;
 }
