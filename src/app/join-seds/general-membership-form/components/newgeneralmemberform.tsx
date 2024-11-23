@@ -10,6 +10,7 @@ import Link from "next/link";
 export default function NewGeneralMemberForm() {
   const [submitted, setSubmitted] = useState(false);
   const [othersSelected, setOthersSelected] = useState(false);
+  const [othersValue, changeOthersValue] = useState("");
 
   function Submit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -75,7 +76,7 @@ export default function NewGeneralMemberForm() {
 
   function toggleSourceType(e: ChangeEvent<HTMLInputElement>) {
     if (e.target.value == "Other") {
-      setOthersSelected(true); //TODO : Not working why???
+      setOthersSelected(true);
       console.log("others is selected and it is " + othersSelected);
     } else {
       setOthersSelected(false);
@@ -231,7 +232,7 @@ export default function NewGeneralMemberForm() {
             type="radio"
             name="Source"
             id="other"
-            value="Other"
+            value={othersValue}
             onChange={(e) => toggleSourceType(e)}
           />
           <label className="form-check-label" htmlFor="other"></label>
@@ -239,6 +240,7 @@ export default function NewGeneralMemberForm() {
             type="text"
             placeholder="Others.."
             disabled={!othersSelected}
+            onChange={(e) => changeOthersValue(e.target.value)}
           />
         </div>
       </div>
