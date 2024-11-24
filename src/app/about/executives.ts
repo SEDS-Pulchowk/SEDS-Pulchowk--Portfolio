@@ -36,7 +36,7 @@ let executives: Member[][] = [
         { icon: "instagram", url: "https://www.instagram.com/sedspulchowk/" },
         {
           icon: "linkedin",
-          url: "https://www.linkedin.com/company/seds-pulchowk/",
+          url: "https://www.linkedin.com/in/arpit-pokhrel77?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         },
       ],
     },

@@ -10,13 +10,13 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
   padding: 20px 0;
-  gap: 32px;
+  gap: 16px;
 }
 
 .content {
   margin: auto;
   display: flex;
-  width: 320px;
+  width: 310px;
   height: auto;
   z-index: -10;
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b9/Youtube_loading_symbol_1_%28wobbly%29.gif"); /*Loading image if didn't load*/

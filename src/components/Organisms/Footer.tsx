@@ -32,7 +32,7 @@ export default function Footer() {
             </span>
           </div>
           <div>
-            Email: &nbsp;
+          <span className={styles.contact_type}>Email: &nbsp;</span>
             <span className={styles.contact_link}>
               <Link href="mailto:seds@pcampus.edu.np" target="_blank">
                 seds@pcampus.edu.np
@@ -40,7 +40,7 @@ export default function Footer() {
             </span>
           </div>
           <div>
-            Contact: &nbsp;
+            <span className={styles.contact_type}>Contact: &nbsp;</span>
             <span className={styles.contact_link}>
               <Link href="tel:9817899305" target="_blank">
                 9817899305

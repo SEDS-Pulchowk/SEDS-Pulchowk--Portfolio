@@ -169,28 +169,30 @@ function ProgramsAndProjects({
     isMobile && !isOpen ? projects.slice(0, 2) : projects;
 
   return (
-    <div className={styles.program_items}>
-      {selected === "programs"
-        ? programsToRender.map((program) => (
-            <Program
-              key={program.id}
-              title={program.title}
-              description={program.description}
-              image={program.image}
-              start={program.start}
-              end={program.end}
-              location={program.location}
-            />
-          ))
-        : projectsToRender.map((project) => (
-            <Project
-              key={project.id}
-              title={project.title}
-              description={project.description}
-              image={project.image}
-              year={project.year}
-            />
-          ))}
+    <div className={styles.program_container}>
+      <div className={styles.program_items}>
+        {selected === "programs"
+          ? programsToRender.map((program) => (
+              <Program
+                key={program.id}
+                title={program.title}
+                description={program.description}
+                image={program.image}
+                start={program.start}
+                end={program.end}
+                location={program.location}
+              />
+            ))
+          : projectsToRender.map((project) => (
+              <Project
+                key={project.id}
+                title={project.title}
+                description={project.description}
+                image={project.image}
+                year={project.year}
+              />
+            ))}
+      </div>
       {isMobile ? (
         <button
           type="button"
