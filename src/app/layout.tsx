@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <meta
           name="google-site-verification"
           content="9vmeU2bnulJ0AYjdQtA1m4iO4K-PrNWUpURwn-W8dWM"
@@ -41,11 +41,12 @@ export default function RootLayout({
         />
         <meta
           property="og:image"
-          content="https://seds.pacmpus.edu.np/public/images/Executives/executives_2081.jpg"
+          content="https://seds.pcampus.edu.np/images/Profile.png"
         />
         <meta property="og:url" content="https://seds.pacmpus.edu.np" />
         <meta property="og:type" content="website" />
 
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@Seds_Pulchowk" />
         <meta name="twitter:title" content="SEDS-Pulchowk" />
         <meta
@@ -54,7 +55,7 @@ export default function RootLayout({
         />
         <meta
           name="twitter:image"
-          content="https://seds.pacmpus.edu.np/public/images/Executives/executives_2081.jpg"
+          content="https://seds.pcampus.edu.np/images/Profile.png"
         />
       </head>
       <body className={inter.className}>
