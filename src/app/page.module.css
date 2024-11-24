@@ -135,14 +135,20 @@
   opacity: 1;
 }
 
+.program_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .program_items {
   margin-top: -30px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-content: space-evenly;
+  display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-content: space-evenly;
   gap: 22px;
-  height: 100%;
 }
 
 @media (max-width: 1024px) {

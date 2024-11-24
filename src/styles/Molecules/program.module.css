@@ -1,6 +1,8 @@
 .program_wrapper {
   display: flex;
   flex-direction: column;
+  width: 32%;
+  min-width: 350px;
   padding: 1rem;
   background-color: var(--background);
   border-radius: 16px;
@@ -88,4 +90,17 @@
   margin-left: 4px;
   visibility: visible;
   scale: 1;
+}
+
+@media (max-width: 720px) {
+  .program_wrapper {
+    width: 80%;
+  }
+}
+
+@media (max-width: 420px) {
+  .program_wrapper {
+    width: 90%;
+    min-width: 310px;
+  }
 }

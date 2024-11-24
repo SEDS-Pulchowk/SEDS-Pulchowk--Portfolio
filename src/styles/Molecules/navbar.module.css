@@ -77,18 +77,6 @@
   transition: text-shadow 100ms ease-in-out;
 }
 
-/* .link .navbar_circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    scale: 0;
-    height: 0px;
-} */
-
-/* .link:hover .navbar_circle {
-    scale: 1;
-} */
-
 .link:hover {
   text-shadow: 1px 1px 1px #fff;
 }
