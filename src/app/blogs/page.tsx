@@ -23,7 +23,7 @@ export default function MediumEmbed() {
         <h2>
           Our Celestial <span className="gradient_text">Chronicles</span>
         </h2>
-        <h6 className="text-danger">We are working on it.</h6>
+        <small className="text-primary">Wait, charging cosmic engines takes some time</small>
         <hr />
       </div>
       <div className={styles.blogs_container}>

@@ -5,10 +5,29 @@
 
 let Blogs = [
   {
+    url: "https://medium.com/@babusandipkatel/cosmic-love-a-romance-beyond-earthly-horizons-6acb4bba6b24",
+    headline: "Cosmic Love: A Romance Beyond Earthly Horizons",
+    imageUrl:
+      "https://miro.medium.com/v2/resize:fit:828/format:webp/1*Cok5XtRlvhDR3RIPFUjP-A.jpeg",
+  },
+
+  {
     url: "https://medium.com/@079bme020.krishna/robotic-explorer-perseverance-rovers-mars-journey-be8f2b364152",
     headline: "Robotic Explorer: Perseverance Rover’s Mars Journey",
     imageUrl:
       "https://miro.medium.com/v2/resize:fit:828/format:webp/1*glwuf7v7X-C9BVWWLc0EaA.png",
+  },
+
+  {
+    url: "https://medium.com/@harkapunmagar/the-mars-mirage-rethinking-interplanetary-colonization-a5546120dbf2",
+    headline: "The Mars Mirage: Rethinking Interplanetary Colonization",
+    imageUrl:
+      "https://miro.medium.com/v2/resize:fit:828/format:webp/1*OMS9kvO51x3ug5TUx2PTpg.jpeg",
+  },
+
+  {
+    url: "https://medium.com/@babusandipkatel/seeing-beyond-time-how-your-eyes-defy-einsteins-speed-limit-aeaa1d6da837",
+    headline: "Seeing Beyond Time: How Your Eyes Defy Einstein’s Speed Limit",
   },
 
   {
@@ -31,28 +50,6 @@ let Blogs = [
     headline: "Deep space really is completely dark, New Horizons shows",
     imageUrl:
       "https://miro.medium.com/v2/resize:fit:828/format:webp/1*VkJJby6ljPTJIlwaDQYkkw.gif",
-  },
-
-  {
-    url: "https://medium.com/@BeggarMidas/we-need-to-chill-about-tabbys-stars-being-an-alien-megastructure-b899a9cd43f6",
-    headline:
-      "We Need to Chill About Tabby’s Stars Being an “Alien Megastructure”",
-    imageUrl:
-      "https://miro.medium.com/v2/resize:fit:828/format:webp/1*H8YlIy5cJTSQ8dQxsBV_pw.png",
-  },
-
-  {
-    url: "https://medium.com/write-a-catalyst/wish-upon-a-shooting-star-1f65d8c5b086",
-    headline: "Wish Upon A Shooting Star",
-    imageUrl:
-      "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*qxpoFvmdCvAUZipYo-JLcw.png",
-  },
-
-  {
-    url: "https://medium.com/@frenchrobson/spacex-mars-on-the-menu-e11ae7caf33a",
-    headline: "SpaceX: Mars on the Menu?",
-    imageUrl:
-      "https://miro.medium.com/v2/resize:fit:828/format:webp/0*CzSc2JMTauPs6V06",
   },
 
   {

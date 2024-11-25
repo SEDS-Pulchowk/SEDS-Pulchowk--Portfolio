@@ -230,6 +230,19 @@ export default function NewGeneralMemberForm() {
             className="form-check-input"
             type="radio"
             name="Source"
+            id="mail"
+            value="Direct Mail"
+            onChange={(e) => toggleSourceType(e)}
+          />
+          <label className="form-check-label" htmlFor="events">
+            Email
+          </label>
+        </div>
+        <div className="form-check">
+          <input
+            className="form-check-input"
+            type="radio"
+            name="Source"
             id="other"
             value="Other"
             onChange={(e) => toggleSourceType(e)}
