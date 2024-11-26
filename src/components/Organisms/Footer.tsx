@@ -65,7 +65,7 @@ export default function Footer() {
               <small className={styles.social_text}>Facebook</small>
             </div>
           </Link>
-          <Link href="https://www.instagram.com/sedspulchowk/">
+          <Link href="https://www.instagram.com/seds.pulchowk/?hl=en">
             <div className={styles.socials_item}>
               <span className={styles.social_icon}>
                 <Instagram />
