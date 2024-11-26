@@ -33,7 +33,7 @@ let executives: Member[][] = [
           icon: "facebook",
           url: "https://www.facebook.com/profile.php?id=100094240345334",
         },
-        { icon: "instagram", url: "https://www.instagram.com/sedspulchowk/" },
+        { icon: "instagram", url: "https://www.instagram.com/seds.pulchowk/?hl=en" },
         {
           icon: "linkedin",
           url: "https://www.linkedin.com/in/arpit-pokhrel77?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -51,7 +51,7 @@ let executives: Member[][] = [
           icon: "facebook",
           url: "https://www.facebook.com/profile.php?id=100094240345334",
         },
-        { icon: "instagram", url: "https://www.instagram.com/sedspulchowk/" },
+        { icon: "instagram", url: "https://www.instagram.com/seds.pulchowk/?hl=en" },
         {
           icon: "linkedin",
           url: "https://www.linkedin.com/company/seds-pulchowk/",
@@ -71,7 +71,7 @@ let executives: Member[][] = [
           icon: "facebook",
           url: "https://www.facebook.com/profile.php?id=100094240345334",
         },
-        { icon: "instagram", url: "https://www.instagram.com/sedspulchowk/" },
+        { icon: "instagram", url: "https://www.instagram.com/seds.pulchowk/?hl=en" },
         {
           icon: "linkedin",
           url: "https://www.linkedin.com/company/seds-pulchowk/",
@@ -89,7 +89,7 @@ let executives: Member[][] = [
           icon: "facebook",
           url: "https://www.facebook.com/profile.php?id=100094240345334",
         },
-        { icon: "instagram", url: "https://www.instagram.com/sedspulchowk/" },
+        { icon: "instagram", url: "https://www.instagram.com/seds.pulchowk/?hl=en" },
         {
           icon: "linkedin",
           url: "https://www.linkedin.com/company/seds-pulchowk/",
@@ -107,7 +107,7 @@ let executives: Member[][] = [
           icon: "facebook",
           url: "https://www.facebook.com/profile.php?id=100094240345334",
         },
-        { icon: "instagram", url: "https://www.instagram.com/sedspulchowk/" },
+        { icon: "instagram", url: "https://www.instagram.com/seds.pulchowk/?hl=en" },
         {
           icon: "linkedin",
           url: "https://www.linkedin.com/company/seds-pulchowk/",
@@ -125,9 +125,12 @@ let executives: Member[][] = [
       links: [
         {
           icon: "facebook",
-          url: "https://www.facebook.com/profile.php?id=100094240345334",
+          url: "https://www.facebook.com/profile.php?id=100040834662123",
         },
-        { icon: "instagram", url: "https://www.instagram.com/sedspulchowk/" },
+        {
+          icon: "instagram",
+          url: "https://www.instagram.com/prashantsharma_49/",
+        },
         {
           icon: "linkedin",
           url: "https://www.linkedin.com/company/seds-pulchowk/",
@@ -160,7 +163,7 @@ let executives: Member[][] = [
           icon: "facebook",
           url: "https://www.facebook.com/profile.php?id=100094240345334",
         },
-        { icon: "instagram", url: "https://www.instagram.com/sedspulchowk/" },
+        { icon: "instagram", url: "https://www.instagram.com/seds.pulchowk/?hl=en" },
         {
           icon: "linkedin",
           url: "https://www.linkedin.com/company/seds-pulchowk/",
@@ -198,7 +201,7 @@ let executives: Member[][] = [
       image: "/images/Executives/shishir_acharya.jpg",
       links: [
         { icon: "facebook", url: "https://www.facebook.com/share/1G1qgbWxyy/" },
-        { icon: "instagram", url: "https://www.instagram.com/sedspulchowk/" },
+        { icon: "instagram", url: "https://www.instagram.com/seds.pulchowk/?hl=en" },
         {
           icon: "linkedin",
           url: "https://www.linkedin.com/in/shishir-acharya-729a07281",
@@ -215,7 +218,7 @@ let executives: Member[][] = [
       image: "/images/Executives/sandip_katel.jpg",
       links: [
         { icon: "facebook", url: "https://www.facebook.com/sandip.katel.9/" },
-        { icon: "instagram", url: "https://www.instagram.com/sedspulchowk/" },
+        { icon: "instagram", url: "https://www.instagram.com/seds.pulchowk/?hl=en" },
         {
           icon: "linkedin",
           url: "https://www.linkedin.com/in/sandip-katel-7904b9198/",

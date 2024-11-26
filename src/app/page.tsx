@@ -164,9 +164,17 @@ function ProgramsAndProjects({
     /*TODO: Make following code efficient with cleanup*/
   }
   const programsToRender =
-    isMobile && !isOpen ? programs.slice(0, 2) : programs;
+    isMobile && !isOpen
+      ? programs.slice(0, 2)
+      : !isOpen
+      ? programs.slice(0, 3)
+      : programs;
   const projectsToRender =
-    isMobile && !isOpen ? projects.slice(0, 2) : projects;
+    isMobile && !isOpen
+      ? projects.slice(0, 2)
+      : !isOpen
+      ? projects.slice(0, 3)
+      : projects;
 
   return (
     <div className={styles.program_container}>
@@ -193,17 +201,13 @@ function ProgramsAndProjects({
               />
             ))}
       </div>
-      {isMobile ? (
-        <button
-          type="button"
-          onClick={() => setIsOpen(!isOpen)}
-          className="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-        >
-          <small>{isOpen ? "Show Less..." : "Load More..."}</small>
-        </button>
-      ) : (
-        ""
-      )}
+      <button
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        className="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+      >
+        <small>{isOpen ? "Show Less..." : "Load More..."}</small>
+      </button>
     </div>
   );
 }
