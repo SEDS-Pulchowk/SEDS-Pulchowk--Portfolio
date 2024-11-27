@@ -34,7 +34,7 @@ export default function MemberCard({
         </div>
         <div className={styles.links_wrapper}>
           {links?.map((link) => (
-            <Link href={link.url} key={link.url}>
+            <Link href={link.url} key={link.url} target="_blank">
               {link_from_name(link.icon)}
             </Link>
           ))}

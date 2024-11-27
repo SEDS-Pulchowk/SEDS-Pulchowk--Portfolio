@@ -1,4 +1,4 @@
-import { Member, SocialIcon } from "@/types";
+import { Member} from "@/types";
 
 let executives: Member[][] = [
   [

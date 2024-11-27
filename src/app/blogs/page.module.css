@@ -43,6 +43,28 @@
   border-radius: 10px;
 }
 
+.loading {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  margin: auto;
+  animation: fadeOut 5s linear 1 normal;
+  opacity: 0;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @media(max-width: 420){
   .blogs_main {
     margin-left: 0;

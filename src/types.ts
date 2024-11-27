@@ -7,6 +7,14 @@ export interface Member {
     links?: Link[];
 }
 
+export interface Advisor {
+    name: string;
+    message: string;
+    position: string;
+    image?: string;
+    url?: string;
+}
+
 export type SocialIcon = "facebook" | "instagram" | "linkedin";
 
 export interface Link {

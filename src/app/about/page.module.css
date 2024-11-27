@@ -23,6 +23,14 @@
   border-radius: 24px 0px 0px 24px;
 }
 
+.advisors_wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  margin-bottom: 24px;
+  padding: 20px;
+}
+
 .executives_section {
   margin-bottom: 64px;
 }
@@ -31,7 +39,7 @@
   font-size: 3rem;
   text-transform: capitalize;
   text-align: center;
-  margin-bottom: 64px;
+  margin-bottom: 24px;
 }
 
 .executives_wrapper {
@@ -114,6 +122,10 @@
   .about_us {
     margin: 100px 30px 50px 30px;
   }
+  
+  .advisors_wrapper {
+    flex-direction: column;
+  }
 
   .executives_container {
     animation: none;
@@ -130,6 +142,7 @@
     width: 20%;
   }
 }
+
 
 @media (max-width: 420px) {
   .about_us {

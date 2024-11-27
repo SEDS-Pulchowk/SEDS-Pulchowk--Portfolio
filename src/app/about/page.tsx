@@ -4,7 +4,9 @@
 
 import styles from "./page.module.css";
 import MemberCard from "@/components/Molecules/MemberCard";
-import executives from "./executives";
+import AdvisorCard from "@/components/Molecules/AdvisorCard";
+import executives from "./data/executives";
+import advisors from "./data/advisors";
 import Image from "next/image";
 import executives_2081 from "public/images/Executives/executives_2081.jpg";
 
@@ -18,22 +20,23 @@ export default function About() {
         </h2>
         <div className={styles.about_content}>
           <p className={styles.about_text}>
-            At SEDS-Pulchowk, we believe that the future of space exploration is
-            built through collaboration. We welcome enthusiasts from all
-            engineering disciplines at IOE Pulchowk, as each individual’s unique
-            skills and perspectives are essential to driving innovation. As
-            passionate research lovers, we are always seeking to learn, grow,
-            and push the boundaries of space technology. We continuously work on
-            our development, inspiring each other to reach new heights through
-            teamwork and creativity.
+            At SEDS-Pulchowk, collaboration is at the heart of everything we do.
+            We bring together enthusiastic students from diverse engineering
+            disciplines at IOE Pulchowk, fostering innovation through the unique
+            perspectives and talents of our members.
             <br />
             <br />
-            Once you join the SEDS-Pulchowk family, you become part of a
-            close-knit community driven by a shared purpose. We support one
-            another in our journey, creating not only professional connections
-            but lifelong friendships. Together, we are committed to advancing
-            space exploration and contributing to the future of space
-            technology.
+            As a research-driven community, we continuously strive to learn,
+            grow, and push the boundaries of space technology. Beyond
+            professional development, we create a supportive and close-knit
+            environment where lifelong friendships and meaningful connections
+            thrive.
+            <br />
+            <br />
+            By joining SEDS-Pulchowk, you become part of a dynamic family
+            committed to advancing space exploration and shaping the future of
+            space technology. Together, we aim to inspire each other and leave a
+            lasting impact on the global space community.
           </p>
           <Image
             alt="Some Executive Committee members of SEDS 2081"
@@ -42,10 +45,22 @@ export default function About() {
           />
         </div>
       </section>
+      <section className={styles.advisors_section}>
+        <h2 className={styles.executives_header}>
+          Message From <span className="gradient_text"> Advisors</span>
+        </h2>
 
+        <div className={styles.advisors_wrapper}>
+          {advisors.map((advisor) => (
+            <div key={advisor.name} className={styles.advisors_card}>
+              <AdvisorCard {...advisor} />
+            </div>
+          ))}
+        </div>
+      </section>
       <section className={styles.executives_section}>
         <h2 className={styles.executives_header}>
-          Meet our <span className="gradient_text">executives</span>
+          SEDS Executive <span className="gradient_text"> Council</span>
         </h2>
 
         <div className={styles.executives_wrapper}>
