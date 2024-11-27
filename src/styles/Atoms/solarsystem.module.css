@@ -14,8 +14,8 @@
   display: flex;
   background: radial-gradient(
     circle,
-    rgba(48, 48, 48, 0.4) 0%,
-    rgba(1, 1, 1, 0) 45%
+    rgba(48, 48, 48, 0.3) 0%,
+    rgba(1, 1, 1, 0) 15%
   );
   width: 100%;
   height: 100%;
