@@ -54,15 +54,10 @@
   .executives_wrapper {
     position: relative;
     width: 90vw;
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    padding: 20px 0;
+    overflow: hidden;
+    padding: 10px 0;
     left: 0;
-  }
-
-  .executives_wrapper::-webkit-scrollbar {
-    display: none;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
   }
 
   .executives_container {
