@@ -57,7 +57,7 @@
     overflow: hidden;
     padding: 10px 0;
     left: 0;
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
   }
 
   .executives_container {
@@ -86,7 +86,7 @@
 
   @keyframes autoScroll {
     0% {
-      transform: translateX(2600px);
+      transform: translateX(2550px);
     }
     25% {
       transform: translateX(-50%);
@@ -98,7 +98,7 @@
       transform: translateX(50%);
     }
     100% {
-      transform: translateX(2500px);
+      transform: translateX(2550px);
     }
   }
 }

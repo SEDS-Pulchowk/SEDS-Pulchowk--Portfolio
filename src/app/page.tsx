@@ -66,8 +66,7 @@ export default function Home() {
         id="About Us"
       >
         <h2 className={styles.about_header}>
-          <span className="gradient_text">Who </span>
-          We Are
+          <span className="gradient_text">Who </span> Are We?
         </h2>
         <div className={styles.about_content}>
           <div className={styles.about_text}>
