@@ -66,33 +66,31 @@ export default function Home() {
         id="About Us"
       >
         <h2 className={styles.about_header}>
-          <span className="gradient_text">Who </span>
-          We Are
+          <span className="gradient_text">Who </span> Are We?
         </h2>
         <div className={styles.about_content}>
           <div className={styles.about_text}>
             <p className={isMobile && !isOpen ? styles.paragraph_style : ""}>
-              Founded in 2019, SEDS-Pulchowk is a leading partner of SEDS Nepal,
-              dedicated to advancing space exploration through cutting-edge
-              research, innovation, and outreach programs. We are an
-              enthusiastic, research-oriented group committed to pushing the
-              boundaries of space technology. Our team of passionate engineers,
-              scientists, and visionaries is driven by a shared curiosity to
-              explore the unknown and contribute to the global space community.
-              With a focus on continuous learning and development, we empower
-              the next generation of space enthusiasts by fostering a vibrant,
-              collaborative environment.
+              Established in 2019, SEDS-Pulchowk serves as a pioneer in space
+              exploration and innovation in Nepal. As a leading partner of SEDS
+              Nepal, we are dedicated to advancing space technology through
+              cutting-edge research, impactful outreach, and collaborative
+              projects.
               <br />
               <br />
-              Our members engage in a diverse range of space-related projects,
-              from satellite development to space science research, actively
-              shaping the future of space exploration. We are excited about the
-              future of SEDS, constantly striving to innovate and inspire
-              through our groundbreaking work, while promoting the importance of
-              space science in addressing global challenges. As we continue to
-              expand our reach and deepen our impact, we remain dedicated to
-              creating opportunities that will inspire and propel the next wave
-              of space exploration.
+              Our team of engineers, scientists, and visionaries is united by a
+              shared curiosity to explore the universe and contribute to the
+              global space community. By embracing continuous learning, we
+              strive to foster the next generation of space leaders and
+              innovators. From satellite development to groundbreaking space
+              science research, our members are actively shaping the future of
+              space exploration.
+              <br />
+              <br />
+              Join us on our mission to inspire, innovate, and expand the
+              frontiers of human knowledge. Together, we can address global
+              challenges through space science and create a brighter future for
+              all.
             </p>
             {isMobile ? (
               <button

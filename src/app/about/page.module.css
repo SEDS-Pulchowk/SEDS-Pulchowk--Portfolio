@@ -23,6 +23,14 @@
   border-radius: 24px 0px 0px 24px;
 }
 
+.advisors_wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  margin-bottom: 24px;
+  padding: 20px;
+}
+
 .executives_section {
   margin-bottom: 64px;
 }
@@ -31,7 +39,7 @@
   font-size: 3rem;
   text-transform: capitalize;
   text-align: center;
-  margin-bottom: 64px;
+  margin-bottom: 24px;
 }
 
 .executives_wrapper {
@@ -54,15 +62,10 @@
   .executives_wrapper {
     position: relative;
     width: 90vw;
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    padding: 20px 0;
+    overflow: hidden;
+    padding: 10px 0;
     left: 0;
-  }
-
-  .executives_wrapper::-webkit-scrollbar {
-    display: none;
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
   }
 
   .executives_container {
@@ -91,7 +94,7 @@
 
   @keyframes autoScroll {
     0% {
-      transform: translateX(2600px);
+      transform: translateX(2550px);
     }
     25% {
       transform: translateX(-50%);
@@ -103,7 +106,7 @@
       transform: translateX(50%);
     }
     100% {
-      transform: translateX(2500px);
+      transform: translateX(2550px);
     }
   }
 }
@@ -118,6 +121,10 @@
 @media (max-width: 738px) {
   .about_us {
     margin: 100px 30px 50px 30px;
+  }
+  
+  .advisors_wrapper {
+    flex-direction: column;
   }
 
   .executives_container {
@@ -135,6 +142,7 @@
     width: 20%;
   }
 }
+
 
 @media (max-width: 420px) {
   .about_us {

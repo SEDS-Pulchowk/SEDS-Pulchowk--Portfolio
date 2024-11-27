@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import Blogs from "./blogs_data";
 import Link from "next/link";
 import { useEffect } from "react";
+import { RocketLaunch } from "@/components/Molecules/icons";
 
 export default function MediumEmbed() {
   useEffect(() => {
@@ -23,12 +24,14 @@ export default function MediumEmbed() {
         <h2>
           Our Celestial <span className="gradient_text">Chronicles</span>
         </h2>
-        <small className="text-primary">Wait, charging cosmic engines takes some time</small>
         <hr />
       </div>
       <div className={styles.blogs_container}>
+        <span className={styles.loading}>
+          <RocketLaunch />
+        </span>
         {Blogs.map((blog, index) => (
-          <Link key={index} href={blog.url}>
+          <Link key={index} href={blog.url} target="_blank">
             <div
               key={index}
               className={`iframely-embed ${styles.content}`}

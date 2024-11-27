@@ -17,12 +17,12 @@
   background-image: url("/hero_background.png");
   background-size: contain;
   background-position: center;
+  opacity: 0.6;
   z-index: -2;
-  mask-image: radial-gradient(ellipse at center, black 30%, transparent 90%);
-  -webkit-mask-image: radial-gradient(
-    ellipse at center,
-    black 30%,
-    transparent 90%
+  mask-image: linear-gradient( #010006 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(
+    #010006 90%,
+    transparent 100%
   );
 }
 

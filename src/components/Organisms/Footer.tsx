@@ -57,7 +57,7 @@ export default function Footer() {
       </div>
       <div className={styles.footer_lower}>
         <div className={styles.socials}>
-          <Link href="https://www.facebook.com/profile.php?id=100094240345334">
+          <Link href="https://www.facebook.com/profile.php?id=100094240345334" target="_blank">
             <div className={styles.socials_item}>
               <span className={styles.social_icon}>
                 <Facebook />
@@ -65,7 +65,7 @@ export default function Footer() {
               <small className={styles.social_text}>Facebook</small>
             </div>
           </Link>
-          <Link href="https://www.instagram.com/seds.pulchowk/?hl=en">
+          <Link href="https://www.instagram.com/seds.pulchowk/?hl=en" target="_blank">
             <div className={styles.socials_item}>
               <span className={styles.social_icon}>
                 <Instagram />
@@ -73,7 +73,7 @@ export default function Footer() {
               <small className={styles.social_text}>Instagram</small>
             </div>
           </Link>
-          <Link href="https://www.linkedin.com/company/seds-pulchowk/">
+          <Link href="https://www.linkedin.com/company/seds-pulchowk/" target="_blank">
             <div className={styles.socials_item}>
               <span className={styles.social_icon}>
                 <LinkedIn />
@@ -81,7 +81,7 @@ export default function Footer() {
               <small className={styles.social_text}>LinkedIn</small>
             </div>
           </Link>
-          <Link href="https://discord.gg/gtfaf7Q4NB">
+          <Link href="https://discord.gg/gtfaf7Q4NB" target="_blank">
             <div className={styles.socials_item}>
               <span className={styles.social_icon}>
                 <Discord />
