@@ -3,16 +3,25 @@
     flex-direction: column;
     border: 2px solid #f2f2f2;
     border-radius: 30px;
-    text-align: justify;
     padding: 10px;
     gap: 24px;
 }
 
-.details {
+.details_wrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+}
+.details * {
+    margin: 0px;
+    padding: 0px;
+    text-align: left !important;
 }
 
 .advisor_image {
@@ -25,6 +34,7 @@
 
 .message {
     position: relative;
+    text-align: justify;
     top: 20px;
 }
 
