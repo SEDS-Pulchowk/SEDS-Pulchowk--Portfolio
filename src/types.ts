@@ -11,6 +11,8 @@ export interface Advisor {
     name: string;
     message: string;
     position: string;
+    department: string;
+    workArea: string;
     image?: string;
     url?: string;
 }
