@@ -187,6 +187,7 @@ function ProgramsAndProjects({
                 start={program.start}
                 end={program.end}
                 location={program.location}
+                register_url={program.register_url}
               />
             ))
           : projectsToRender.map((project) => (

@@ -2,6 +2,7 @@ import React from "react";
 import { ArrowUpRight, Clock, LocationPin, Hourglass } from "./icons";
 import styles from "@/styles/Molecules/program.module.css";
 import humanize from "humanize-duration";
+import Link from "next/link";
 import Image from "next/image";
 
 export default function Program({
@@ -11,6 +12,7 @@ export default function Program({
   end,
   location,
   image,
+  register_url,
 }: {
   title: string;
   description: string;
@@ -18,6 +20,7 @@ export default function Program({
   end: Date;
   location: string;
   image: string;
+  register_url?: string;
 }) {
   return (
     <div className={styles.program_wrapper}>
@@ -58,15 +61,17 @@ export default function Program({
           </div>
         </div>
         <div>
-          <button
-            className={styles.register_button}
-            disabled={Date.now() > end.getTime()}
-          >
-            <span>Register</span>
-            <span className={styles.register_arrow}>
-              <ArrowUpRight />
-            </span>
-          </button>
+          <Link href={register_url ? register_url : "#"} target="_blank">
+            <button
+              className={styles.register_button}
+              disabled={Date.now() > end.getTime()}
+            >
+              <span>Register</span>
+              <span className={styles.register_arrow}>
+                <ArrowUpRight />
+              </span>
+            </button>
+          </Link>
         </div>
       </div>
     </div>

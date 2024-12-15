@@ -1,5 +1,16 @@
 const programs = [
   {
+    id: 2403,
+    title: "A planerarium Observation",
+    description:
+      "Step into the Space Dome at Pulchowk Campus and experience a 360-degree immersive journey through the cosmos. Explore galaxies, planets, and celestial wonders with cutting-edge technology that brings the universe to life. Alongside the dome experience, enjoy a Solar Observation and Night Sky Observation program to marvel at the sun and stars in real-time.",
+    image: "/images/Programs/space_dome.png",
+    start: new Date("20 Dec 2024"),
+    end: new Date("20 Dec 2024"),
+    location: "In front of D2 Block, Pulchowk Campus",
+    register_url: "https://forms.gle/AWSee96FUgNC5W438",
+  },
+  {
     id: 2402,
     title: "Canset Workshop",
     description:
