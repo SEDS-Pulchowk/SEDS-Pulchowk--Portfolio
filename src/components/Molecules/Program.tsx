@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowUpRight, Clock, LocationPin, Hourglass } from "./icons";
+import { ArrowUpRight, Clock, LocationPin, Hourglass, Calendar } from "./icons";
 import styles from "@/styles/Molecules/program.module.css";
 import humanize from "humanize-duration";
 import Image from "next/image";
@@ -21,6 +21,17 @@ export default function Program({
   image: string;
   register_url?: string;
 }) {
+  const now = new Date();
+const adjustedEnd = new Date(end.getTime() + 24 * 60 * 60 * 1000); // Add 1 day to the end date
+const isToday = 
+  start.toDateString() === now.toDateString() && 
+  start.getFullYear() === now.getFullYear();
+const isEventOngoing = start.getTime() < now.getTime() && now.getTime() < adjustedEnd.getTime();
+const isEventEnded = now.getTime() > adjustedEnd.getTime();
+const isOneDayEvent = 
+  start.toDateString() === end.toDateString() && 
+  start.getFullYear() === end.getFullYear();
+
   return (
     <div className={styles.program_wrapper}>
       <div className={styles.image_wrapper}>
@@ -32,15 +43,26 @@ export default function Program({
           width={300}
         />
         <div
+  className={`${styles.time_remaining} ${isEventEnded ? styles.red : ""}`}
+>
+  {isEventEnded 
+    ? "Closed" 
+    : isEventOngoing || (isOneDayEvent && isToday) 
+      ? "Event Day" 
+      : humanize(start.getTime() - now.getTime(), { largest: 2 })
+  }{"   "}
+  {!isEventEnded && !isEventOngoing && <Hourglass /> || isEventOngoing && <Calendar />}
+</div>
+        {/* <div
           className={`${styles.time_remaining} ${
             Date.now() > end.getTime() ? styles.red : ""
           }`}
         >
           {Date.now() > end.getTime()
-            ? "Closed"
-            : humanize(end.getTime() - Date.now(), { largest: 2 })}{" "}
+            ? (start.getTime() < Date.now()  || Date.now() > end.getTime() ? "Happening" : "Closed")
+            : humanize(start.getTime() - Date.now(), { largest: 2 })}{" "}
           {Date.now() > end.getTime() ? "" : <Hourglass />}
-        </div>
+        </div> */}
       </div>
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.description}>{description}</p>
@@ -60,16 +82,18 @@ export default function Program({
           </div>
         </div>
         <div>
-            <button
-              className={styles.register_button}
-              onClick={() => window.open(register_url ? register_url : "#", '_blank')}
-              disabled={Date.now() > end.getTime()}
-            >
-              <span>Register</span>
-              <span className={styles.register_arrow}>
+          <button
+            className={styles.register_button}
+            onClick={() =>
+              window.open(register_url ? register_url : "#", "_blank")
+            }
+            disabled={Date.now() > end.getTime()}
+          >
+            <span>Register</span>
+            <span className={styles.register_arrow}>
               <ArrowUpRight />
-              </span>
-            </button>
+            </span>
+          </button>
         </div>
       </div>
     </div>
