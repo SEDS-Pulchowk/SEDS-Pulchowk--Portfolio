@@ -38,7 +38,7 @@ export default function Program({
         >
           {Date.now() > end.getTime()
             ? "Closed"
-            : humanize(end.getTime() - Date.now(), { largest: 1 })}{" "}
+            : humanize(end.getTime() - Date.now(), { largest: 2 })}{" "}
           {Date.now() > end.getTime() ? "" : <Hourglass />}
         </div>
       </div>

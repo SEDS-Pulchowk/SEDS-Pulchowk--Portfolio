@@ -43,7 +43,7 @@
 }
 
 .solar_syst div:not(.sun):before {
-  box-shadow: inset 0 6px 0 -2px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 6px 0 -2px rgba(0, 0, 0, 0.3);
 }
 
 .sun {
@@ -168,9 +168,10 @@
   width: var(--jupitor-size);
   margin-top: calc(-0.5 * var(--jupitor-size));
   margin-left: calc(-0.5 * var(--jupitor-size));
+  background-color: red;
   background: radial-gradient(ellipse at 80% 50% , #a77221bb 5%, #a59186a1 20%, #d8ca9d8d 70%, #e3dccb90 80%) top left no-repeat, radial-gradient(ellipse at 10% 30% , #a46302e8 5%, #a59186 20%, #d8ca9d 70%, #e3dccb 100%) top left no-repeat;
-  --start-rotation: -200deg;
-  animation: orb calc(var(--year-in-second) * 11.8618) linear infinite;
+  /* --start-rotation: -200deg; */
+  /* animation: orb calc(var(--year-in-second) * 11.8618) linear infinite; */
   animation-direction: reverse;
 }
 

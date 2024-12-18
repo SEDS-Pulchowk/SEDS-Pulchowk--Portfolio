@@ -1,7 +1,7 @@
 const programs = [
   {
     id: 2403,
-    title: "A planerarium Observation",
+    title: "A planetarium Observation",
     description:
       "Step into the Space Dome at Pulchowk Campus and experience a 360-degree immersive journey through the cosmos. Explore galaxies, planets, and celestial wonders with cutting-edge technology that brings the universe to life. Alongside the dome experience, enjoy a Solar Observation and Night Sky Observation program to marvel at the sun and stars in real-time.",
     image: "/images/Programs/space_dome.png",
