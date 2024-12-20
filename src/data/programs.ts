@@ -9,6 +9,7 @@ const programs = [
     end: new Date("20 Dec 2024"),
     location: "In front of D2 Block, Pulchowk Campus",
     register_url: "https://forms.gle/AWSee96FUgNC5W438",
+    collection_url: "#",
   },
   {
     id: 2402,

@@ -12,6 +12,7 @@ export default function Program({
   location,
   image,
   register_url,
+  collection_url,
 }: {
   title: string;
   description: string;
@@ -20,17 +21,19 @@ export default function Program({
   location: string;
   image: string;
   register_url?: string;
+  collection_url?: string;
 }) {
   const now = new Date();
-const adjustedEnd = new Date(end.getTime() + 24 * 60 * 60 * 1000); // Add 1 day to the end date
-const isToday = 
-  start.toDateString() === now.toDateString() && 
-  start.getFullYear() === now.getFullYear();
-const isEventOngoing = start.getTime() < now.getTime() && now.getTime() < adjustedEnd.getTime();
-const isEventEnded = now.getTime() > adjustedEnd.getTime();
-const isOneDayEvent = 
-  start.toDateString() === end.toDateString() && 
-  start.getFullYear() === end.getFullYear();
+  const adjustedEnd = new Date(end.getTime() + 24 * 60 * 60 * 1000);
+  const isToday =
+    start.toDateString() === now.toDateString() &&
+    start.getFullYear() === now.getFullYear();
+  const isEventOngoing =
+    start.getTime() < now.getTime() && now.getTime() < adjustedEnd.getTime();
+  const isEventEnded = now.getTime() > adjustedEnd.getTime();
+  const isOneDayEvent =
+    start.toDateString() === end.toDateString() &&
+    start.getFullYear() === end.getFullYear();
 
   return (
     <div className={styles.program_wrapper}>
@@ -43,26 +46,19 @@ const isOneDayEvent =
           width={300}
         />
         <div
-  className={`${styles.time_remaining} ${isEventEnded ? styles.red : ""}`}
->
-  {isEventEnded 
-    ? "Closed" 
-    : isEventOngoing || (isOneDayEvent && isToday) 
-      ? "Event Day" 
-      : humanize(start.getTime() - now.getTime(), { largest: 2 })
-  }{"   "}
-  {!isEventEnded && !isEventOngoing && <Hourglass /> || isEventOngoing && <Calendar />}
-</div>
-        {/* <div
           className={`${styles.time_remaining} ${
-            Date.now() > end.getTime() ? styles.red : ""
+            isEventEnded ? styles.red : ""
           }`}
         >
-          {Date.now() > end.getTime()
-            ? (start.getTime() < Date.now()  || Date.now() > end.getTime() ? "Happening" : "Closed")
-            : humanize(start.getTime() - Date.now(), { largest: 2 })}{" "}
-          {Date.now() > end.getTime() ? "" : <Hourglass />}
-        </div> */}
+          {isEventEnded
+            ? "Closed"
+            : isEventOngoing || (isOneDayEvent && isToday)
+            ? "Event Day"
+            : humanize(start.getTime() - now.getTime(), { largest: 2 })}
+          {"   "}
+          {(!isEventEnded && !isEventOngoing && <Hourglass />) ||
+            (isEventOngoing && <Calendar />)}
+        </div>
       </div>
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.description}>{description}</p>
@@ -81,22 +77,55 @@ const isOneDayEvent =
             <small>{location}</small>
           </div>
         </div>
-        <div>
-          <button
-            className={styles.register_button}
-            onClick={() =>
-              window.open(register_url ? register_url : "#", "_blank")
-            }
-            disabled={Date.now() > end.getTime()}
-          >
-            <span>Register</span>
-            <span className={styles.register_arrow}>
-              <ArrowUpRight />
-            </span>
-          </button>
-        </div>
+        <EventButton
+          start={start}
+          collectionUrl={collection_url}
+          registerUrl={register_url}
+        />
       </div>
     </div>
+  );
+}
+
+interface EventButtonProps {
+  start?: Date | null;
+  collectionUrl?: string | null;
+  registerUrl?: string | null;
+}
+
+function EventButton({
+  start = new Date(),
+  collectionUrl = null,
+  registerUrl = null,
+}: EventButtonProps) {
+  // Safely check if start date exists and compare
+  const isEventStarted = start ? Date.now() >= start.getTime() : false;
+  const showGallery = isEventStarted && collectionUrl;
+
+  const handleClick = () => {
+    const url = showGallery ? collectionUrl : registerUrl || "#";
+    window.open(url, "_blank");
+  };
+
+  if (showGallery) {
+    return (
+      <button className={styles.gallery_button} onClick={handleClick}>
+        Gallery
+      </button>
+    );
+  }
+
+  return (
+    <button
+      className={styles.register_button}
+      onClick={handleClick}
+      disabled={isEventStarted}
+    >
+      Register
+      <span className={styles.register_arrow}>
+        <ArrowUpRight />
+      </span>
+    </button>
   );
 }
 

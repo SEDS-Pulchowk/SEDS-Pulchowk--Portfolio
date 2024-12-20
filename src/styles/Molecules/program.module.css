@@ -57,10 +57,10 @@
   display: flex;
   gap: 0.5rem;
   opacity: 0.7;
-  text-align:left
+  text-align: left;
 }
 
-.register_button {
+/* .register_button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,6 +75,7 @@
 
 .register_button:disabled {
   border-color: grey;
+  color: grey;
   cursor: not-allowed;
 }
 
@@ -90,6 +91,295 @@
   margin-left: 4px;
   visibility: visible;
   scale: 1;
+}
+
+.image_url_button {
+  padding: 6px 14px;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 32px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.image_url_button:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-image_url_button 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 32px;
+}
+
+@keyframes glowing-image_url_button {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.image_url_button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--background);
+  left: 0;
+  top: 0;
+  border-radius: 32px;
+} */
+
+/* .fancy_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  line-height: normal;
+  font-variant: small-caps;
+  border-radius: 32px;
+  padding: 6px 14px;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.fancy_button:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 32px;
+}
+
+.fancy_button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--background);
+  left: 0;
+  top: 0;
+  border-radius: 32px;
+}
+
+.fancy_button:disabled {
+  background: #444;
+  color: #888;
+  cursor: not-allowed;
+}
+
+.fancy_button:disabled:before {
+  opacity: 0;
+}
+
+.button_arrow {
+  display: flex;
+  align-items: center;
+  visibility: collapse;
+  scale: 0;
+  transition: scale 200ms ease-in-out, margin 200ms ease-in-out;
+}
+
+.fancy_button:not(:disabled):hover > .button_arrow {
+  margin-left: 4px;
+  visibility: visible;
+  scale: 1;
+}
+
+@keyframes glowing-button {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+} */
+
+/* Register Button with Pulse Animation */
+.register_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 32px;
+  padding: 6px 14px;
+  border: 2px solid var(--gradient-start);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(var(--gradient-start-rgb), 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(var(--gradient-start-rgb), 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(var(--gradient-start-rgb), 0);
+  }
+}
+
+.register_button:disabled {
+  border-color: grey;
+  color: grey;
+  cursor: not-allowed;
+  animation: none;
+}
+
+.register_arrow {
+  display: flex;
+  align-items: center;
+  visibility: collapse;
+  margin-left: -15px;
+  scale: 0;
+  transition: scale 200ms ease-in-out, margin 200ms ease-in-out;
+}
+
+.register_button:not(:disabled):hover > .register_arrow {
+  margin-left: 4px;
+  visibility: visible;
+  scale: 1;
+}
+
+/* Gallery Button with Rainbow Animation */
+.gallery_button {
+  height: fit-content;
+  padding: 6px 14px;
+  border: none;
+  color: white;
+  /* background: #0a0a2a; */
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 32px;
+  user-select: none;
+}
+
+.gallery_button:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #000033,
+    #0066cc,
+    #6600cc,
+    #9933ff,
+    #3366ff,
+    #00ccff,
+    #6600ff,
+    #000066
+  );
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(8px);
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  animation: cosmic-glow 15s linear infinite;
+  border-radius: 32px;
+}
+
+@keyframes cosmic-glow {
+  0% {
+    background-position: 0 0;
+    filter: blur(1px) brightness(2);
+  }
+  50% {
+    background-position: 400% 0;
+    filter: blur(4px) brightness(1);
+  }
+  100% {
+    background-position: 0 0;
+    filter: blur(1px) brightness(2);
+  }
+}
+
+.gallery_button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #0a0a2a;
+  left: 0;
+  top: 0;
+  border-radius: 32px;
+}
+
+.gallery_button:disabled {
+  background: #1a1a3a;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.gallery_button:disabled:before {
+  opacity: 0;
 }
 
 @media (max-width: 720px) {
