@@ -1,4 +1,6 @@
-const projects = [
+import { Project } from "@/types";
+
+const projects: Project[] = [
   {
     id: 2402,
     title: "SEDS Earth Information",

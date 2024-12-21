@@ -181,6 +181,7 @@ function ProgramsAndProjects({
           ? programsToRender.map((program) => (
               <Program
                 key={program.id}
+                id={program.id}
                 title={program.title}
                 description={program.description}
                 image={program.image}
@@ -189,6 +190,8 @@ function ProgramsAndProjects({
                 location={program.location}
                 register_url={program.register_url}
                 collection_url={program.collection_url}
+                giveawayDeadline={program.giveawayDeadline}
+                giveawayMessage={program.giveawayMessage}
               />
             ))
           : projectsToRender.map((project) => (

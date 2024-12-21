@@ -1,4 +1,6 @@
-const programs = [
+import { Program } from "@/types";
+
+const programs: Program[] = [
   {
     id: 2403,
     title: "A planetarium Observation",
@@ -9,7 +11,11 @@ const programs = [
     end: new Date("20 Dec 2024"),
     location: "In front of D2 Block, Pulchowk Campus",
     register_url: "https://forms.gle/AWSee96FUgNC5W438",
-    collection_url: "#",
+    collection_url:
+      "https://drive.google.com/drive/folders/1QTtuobZ-WCVAVR-4M3b81FjKSsmVBD5F?usp=sharing",
+    giveawayDeadline: new Date("20 Dec 2024"),
+    giveawayMessage:
+      "🎁 Share Your Cosmic Moments!\nShare your favorite event photos for a chance to win our exclusive merchandise bundle. Visit our Social Media for giveaway details. \n✨ Let Your Space Journey Continue ✨",
   },
   {
     id: 2402,
@@ -17,7 +23,7 @@ const programs = [
     description:
       "With 70+ participants from different colleges and diverse fields in association with FSU Pulchowk, a CanSat workshop was an educational event where participants designed and build small satellite models, called CanSats, about the size of a soda can. This workshop  provides practical exposure to space technology and fosters skills in STEM fields, inspiring the next generation of engineers and scientists.",
     image: "/images/Programs/cansat_workshop.jpg",
-    start: new Date("23 Jan 2024"),
+    start: new Date("22 Jan 2024"),
     end: new Date("27 Jan 2024"),
     location: "G Hall, Pulchowk Campus",
   },

@@ -3,6 +3,7 @@ import { ArrowUpRight, Clock, LocationPin, Hourglass, Calendar } from "./icons";
 import styles from "@/styles/Molecules/program.module.css";
 import humanize from "humanize-duration";
 import Image from "next/image";
+import { Program as ProgramProps, EventButtonProps } from "@/types";
 
 export default function Program({
   title,
@@ -13,16 +14,9 @@ export default function Program({
   image,
   register_url,
   collection_url,
-}: {
-  title: string;
-  description: string;
-  start: Date;
-  end: Date;
-  location: string;
-  image: string;
-  register_url?: string;
-  collection_url?: string;
-}) {
+  giveawayDeadline,
+  giveawayMessage,
+}: ProgramProps) {
   const now = new Date();
   const adjustedEnd = new Date(end.getTime() + 24 * 60 * 60 * 1000);
   const isToday =
@@ -81,45 +75,45 @@ export default function Program({
           start={start}
           collectionUrl={collection_url}
           registerUrl={register_url}
+          giveawayDeadline={giveawayDeadline}
+          giveawayMessage={giveawayMessage}
         />
       </div>
     </div>
   );
 }
 
-interface EventButtonProps {
-  start?: Date | null;
-  collectionUrl?: string | null;
-  registerUrl?: string | null;
-}
-
 function EventButton({
   start = new Date(),
-  collectionUrl = null,
-  registerUrl = null,
+  collectionUrl,
+  registerUrl,
+  giveawayDeadline,
+  giveawayMessage,
 }: EventButtonProps) {
-  // Safely check if start date exists and compare
-  const isEventStarted = start ? Date.now() >= start.getTime() : false;
-  const showGallery = isEventStarted && collectionUrl;
+  const isEventStarted = start && Date.now() >= start.getTime();
+  const isGiveawayActive =
+    giveawayDeadline &&
+    (Date.now() < giveawayDeadline.getTime() ||
+      new Date().toDateString() === giveawayDeadline.toDateString());
+  const targetUrl =
+    isEventStarted && collectionUrl ? collectionUrl : registerUrl || "#";
 
   const handleClick = () => {
-    const url = showGallery ? collectionUrl : registerUrl || "#";
-    window.open(url, "_blank");
+    if (isGiveawayActive && giveawayMessage) {
+      alert(giveawayMessage);
+    }
+    window.open(targetUrl, "_blank");
   };
 
-  if (showGallery) {
-    return (
-      <button className={styles.gallery_button} onClick={handleClick}>
-        Gallery
-      </button>
-    );
-  }
-
-  return (
+  return isEventStarted && collectionUrl ? (
+    <button className={styles.gallery_button} onClick={handleClick}>
+      Gallery
+    </button>
+  ) : (
     <button
       className={styles.register_button}
       onClick={handleClick}
-      disabled={isEventStarted}
+      disabled={!!isEventStarted}
     >
       Register
       <span className={styles.register_arrow}>
