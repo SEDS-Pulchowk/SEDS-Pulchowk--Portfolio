@@ -13,7 +13,7 @@ const programs: Program[] = [
     register_url: "https://forms.gle/AWSee96FUgNC5W438",
     collection_url:
       "https://drive.google.com/drive/folders/1QTtuobZ-WCVAVR-4M3b81FjKSsmVBD5F?usp=sharing",
-    giveawayDeadline: new Date("20 Dec 2024"),
+    giveawayDeadline: new Date("22 Dec 2024"),
     giveawayMessage:
       "🎁 Share Your Cosmic Moments!\nShare your favorite event photos for a chance to win our exclusive merchandise bundle. Visit our Social Media for giveaway details. \n✨ Let Your Space Journey Continue ✨",
   },
