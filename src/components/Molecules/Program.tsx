@@ -107,7 +107,7 @@ function EventButton({
 
   return isEventStarted && collectionUrl ? (
     <button className={styles.gallery_button} onClick={handleClick}>
-      Gallery
+     Event&nbsp;Gallery
     </button>
   ) : (
     <button

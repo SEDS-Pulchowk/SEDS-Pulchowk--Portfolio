@@ -5,8 +5,8 @@ const programs: Program[] = [
     id: 2403,
     title: "A planetarium Observation",
     description:
-      "Step into the Space Dome at Pulchowk Campus and experience a 360-degree immersive journey through the cosmos. Explore galaxies, planets, and celestial wonders with cutting-edge technology that brings the universe to life. Alongside the dome experience, enjoy a Solar Observation and Night Sky Observation program to marvel at the sun and stars in real-time.",
-    image: "/images/Programs/space_dome.png",
+      "Over 500 participants stepped into our program, experiencing an extraordinary 360-degree immersive journey through the cosmos. Together, we explored distant constellation, planets, and celestial wonders through cutting-edge technology that brought the universe to life. The event culminated in captivating Solar and Night Sky Observation sessions, where attendees witnessed the sun's magnificent features and marveled at the stars in real-time.",
+    image: "/images/Programs/space_dome.jpg",
     start: new Date("20 Dec 2024"),
     end: new Date("20 Dec 2024"),
     location: "In front of D2 Block, Pulchowk Campus",
