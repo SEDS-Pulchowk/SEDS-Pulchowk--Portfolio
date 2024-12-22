@@ -21,12 +21,12 @@ export interface Project {
 }
 
 export interface EventButtonProps {
-    start?: Date | null;
-    collectionUrl?: string | null;
-    registerUrl?: string | null;
-    giveawayDeadline?: Date | null;
-    giveawayMessage?: string | null;
-  }
+  start?: Date | null;
+  collectionUrl?: string | null;
+  registerUrl?: string | null;
+  giveawayDeadline?: Date | null;
+  giveawayMessage?: string | null;
+}
 
 export interface Member {
   name: string;
@@ -52,4 +52,11 @@ export type SocialIcon = "facebook" | "instagram" | "linkedin";
 export interface Link {
   icon: SocialIcon;
   url: string;
+}
+
+export interface Blog {
+  id: number;
+  url: string;
+  headline?: string;
+  imageUrl?: string;
 }
