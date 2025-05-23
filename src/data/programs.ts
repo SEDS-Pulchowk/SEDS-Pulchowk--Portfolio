@@ -19,7 +19,7 @@ const programs: Program[] = [
   },
   {
     id: 2402,
-    title: "Canset Workshop",
+    title: "Cansat Workshop",
     description:
       "With 70+ participants from different colleges and diverse fields in association with FSU Pulchowk, a CanSat workshop was an educational event where participants designed and build small satellite models, called CanSats, about the size of a soda can. This workshop  provides practical exposure to space technology and fosters skills in STEM fields, inspiring the next generation of engineers and scientists.",
     image: "/images/Programs/cansat_workshop.jpg",

@@ -49,7 +49,6 @@ function DirectMessage() {
       className={`${styles.direct_message_container}`}
       id="direct-message"
     >
-      <hr />
       <h3>
         Space Station:<span className="gradient_text"> Message Bay</span>
       </h3>

@@ -111,7 +111,8 @@ button {
 
   p,
   li,
-  label, em {
+  label,
+  em {
     font-size: 14px !important;
   }
 }
