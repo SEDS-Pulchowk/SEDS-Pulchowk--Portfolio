@@ -119,7 +119,7 @@ export default function ExecutiveForm() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  General Evecutive Committee 
+                  General Evecutive Committee Member
                 </a>
               </div>
             </section>
