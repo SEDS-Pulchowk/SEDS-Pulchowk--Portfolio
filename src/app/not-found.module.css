@@ -57,6 +57,7 @@
 /* Astronaut */
 .astronaut {
   position: relative;
+  z-index: 20;
   animation: float 6s ease-in-out infinite;
 }
 

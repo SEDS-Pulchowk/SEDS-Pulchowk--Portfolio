@@ -89,7 +89,6 @@
   .application_form {
     width: 100%;
   }
-
 }
 
 @media (max-width: 620px) {
@@ -116,8 +115,248 @@
   .application_form {
     padding: 0 5px;
   }
-  
+
   .form_outline {
     margin: 0;
   }
+}
+
+/* Evecutive Form Style */
+
+.joinSeds {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 33px auto;
+}
+
+.applicationForm {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.applicationForm::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--gradient-start),
+    #8d4ecd,
+    #8839e7,
+    #5c32f5,
+    var(--gradient-end)
+  );
+  animation: slideGradient 3s ease-in-out infinite;
+}
+
+@keyframes slideGradient {
+  0%,
+  100% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+}
+
+/* Header Section */
+.headerSection {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.mainTitle {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, var(--gradient-start), #8046e5, var(--gradient-end));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+  animation: titleGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+  from {
+    filter: drop-shadow(0 0 20px var(--gradient-start));
+  }
+  to {
+    filter: drop-shadow(0 0 30px var(--gradient-end));
+  }
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  margin-bottom: 20px;
+}
+
+.description {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.spaceIcon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Form Outline */
+.formOutline {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.formLink {
+  display: block;
+  padding: 20px 30px;
+  color: var(--text-main);
+  text-decoration: none;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+
+.formLink::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.formLink:hover::before {
+  left: 100%;
+}
+
+.formLink:hover {
+  transform: translateY(-5px) scale(1.02);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.executiveForm {
+  background: var(--gradient-start);
+}
+
+.executiveForm:hover {
+  box-shadow: 0 5px 35px var(--gradient-start);
+}
+
+.presidentForm {
+  background: var(--gradient-end);
+}
+
+.presidentForm:hover {
+  box-shadow: 0 5px 35px var(--gradient-end);
+}
+
+/* Additional Animations */
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.fadeInUp {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .applicationForm {
+    padding: 30px 20px;
+    margin: 20px 10px;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .formLink {
+    padding: 15px 20px;
+    font-size: 1rem;
+  }
+
+  .spaceIcon {
+    font-size: 3rem;
+  }
+}
+
+/* Focus and Accessibility */
+.formLink:focus {
+  outline: 2px solid #694ef0;
+  outline-offset: 2px;
+}
+
+.formLink:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.formLink:focus-visible {
+  outline: 2px solid #694ef0;
+  outline-offset: 2px;
 }
