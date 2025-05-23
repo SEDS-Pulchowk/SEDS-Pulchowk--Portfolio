@@ -1,0 +1,434 @@
+/* not-found.module.css */
+.not_found_container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  font-family: "Arial", sans-serif;
+}
+
+.hero_banner {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero_banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/Media/hero_background.png");
+  background-size: contain;
+  background-position: center;
+  opacity: 0.6;
+  z-index: -2;
+  mask-image: linear-gradient(#010006 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(#010006 90%, transparent 100%);
+}
+
+@keyframes moveStars {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-100px);
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  z-index: 10;
+  position: relative;
+}
+
+/* Astronaut */
+.astronaut {
+  position: relative;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+.astronaut_body {
+  position: relative;
+  width: 120px;
+  height: 160px;
+}
+
+.helmet {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--gradient-start), #2c5aa0);
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto 10px;
+  border: 3px solid var(--gradient-end);
+}
+
+.helmet_reflection {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 25px;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+
+.face {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.eye {
+  width: 8px;
+  height: 8px;
+  background: #333;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+}
+
+.left_eye {
+  left: -12px;
+}
+.right_eye {
+  right: -12px;
+}
+
+.mouth {
+  width: 12px;
+  height: 6px;
+  border-bottom: 2px solid #333;
+  border-radius: 0 0 12px 12px;
+  position: absolute;
+  top: 5px;
+  left: -6px;
+}
+
+.suit {
+  width: 100px;
+  height: 80px;
+  background: var(--gradient);
+  border-radius: 20px;
+  margin: 0 auto;
+  position: relative;
+  border: 2px solid #670495;
+}
+
+.chest_panel {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 50px;
+  background: #333;
+  border-radius: 5px;
+}
+
+.button {
+  width: 8px;
+  height: 8px;
+  background: var(--gradient-start);
+  border-radius: 50%;
+  margin: 5px auto;
+  z-index: 20;
+}
+
+.display {
+  width: 30px;
+  height: 15px;
+  background: #000;
+  margin: 5px auto;
+  border-radius: 2px;
+  border: 1px solid var(--gradient-start);
+}
+
+.arm {
+  width: 25px;
+  height: 60px;
+  background: var(--gradient-start);
+  border-radius: 15px;
+  position: absolute;
+  top: 90px;
+  border: 2px solid var(--gradient-end);
+}
+
+.left_arm {
+  left: -15px;
+  transform: rotate(-20deg);
+}
+
+.right_arm {
+  right: -15px;
+  transform: rotate(20deg);
+}
+
+.leg {
+  width: 30px;
+  height: 50px;
+  background: var(--gradient-start);
+  border-radius: 15px;
+  position: absolute;
+  top: 140px;
+  border: 2px solid var(--gradient-end);
+}
+
+.left-leg {
+  left: 20px;
+}
+.right-leg {
+  right: 20px;
+}
+
+.jetpack {
+  position: absolute;
+  top: 100px;
+  left: -30px;
+  width: 20px;
+  height: 40px;
+  background: #666;
+  border-radius: 10px;
+}
+
+.flame {
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 15px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+
+.flame_1 {
+  background: linear-gradient(to top, #ff6b35, #f7931e);
+  animation: flicker 0.5s ease-in-out infinite alternate;
+}
+
+.flame_2 {
+  background: linear-gradient(to top, #ff6b35, #f7931e);
+  left: 40%;
+  animation: flicker 0.7s ease-in-out infinite alternate;
+}
+
+.flame_3 {
+  background: linear-gradient(to top, #ff6b35, #f7931e);
+  left: 60%;
+  animation: flicker 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes flicker {
+  0% {
+    transform: translateX(-50%) scaleY(1);
+  }
+  100% {
+    transform: translateX(-50%) scaleY(1.2);
+  }
+}
+
+/* Planets */
+.planets {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.planet {
+  position: absolute;
+  border-radius: 50%;
+  animation: orbit 20s linear infinite;
+}
+
+.planet_1 {
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle at 30% 30%, #b143e4, #6336c4);
+  top: 10%;
+  right: 10%;
+  animation-duration: 25s;
+}
+
+.planet_2 {
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(
+    circle at 30% 30%,
+    var(--gradient-start),
+    #2c5aa0
+  );
+  bottom: 20%;
+  left: 15%;
+  animation-duration: 35s;
+  animation-direction: reverse;
+}
+
+.planet_3 {
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(circle at 30% 30%, #6e1ef7, #451ad4);
+  top: 60%;
+  right: 25%;
+  animation-duration: 30s;
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(100px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(100px) rotate(-360deg);
+  }
+}
+
+/* Text Content */
+.text_content {
+  flex: 1;
+  max-width: 500px;
+  text-align: center;
+  color: white;
+  margin-left: 50px;
+}
+
+.error_code {
+  font-size: 8rem;
+  font-weight: bold;
+  color: var(--gradient-end);
+  text-shadow: 0 0 20px var(--gradient-end);
+  margin-bottom: 20px;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px var(--gradient-end);
+  }
+  to {
+    text-shadow: 0 0 30px #0548f1, 0 0 40px #0942d5;
+  }
+}
+
+.error_title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.error_message {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.action_buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.primary_btn {
+  background: var(--gradient);
+  color: var(--text-main);
+  box-shadow: 0 4px 15px rgba(161, 71, 251, 0.3);
+  z-index: 20;
+}
+
+.primary_btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+}
+
+.secondary_btn {
+  background: transparent;
+  color: white;
+  border: 2px solid var(--gradient-start);
+  z-index: 20;
+}
+
+.secondary_btn:hover {
+  background: var(--gradient-end);
+  border-color: var(--gradient-end);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text_content {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+
+  .error_code {
+    font-size: 6rem;
+  }
+
+  .error_title {
+    font-size: 2rem;
+  }
+
+  .action_buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .error_code {
+    font-size: 4rem;
+  }
+
+  .error_title {
+    font-size: 1.5rem;
+  }
+
+  .error_message {
+    font-size: 1rem;
+  }
+}
